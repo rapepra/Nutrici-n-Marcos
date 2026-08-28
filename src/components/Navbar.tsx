@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Calendar, Menu, X, MapPin, Phone } from 'lucide-react';
+import { Calendar, Menu, X, MapPin, Instagram } from 'lucide-react';
 
 interface NavbarProps {
   onOpenBooking: () => void;
 }
+
+const INSTAGRAM_URL = "https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl";
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,6 +54,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             <a href="#testimonios" className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors">
               Casos Reales
             </a>
+            <a href="#instagram-divulgacion" className="text-sm font-medium text-slate-700 hover:text-pink-600 transition-colors flex items-center gap-1">
+              <Instagram className="w-4 h-4 text-pink-600" /> @marcostsd.rehab
+            </a>
             <a href="#guia-gratuita" className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors">
               Guía PDF
             </a>
@@ -62,6 +67,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
           {/* Action Buttons */}
           <div className="hidden sm:flex items-center gap-3">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-xl bg-slate-100 hover:bg-pink-50 text-slate-700 hover:text-pink-600 transition-colors"
+              title="Sígueme en Instagram @marcostsd.rehab"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
             <button
               onClick={onOpenBooking}
               className="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-emerald-glow cursor-pointer"
@@ -73,6 +87,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-2 sm:hidden">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-pink-600 bg-pink-50 rounded-lg"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
             <button
               onClick={onOpenBooking}
               className="btn-cta bg-emerald-600 text-white p-2 rounded-lg"
@@ -115,6 +137,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               className="text-base font-semibold text-slate-800 hover:text-emerald-600 py-2 border-b border-slate-100"
             >
               Casos Reales
+            </a>
+            <a 
+              href="#instagram-divulgacion" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-base font-semibold text-pink-600 hover:text-pink-700 py-2 border-b border-slate-100 flex items-center gap-2"
+            >
+              <Instagram className="w-5 h-5" /> @marcostsd.rehab
             </a>
             <a 
               href="#guia-gratuita" 

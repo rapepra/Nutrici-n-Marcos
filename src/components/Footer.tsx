@@ -1,9 +1,11 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, MessageSquare, ShieldCheck, Heart } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageSquare, ShieldCheck, Instagram } from 'lucide-react';
 
 interface FooterProps {
   onOpenBooking: () => void;
 }
+
+const INSTAGRAM_URL = "https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl";
 
 export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
   return (
@@ -24,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             </div>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-md">
-              Consulta de nutrición clínica y deportiva enfocada en recomposición corporal, optimización de la salud digestiva y rendimiento físico. Atención presencial en Madrid y programa online.
+              Consulta de nutrición clínica y deportiva por Marcos (TSD). Especialista en recomposición corporal, salud digestiva y recuperación física. Atención presencial en Madrid y programa online.
             </p>
 
             <div className="pt-2 space-y-2 text-xs text-slate-300">
@@ -33,16 +35,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 <span>Calle de Serrano, 45 · Barrio de Salamanca, 28001 Madrid</span>
               </div>
               <div className="flex items-center gap-2">
+                <Instagram className="w-4 h-4 text-pink-400 flex-shrink-0" />
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 underline font-semibold">
+                  @marcostsd.rehab (Instagram Oficial)
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <span>+34 910 000 000 / WhatsApp directo</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <span>contacto@marcosnutricion.es</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span>Lunes a Viernes: 09:00 - 20:00 h</span>
               </div>
             </div>
           </div>
@@ -60,13 +64,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 <a href="#programas" className="hover:text-emerald-400 transition-colors">Programa 90 Días</a>
               </li>
               <li>
+                <a href="#instagram-divulgacion" className="hover:text-pink-400 transition-colors">Artículos Instagram</a>
+              </li>
+              <li>
                 <a href="#testimonios" className="hover:text-emerald-400 transition-colors">Casos de Éxito</a>
               </li>
               <li>
                 <a href="#guia-gratuita" className="hover:text-emerald-400 transition-colors">Guía PDF Gratuita</a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-emerald-400 transition-colors">Preguntas Frecuentes</a>
               </li>
             </ul>
           </div>
@@ -79,9 +83,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li>Recomposición Corporal</li>
               <li>Nutrición Deportiva & Fuerza</li>
+              <li>Recuperación Muscular & TSD</li>
               <li>Tratamiento SIBO / Digestivo</li>
               <li>Bioimpedancia Clínica ISAK</li>
-              <li>Nutrición Antiinflamatoria</li>
             </ul>
           </div>
 
@@ -102,13 +106,23 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             </button>
 
             <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gradient-to-r from-pink-600 to-red-600 hover:opacity-95 text-white font-semibold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-opacity mb-2"
+            >
+              <Instagram className="w-4 h-4" />
+              <span>Ver @marcostsd.rehab</span>
+            </a>
+
+            <a
               href="https://wa.me/34910000000?text=Hola%20Marcos,%20quisiera%20información%20sobre%20las%20sesiones%20en%20Madrid"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold text-xs py-2.5 px-4 rounded-xl border border-slate-800 flex items-center justify-center gap-2 transition-colors"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>Contactar por WhatsApp</span>
+              <span>WhatsApp Directo</span>
             </a>
           </div>
 
@@ -118,19 +132,17 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>Nutricionista-Dietista Colegiado N.º MAD-0842 · Comunidad de Madrid</span>
+            <span>Técnico Superior en Dietética & Recuperación · Colegiado N.º MAD-0842</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
             <a href="#" className="hover:text-slate-300 transition-colors">Aviso Legal</a>
             <span>·</span>
             <a href="#" className="hover:text-slate-300 transition-colors">Política de Privacidad</a>
-            <span>·</span>
-            <a href="#" className="hover:text-slate-300 transition-colors">Política de Cookies</a>
           </div>
 
           <div className="text-slate-500">
-            © {new Date().getFullYear()} Marcos Nutrición Madrid. Todos los derechos reservados.
+            © {new Date().getFullYear()} Marcos Nutrición Madrid (@marcostsd.rehab).
           </div>
         </div>
 

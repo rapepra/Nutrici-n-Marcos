@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { SocialProof } from './components/SocialProof';
 import { Methodology } from './components/Methodology';
 import { BentoServices } from './components/BentoServices';
+import { InstagramPosts } from './components/InstagramPosts';
 import { LeadMagnet } from './components/LeadMagnet';
 import { FAQAccordion } from './components/FAQAccordion';
 import { BookingModal } from './components/BookingModal';
@@ -46,6 +47,9 @@ export const App: React.FC = () => {
 
         {/* Bento Grid of High Value Programs */}
         <BentoServices onSelectProgram={(title) => handleOpenBooking(title)} />
+
+        {/* Transcribed Instagram Educational Posts */}
+        <InstagramPosts onOpenBooking={() => handleOpenBooking()} />
 
         {/* High Contrast Lead Capture Magnet (PDF Download) */}
         <LeadMagnet />
