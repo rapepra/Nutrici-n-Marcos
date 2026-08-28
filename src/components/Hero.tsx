@@ -1,9 +1,11 @@
 import React from 'react';
-import { Calendar, Download, ShieldCheck, MapPin, Sparkles, Star, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { Calendar, Download, MapPin, CheckCircle2, Instagram, ArrowDown } from 'lucide-react';
 
 interface HeroProps {
   onOpenBooking: () => void;
 }
+
+const INSTAGRAM_URL = "https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl";
 
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   return (
@@ -13,138 +15,96 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Local Geo & Trust Pill Badge */}
-        <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs sm:text-sm font-semibold shadow-sm animate-pulse-subtle">
-            <span className="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping" />
-            <MapPin className="w-4 h-4 text-emerald-600" />
-            <span>Nutricionista en Madrid · Barrio de Salamanca (Consulta Presencial & Online)</span>
-          </div>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
-        {/* H1 Headline Centered on Primary Benefit */}
-        <div className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-            Transforma tu físico y tu energía <br className="hidden sm:inline" />
-            <span className="bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 bg-clip-text text-transparent">
-              sin dietas extremas ni efecto rebote
-            </span>
-          </h1>
-
-          {/* H2 Subtitle with Local GEO Positioning */}
-          <h2 className="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-            Programa clínico y deportivo personalizado en <strong className="font-semibold text-slate-900">Madrid</strong>. 
-            Optimizamos tu composición corporal, salud digestiva y niveles de energía con ciencia y adherencia real.
-          </h2>
-
-          {/* Call to Actions (CTAs) */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            {/* Primary CTA */}
-            <button
-              onClick={onOpenBooking}
-              className="w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg px-8 py-4 rounded-xl flex items-center justify-center gap-3 shadow-emerald-glow group cursor-pointer"
-            >
-              <Calendar className="w-5 h-5 transition-transform group-hover:scale-110" />
-              <span>Agenda tu Sesión de Valoración Gratuita</span>
-            </button>
-
-            {/* Secondary CTA */}
-            <a
-              href="#guia-gratuita"
-              className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-300 flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:border-slate-400"
-            >
-              <Download className="w-5 h-5 text-emerald-600" />
-              <span>Descarga Guía PDF Gratuita</span>
-            </a>
-          </div>
-
-          {/* Trust Guarantees */}
-          <div className="pt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-500 font-medium">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Sin compromiso de permanencia
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Bioimpedancia clínica en Madrid
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Colegiado N.º MAD-0842
-            </span>
-          </div>
-        </div>
-
-        {/* Visual Showcase Card - Recomposición Dashboard */}
-        <div className="mt-12 sm:mt-16 max-w-4xl mx-auto">
-          <div className="relative rounded-2xl sm:rounded-3xl p-4 sm:p-8 bg-white border border-slate-200/80 shadow-2xl overflow-hidden">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-50 rounded-full blur-3xl -z-10" />
+          {/* Hero Left Column: Headline & Value Proposition */}
+          <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-              
-              {/* Stat 1 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xl">
-                  -8kg
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Grasa Corporal</div>
-                  <div className="text-base sm:text-lg font-bold text-slate-900">Sin perder músculo</div>
-                  <div className="text-xs text-emerald-600 font-medium flex items-center gap-1 mt-0.5">
-                    <TrendingUp className="w-3.5 h-3.5" /> Media en 90 Días
-                  </div>
-                </div>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-xl">
-                  100%
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Plan Flexible</div>
-                  <div className="text-base sm:text-lg font-bold text-slate-900">Adaptado a tu vida</div>
-                  <div className="text-xs text-slate-500 font-medium mt-0.5">Comida real de Madrid</div>
-                </div>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xl">
-                  ⚡
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Energía & Digestión</div>
-                  <div className="text-base sm:text-lg font-bold text-slate-900">Cero hinchazón</div>
-                  <div className="text-xs text-teal-600 font-medium mt-0.5">Salud digestiva óptima</div>
-                </div>
-              </div>
-
+            {/* Local Badge & Instagram Link */}
+            <div className="flex justify-center lg:justify-start">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 hover:bg-pink-50 border border-emerald-200 hover:border-pink-300 text-emerald-800 hover:text-pink-700 text-xs sm:text-sm font-semibold shadow-sm transition-colors"
+              >
+                <span className="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping" />
+                <Instagram className="w-4 h-4 text-pink-600" />
+                <span>@marcostsd.rehab · Nutricionista & Recuperación en Madrid</span>
+              </a>
             </div>
 
-            {/* Live Madrid Patient Rating Banner */}
-            <div className="mt-6 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2 overflow-hidden">
-                  <img className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Paciente Madrid" />
-                  <img className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Paciente Madrid" />
-                  <img className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Paciente Madrid" />
-                  <img className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Paciente Madrid" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                    ))}
-                    <span className="text-sm font-bold text-slate-900 ml-1">4.9/5.0</span>
-                  </div>
-                  <p className="text-xs text-slate-500 font-medium">Basado en +350 reseñas verificadas en Google Madrid</p>
-                </div>
-              </div>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              Transforma tu físico y tu energía <br className="hidden sm:inline" />
+              <span className="bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 bg-clip-text text-transparent">
+                sin dietas extremas ni efecto rebote
+              </span>
+            </h1>
 
-              <div className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100">
-                🔥 Plazas limitadas presenciales este mes en Salamanca, Madrid
-              </div>
+            <h2 className="text-base sm:text-xl text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Programa clínico y deportivo personalizado en <strong className="font-semibold text-slate-900">Madrid</strong>. 
+              Optimizamos tu composición corporal, salud digestiva y recuperación muscular con ciencia y adherencia real.
+            </h2>
+
+            {/* Action Buttons */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+              <button
+                onClick={onOpenBooking}
+                className="w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg px-8 py-4 rounded-xl flex items-center justify-center gap-3 shadow-emerald-glow group cursor-pointer"
+              >
+                <Calendar className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>Agenda tu Sesión de Valoración Gratuita</span>
+              </button>
+
+              <a
+                href="#guia-gratuita"
+                className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-300 flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:border-slate-400"
+              >
+                <Download className="w-5 h-5 text-emerald-600" />
+                <span>Descarga Guía PDF Gratuita</span>
+              </a>
+            </div>
+
+            {/* Trust Signals */}
+            <div className="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-500 font-medium">
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-emerald-600" /> Sin permanencia</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-emerald-600" /> Bioimpedancia médica Madrid</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-emerald-600" /> TSD & Recuperación</span>
             </div>
 
           </div>
+
+          {/* Hero Right Column: Authentic Professional Portrait Photo */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group max-w-md mx-auto">
+              
+              <img 
+                src="assets/images/marcos-nutricionista.png" 
+                alt="Marcos Nutricionista Clínico y Deportivo en Madrid - Tu nutrición, tu cambio" 
+                className="w-full h-[480px] sm:h-[540px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+
+              {/* Floating Live Credibility Badge */}
+              <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md text-white p-4 rounded-2xl border border-slate-700/80 flex items-center justify-between shadow-xl">
+                <div>
+                  <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Tu nutrición, tu cambio</span>
+                  <span className="text-sm font-extrabold text-white">Marcos (TSD)</span>
+                  <span className="text-[11px] text-slate-300 block">Nutricionista & Recuperación Madrid</span>
+                </div>
+
+                <a href="#sobre-marcos" className="w-10 h-10 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition-colors shadow-md">
+                  <ArrowDown className="w-5 h-5" />
+                </a>
+              </div>
+
+              {/* Rating Badge top right */}
+              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200 flex items-center gap-1.5 text-xs font-bold text-slate-900">
+                <span className="text-amber-400">★</span> 4.9/5.0 Reseñas Madrid
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
       </div>

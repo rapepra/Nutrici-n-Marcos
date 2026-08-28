@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { AboutMarcos } from './components/AboutMarcos';
 import { SocialProof } from './components/SocialProof';
 import { Methodology } from './components/Methodology';
 import { BentoServices } from './components/BentoServices';
@@ -38,6 +39,9 @@ export const App: React.FC = () => {
         <div id="hero">
           <Hero onOpenBooking={() => handleOpenBooking()} />
         </div>
+
+        {/* Credibility & About Marcos Section */}
+        <AboutMarcos onOpenBooking={() => handleOpenBooking()} />
 
         {/* Immediate Social Proof & Testimonials */}
         <SocialProof />
