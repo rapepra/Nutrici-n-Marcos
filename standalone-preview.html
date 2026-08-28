@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutricionista Clínico y Deportivo en Madrid | Marcos Nutrición</title>
+  <meta name="description" content="Nutricionista clínico y deportivo en Madrid (Barrio de Salamanca y Online). Especialista en recomposición corporal de 90 días, salud digestiva y rendimiento físico.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#FAFAFA",
+            emerald: {
+              50: "#ecfdf5",
+              100: "#d1fae5",
+              200: "#a7f3d0",
+              500: "#10b981",
+              600: "#059669",
+              700: "#047857",
+              900: "#064e3b",
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- React 18 & Babel for instant browser rendering -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.min.js"></script>
+
+  <!-- Schema Markup JSON-LD (SEO & GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["MedicalBusiness", "LocalBusiness"],
+        "name": "Marcos Nutrición Clínica y Deportiva Madrid",
+        "url": "https://marcosnutricion.es",
+        "telephone": "+34910000000",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle de Serrano, 45",
+          "addressLocality": "Madrid",
+          "postalCode": "28001",
+          "addressRegion": "Comunidad de Madrid",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.4258,
+          "longitude": -3.6865
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Marcos",
+        "jobTitle": "Nutricionista Clínico y Deportivo Colegiado"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body { background-color: #FAFAFA; color: #0f172a; font-family: 'Inter', sans-serif; }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .btn-cta {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] text-slate-900 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function App() {
+      const [isModalOpen, setIsModalOpen] = useState(false);
+      const [modalProgram, setModalProgram] = useState('');
+      const [openFaq, setOpenFaq] = useState('1');
+      const [leadForm, setLeadForm] = useState({ name: '', email: '', goal: 'Recomposición Corporal' });
+      const [leadSuccess, setLeadSuccess] = useState(false);
+      const [bookingStep, setBookingStep] = useState(1);
+      const [bookingForm, setBookingForm] = useState({ name: '', email: '', phone: '', goal: 'Recomposición Integral 90 Días', modality: 'presencial' });
+      const [bookingSuccess, setBookingSuccess] = useState(false);
+
+      useEffect(() => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+
+      const handleOpenBooking = (program = 'Recomposición Integral 90 Días') => {
+        setModalProgram(program);
+        setBookingForm(prev => ({ ...prev, goal: program }));
+        setBookingStep(1);
+        setBookingSuccess(false);
+        setIsModalOpen(true);
+      };
+
+      const handleLeadSubmit = (e) => {
+        e.preventDefault();
+        setLeadSuccess(true);
+        if (window.confetti) {
+          window.confetti({ particleCount: 80, spread: 70, origin: { y: 0.7 } });
+        }
+      };
+
+      const handleBookingSubmit = (e) => {
+        e.preventDefault();
+        setBookingSuccess(true);
+        if (window.confetti) {
+          window.confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+        }
+      };
+
+      return (
+        <div className="min-h-screen flex flex-col">
+          
+          {/* STICKY NAVBAR */}
+          <header className="fixed top-0 inset-x-0 z-50 px-4 py-3">
+            <div className="max-w-7xl mx-auto glass-nav rounded-2xl px-6 py-3 flex items-center justify-between shadow-sm">
+              <a href="#" className="flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-md">M</div>
+                <div className="flex flex-col">
+                  <span className="font-extrabold text-slate-900 tracking-tight text-lg">MARCOS <span className="text-emerald-600 font-medium text-sm">Nutrición</span></span>
+                  <span className="text-[10px] text-slate-500 font-medium flex items-center gap-1">📍 Madrid · Barrio de Salamanca</span>
+                </div>
+              </a>
+
+              <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+                <a href="#metodo" className="hover:text-emerald-600">El Método</a>
+                <a href="#programas" className="hover:text-emerald-600">Programas 90 Días</a>
+                <a href="#testimonios" className="hover:text-emerald-600">Casos Reales</a>
+                <a href="#guia-gratuita" className="hover:text-emerald-600">Guía PDF</a>
+                <a href="#faq" className="hover:text-emerald-600">Dudas Madrid</a>
+              </nav>
+
+              <button
+                onClick={() => handleOpenBooking()}
+                className="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-md"
+              >
+                <span>Agenda tu Valoración</span>
+              </button>
+            </div>
+          </header>
+
+          {/* HERO SECTION */}
+          <section className="pt-32 pb-20 px-4 sm:px-6 relative overflow-hidden">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs sm:text-sm font-bold border border-emerald-200">
+                <span>📍 Nutricionista en Madrid · Barrio de Salamanca (Presencial & Online)</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Transforma tu físico y tu energía <br />
+                <span className="bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-transparent">
+                  sin dietas extremas ni efecto rebote
+                </span>
+              </h1>
+
+              <h2 className="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal">
+                Programa clínico y deportivo personalizado en <strong>Madrid</strong>. Optimizamos tu composición corporal, salud digestiva y vitalidad con ciencia y adherencia real.
+              </h2>
+
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button
+                  onClick={() => handleOpenBooking()}
+                  className="w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg"
+                >
+                  Agenda tu Sesión de Valoración Gratuita
+                </button>
+                <a
+                  href="#guia-gratuita"
+                  className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-300 shadow-sm"
+                >
+                  Descarga Guía PDF Gratuita
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* SOCIAL PROOF BANNER & TESTIMONIALS */}
+          <section id="testimonios" className="py-16 bg-white border-y border-slate-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="bg-slate-900 text-white rounded-2xl p-8 mb-12 shadow-xl grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-emerald-400">+10.000</div>
+                  <div className="text-xs text-slate-300 mt-1">Comunidad activa en Madrid</div>
+                </div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-emerald-400">+1.200</div>
+                  <div className="text-xs text-slate-300 mt-1">Pacientes transformados</div>
+                </div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-emerald-400">98.4%</div>
+                  <div className="text-xs text-slate-300 mt-1">Sostenibilidad a 12 meses</div>
+                </div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-amber-400">4.9 / 5.0</div>
+                  <div className="text-xs text-slate-300 mt-1">Reseñas en Google Madrid</div>
+                </div>
+              </div>
+
+              <div className="text-center max-w-2xl mx-auto mb-10">
+                <h2 className="text-xs font-bold text-emerald-600 uppercase tracking-wider">Casos Reales Madrid</h2>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Testimonios de Pacientes</h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { name: 'Carlos Ruiz', role: 'Ejecutivo en Madrid', result: '-11kg grasa / +3kg músculo', text: 'Con Marcos aprendí a comer de acuerdo a mis horarios de oficina en Madrid. La bioimpedancia en consulta me motivó muchísimo.' },
+                  { name: 'Elena Gómez', role: 'Atleta de CrossFit', result: 'Cero hinchazón abdominal', text: 'Llegué con SIBO y problemas digestivos severos. El protocolo de nutrición antiinflamatoria en 8 semanas me devolvió la energía.' },
+                  { name: 'Javier Fernández', role: 'Opositor Policía', result: 'Superación de marcas físicas', text: 'Necesitaba rendir al máximo en las pruebas físicas sin perder músculo. La pauta peri-entreno en Madrid me dio la plaza.' }
+                ].map((item, idx) => (
+                  <div key={idx} className="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                      <div className="font-bold text-slate-900">{item.name}</div>
+                      <div className="text-xs text-slate-500">{item.role}</div>
+                      <div className="text-amber-400 text-sm my-2">★★★★★</div>
+                      <p className="text-xs sm:text-sm text-slate-700 italic">"{item.text}"</p>
+                    </div>
+                    <div className="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg inline-block">
+                      ✓ {item.result}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* BENTO GRID SERVICES */}
+          <section id="programas" className="py-20 bg-[#FAFAFA]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <span className="text-xs font-bold text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full uppercase">Programas Integrales</span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Nuestros Servicios de Alto Valor</h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="md:col-span-2 bg-slate-900 text-white rounded-3xl p-8 border border-slate-800 shadow-xl flex flex-col justify-between">
+                  <div>
+                    <span className="bg-emerald-600 text-xs font-bold px-3 py-1 rounded-full">PROGRAMA ESTRELLA</span>
+                    <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-3">Recomposición Integral de 90 Días</h3>
+                    <p className="text-sm text-slate-300 mt-2">Quema grasa y gana músculo con seguimiento continuo y bioimpedancia presencial en Madrid.</p>
+                  </div>
+                  <button onClick={() => handleOpenBooking('Recomposición Integral 90 Días')} className="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3 rounded-xl w-full sm:w-auto">
+                    Solicitar Plaza 90 Días
+                  </button>
+                </div>
+
+                <div className="bg-white rounded-3xl p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900">Alto Rendimiento Deportivo</h3>
+                    <p className="text-xs text-slate-600 mt-2">Suplementación con evidencia A-AIS y periodización para atletas en Madrid.</p>
+                  </div>
+                  <button onClick={() => handleOpenBooking('Alto Rendimiento Deportivo')} className="mt-4 bg-slate-100 hover:bg-slate-200 text-slate-900 text-xs font-bold py-2.5 rounded-xl">
+                    Agendar Valoración
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* LEAD MAGNET SECTION */}
+          <section id="guia-gratuita" className="py-20 bg-slate-900 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              <div>
+                <span className="text-xs font-bold text-emerald-400 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800">Recurso Gratuito PDF</span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">Guía Definitiva: Recomposición & Nutrición Antiinflamatoria</h2>
+                <p className="text-sm text-slate-300 mt-3">Descarga sin coste las 42 páginas con las claves para desinflamar el digestivo y transformar tu físico en Madrid.</p>
+              </div>
+
+              <div className="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl">
+                {leadSuccess ? (
+                  <div className="text-center py-6">
+                    <h3 className="text-xl font-bold text-slate-900">¡Guía enviada con éxito!</h3>
+                    <p className="text-xs text-slate-600 mt-2">Hemos registrado tu email. Puedes descargar el PDF de inmediato.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleLeadSubmit} className="space-y-4">
+                    <h3 className="text-xl font-bold">Descargar Guía en PDF</h3>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Tu nombre completo"
+                      value={leadForm.name}
+                      onChange={(e) => setLeadForm({ ...leadForm, name: e.target.value })}
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm"
+                    />
+                    <input
+                      type="email"
+                      required
+                      placeholder="Tu correo electrónico"
+                      value={leadForm.email}
+                      onChange={(e) => setLeadForm({ ...leadForm, email: e.target.value })}
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm"
+                    />
+                    <button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-md">
+                      Obtener Guía Gratuita Ahora
+                    </button>
+                  </form>
+                )}
+              </div>
+            </div>
+          </section>
+
+          {/* GEO FAQ ACCORDION */}
+          <section id="faq" className="py-20 bg-[#FAFAFA]">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6">
+              <h2 className="text-3xl font-extrabold text-center text-slate-900 mb-8">Preguntas Frecuentes Madrid</h2>
+              
+              <div className="space-y-3">
+                {[
+                  { id: '1', q: '¿Dónde está ubicada la consulta presencial en Madrid?', a: 'En Calle de Serrano 45, Barrio de Salamanca, Madrid (Metro Rubén Darío / Núñez de Balboa).' },
+                  { id: '2', q: '¿En qué consiste la valoración gratuita?', a: 'Una sesión de 20 minutos donde analizamos tus objetivos, estado actual e historial antes de proponerte un programa.' },
+                  { id: '3', q: '¿Puedo hacerlo 100% Online?', a: 'Sí, contamos con plataforma propia y seguimiento por WhatsApp con la misma efectividad.' }
+                ].map((item) => (
+                  <div key={item.id} className="bg-white rounded-2xl border border-slate-200 p-5">
+                    <button onClick={() => setOpenFaq(openFaq === item.id ? null : item.id)} className="w-full text-left font-bold text-slate-900 flex justify-between">
+                      <span>{item.q}</span>
+                      <span>{openFaq === item.id ? '−' : '+'}</span>
+                    </button>
+                    {openFaq === item.id && <p className="text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">{item.a}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* FOOTER */}
+          <footer className="bg-slate-950 text-white py-12 border-t border-slate-800 text-xs">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between gap-6">
+              <div>
+                <div className="font-extrabold text-base text-white">MARCOS Nutrición Madrid</div>
+                <div className="text-slate-400 mt-1">Calle Serrano 45 · Barrio de Salamanca · Madrid</div>
+              </div>
+              <div className="text-slate-400">© 2026 Marcos Nutrición. Colegiado N.º MAD-0842.</div>
+            </div>
+          </footer>
+
+          {/* BOOKING MODAL */}
+          {isModalOpen && (
+            <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+              <div className="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 max-w-lg w-full relative">
+                <button onClick={() => setIsModalOpen(false)} className="absolute top-4 right-4 text-slate-400 font-bold text-lg">✕</button>
+                {bookingSuccess ? (
+                  <div className="text-center py-6">
+                    <h3 className="text-2xl font-bold text-emerald-600">¡Reserva Solicitada!</h3>
+                    <p className="text-xs text-slate-600 mt-2">Te contactaremos en menos de 24h laborables para confirmar hora en Madrid.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleBookingSubmit} className="space-y-4">
+                    <h3 className="text-xl font-extrabold">Agendar Sesión de Valoración</h3>
+                    <p className="text-xs text-slate-500">Programa seleccionado: <strong>{bookingForm.goal}</strong></p>
+
+                    <input
+                      type="text"
+                      required
+                      placeholder="Nombre y Apellidos"
+                      value={bookingForm.name}
+                      onChange={(e) => setBookingForm({ ...bookingForm, name: e.target.value })}
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm"
+                    />
+                    <input
+                      type="tel"
+                      required
+                      placeholder="Teléfono / WhatsApp"
+                      value={bookingForm.phone}
+                      onChange={(e) => setBookingForm({ ...bookingForm, phone: e.target.value })}
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm"
+                    />
+                    <input
+                      type="email"
+                      required
+                      placeholder="Correo Electrónico"
+                      value={bookingForm.email}
+                      onChange={(e) => setBookingForm({ ...bookingForm, email: e.target.value })}
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm"
+                    />
+
+                    <button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-md">
+                      Confirmar Reserva Gratuita
+                    </button>
+                  </form>
+                )}
+              </div>
+            </div>
+          )}
+
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

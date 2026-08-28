@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { SocialProof } from './components/SocialProof';
+import { Methodology } from './components/Methodology';
+import { BentoServices } from './components/BentoServices';
+import { LeadMagnet } from './components/LeadMagnet';
+import { FAQAccordion } from './components/FAQAccordion';
+import { BookingModal } from './components/BookingModal';
+import { JsonLdSchema } from './components/JsonLdSchema';
+import { Footer } from './components/Footer';
+
+export const App: React.FC = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [selectedProgram, setSelectedProgram] = useState<string | undefined>(undefined);
+
+  const handleOpenBooking = (programTitle?: string) => {
+    setSelectedProgram(programTitle);
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseBooking = () => {
+    setIsBookingModalOpen(false);
+    setSelectedProgram(undefined);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#FAFAFA] text-slate-900 flex flex-col font-sans selection:bg-emerald-500 selection:text-white">
+      {/* Schema Markup for SEO / GEO Local Business & Person */}
+      <JsonLdSchema />
+
+      {/* Floating Glassmorphism Sticky Navbar */}
+      <Navbar onOpenBooking={() => handleOpenBooking()} />
+
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <div id="hero">
+          <Hero onOpenBooking={() => handleOpenBooking()} />
+        </div>
+
+        {/* Immediate Social Proof & Testimonials */}
+        <SocialProof />
+
+        {/* 4-Step Methodology */}
+        <Methodology />
+
+        {/* Bento Grid of High Value Programs */}
+        <BentoServices onSelectProgram={(title) => handleOpenBooking(title)} />
+
+        {/* High Contrast Lead Capture Magnet (PDF Download) */}
+        <LeadMagnet />
+
+        {/* GEO Optimized FAQ Accordion */}
+        <FAQAccordion />
+      </main>
+
+      {/* Localized Footer */}
+      <Footer onOpenBooking={() => handleOpenBooking()} />
+
+      {/* Multi-step Valuation Booking Modal */}
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={handleCloseBooking}
+        preselectedProgram={selectedProgram}
+      />
+    </div>
+  );
+};
+
+export default App;
