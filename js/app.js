@@ -1,6 +1,143 @@
 /**
  * Vanilla JavaScript application logic for Nutrición Marcos Madrid (html-css branch)
+ * Includes Instagram profile integration (@marcostsd.rehab) & post transcription reader.
  */
+
+const INSTAGRAM_URL = "https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl";
+
+const instagramPostsData = [
+  {
+    id: "post-1",
+    title: "La Clave de la Recuperación & Potenciación Muscular sin Inflamación Crónica",
+    category: "Recuperación & Fuerza",
+    badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
+    date: "Publicado en @marcostsd.rehab",
+    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+    instagramUrl: INSTAGRAM_URL,
+    summary: "Transcribimos y ampliamos el análisis de Marcos (TSD) sobre cómo acelerar la regeneración tisular entre sesiones de entrenamiento combinando periodización proteica y modulación del estrés.",
+    fullContent: `
+      <h3>1. El Mito del Sobrenentrenamiento vs. Bajo Descanso Nutricional</h3>
+      <p>Muchos deportistas en Madrid atribuyen el dolor articular persistente o la falta de fuerza al "sobreentrenamiento". En el 80% de los casos evaluados en consulta, el problema real es una falta de potencia sustratal: no se aportan la leucina ni los micronutrientes cofactores necesarios para la síntesis de colágeno durante la ventana de reparación nocturna.</p>
+      
+      <h3>2. Protocolo de Potenciación Nutricional (Método Marcos TSD)</h3>
+      <ul>
+        <li><strong>Peri-entreno estructurado:</strong> Ingesta de 0.4g/kg de proteína de alto valor biológico junto a carbohidratos de bajo índice glucémico pre-sesión para preservar el glucógeno muscular.</li>
+        <li><strong>Modulación Antiinflamatoria:</strong> Ratio Omega 3/6 optimizado mediante alimentos reales (pescado azul, nueces, semillas) reduciendo el dolor articular tardío (DOMS).</li>
+        <li><strong>Hidratación e Ionización:</strong> Reposición de sodio y magnesio ajustados al nivel de sudoración en entrenamientos intensos.</li>
+      </ul>
+
+      <p class="mt-4 italic bg-emerald-50 p-4 rounded-xl text-emerald-900 border border-emerald-200">
+        💡 <strong>Conclusión Marcos TSD:</strong> "La masa muscular no se destruye en el gimnasio, se reconstruye en el plato. Ajusta tus macros a la exigencia de tus entrenamientos."
+      </p>
+    `
+  },
+  {
+    id: "post-2",
+    title: "Recomposición Corporal de 90 Días: Por qué las Dietas de 1200 kcal Destruyen tu Metabolismo",
+    category: "Recomposición Corporal",
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    date: "Publicado en @marcostsd.rehab",
+    image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80",
+    instagramUrl: INSTAGRAM_URL,
+    summary: "Explicación detallada de por qué el déficit calórico agresivo provoca pérdida de masa magra, ralentización tiroidea y efecto rebote rápido al volver a comer normal.",
+    fullContent: `
+      <h3>1. La trampa del peso balanza vs. Composición Corporal</h3>
+      <p>Cuando reduces drásticamente las calorías sin una pauta adaptada, el peso que pierdes en las primeras semanas es principalmente agua, glucógeno y proteína muscular. Al disminuir la masa magra, tu gasto calórico en reposo cae drásticamente.</p>
+
+      <h3>2. La Estrategia de Recomposición en 90 Días</h3>
+      <p>En el programa de Marcos TSD aplicamos un déficit leve o neutro calórico (Cycling Calórico) enfocado en:</p>
+      <ul>
+        <li>Aumentar la densidad nutricional sin reducir el volumen del plato.</li>
+        <li>Mantener la tasa metabólica activa mediante estímulo de fuerza y aporte proteico óptimo (1.8g - 2.2g / kg).</li>
+        <li>Medición de grasa visceral y masa magra mediante bioimpedancia médica mensual en Madrid.</li>
+      </ul>
+
+      <p class="mt-4 italic bg-emerald-50 p-4 rounded-xl text-emerald-900 border border-emerald-200">
+        💡 <strong>Conclusión Marcos TSD:</strong> "El objetivo no es comer menos, es enseñarle a tu organismo a usar la grasa acumulada como combustible sin sacrificar tu musculatura."
+      </p>
+    `
+  },
+  {
+    id: "post-3",
+    title: "Salud Digestiva & SIBO: Protocolo Antiinflamatorio en 3 Fases Clínicas",
+    category: "Salud Digestiva",
+    badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
+    date: "Publicado en @marcostsd.rehab",
+    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    instagramUrl: INSTAGRAM_URL,
+    summary: "Cómo abordar la hinchazón permanente, gases molestos y disbiosis intestinal mediante el protocolo por fases de nutrición clínica de Marcos TSD.",
+    fullContent: `
+      <h3>1. ¿Por qué estás hinchado/a todas las tardes?</h3>
+      <p>La inflamación intestinal recurrente suele ser síntoma de sobrecrecimiento bacteriano (SIBO), falta de ácido clorhídrico estomacal o alteración del Complejo Motor Migratorio (CMM). Comer a deshoras o alimentos ultraprocesados agrava el problema.</p>
+
+      <h3>2. Protocolo Clínico de 3 Fases</h3>
+      <ol>
+        <li><strong>Fase 1: Eliminación Estructurada (Low FODMAP):</strong> Retirada temporal de carbohidratos fermentables que alimentan a las bacterias desplazadas.</li>
+        <li><strong>Fase 2: Reparación Intestinal:</strong> Aporte de glutamina, zinc carnosina y polifenoles para restaurar las uniones estrechas del epitelio digestivo.</li>
+        <li><strong>Fase 3: Reintroducción & Tolerancia:</strong> Probamos uno a uno los grupos de alimentos para devolverte la libertad de comer en cualquier restaurante de Madrid sin hinchazón.</li>
+      </ol>
+    `
+  },
+  {
+    id: "post-4",
+    title: "Ayuno Intermitente vs. Adherencia Real: Mito vs. Realidad Científica",
+    category: "Mitos & Evidencia",
+    badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
+    date: "Publicado en @marcostsd.rehab",
+    image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80",
+    instagramUrl: INSTAGRAM_URL,
+    summary: "El ayuno no es mágico por sí solo: desglosamos cuándo ayuda a regular la insulina y cuándo destruye la recuperación en deportistas de alto rendimiento.",
+    fullContent: `
+      <h3>1. ¿Sirve el ayuno intermitente 16/8 para perder grasa?</h3>
+      <p>El ayuno 16/8 es simplemente una herramienta para controlar la ventana de ingesta. Si dentro de las 8 horas de comida consumes más calorías de las que gastas, no perderás grasa. Sin embargo, en personas con resistencia a la insulina o mala sensibilidad matutina a los carbohidratos, resulta extremadamente útil.</p>
+
+      <h3>2. Cuándo NO hacer Ayuno Intermitente</h3>
+      <p>Si entrenas fuerza a primera hora de la mañana con cargas elevadas o si sufres de ansiedad por la comida en las horas previas a acostarte, forzar el ayuno aumentará los niveles de cortisol y el catabolismo muscular.</p>
+    `
+  },
+  {
+    id: "post-5",
+    title: "Nutrición y Recuperación de Lesiones Musculares y Articulares",
+    category: "Rehabilitación TSD",
+    badgeColor: "bg-rose-100 text-rose-800 border-rose-200",
+    date: "Publicado en @marcostsd.rehab",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+    instagramUrl: INSTAGRAM_URL,
+    summary: "Nutrientes específicos y suplementación clínica para recortar semanas en la cicatrización de tendones, ligamentos y roturas fibrilares.",
+    fullContent: `
+      <h3>1. Nutrición durante la Fase Inmovilizada o de Baja Carga</h3>
+      <p>Tras una lesión deportiva, el error común es reducir drásticamente las calorías por miedo a engordar. Sin embargo, el proceso de cicatrización tisular eleva la tasa metabólica en reposo entre un 15% y un 50%.</p>
+
+      <h3>2. Los 4 Pilares de la Remodelación del Tejido</h3>
+      <ul>
+        <li><strong>Proteína Elevada (2.0g-2.5g/kg):</strong> Crucial para prevenir la atrofia muscular inducida por desuso.</li>
+        <li><strong>Péptidos de Colágeno + Vitamina C:</strong> Consumidos 45 minutos antes de la fisioterapia o carga mecánica para dirigir la síntesis de colágeno al tendón dañado.</li>
+        <li><strong>Omega 3 de Alta Pureza (EPA/DHA):</strong> Modula la fase de inflamación aguda sin frenar el proceso fisiológico de reparación.</li>
+        <li><strong>Creatina Monohidrato (5g/día):</strong> Mantiene la hidratación celular muscular durante el periodo de inactividad.</li>
+      </ul>
+    `
+  },
+  {
+    id: "post-6",
+    title: "Cómo Estructurar tu Plato Nutricional en Madrid sin Medir al Gramo",
+    category: "Estilo de Vida",
+    badgeColor: "bg-blue-100 text-blue-800 border-blue-200",
+    date: "Publicado en @marcostsd.rehab",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    instagramUrl: INSTAGRAM_URL,
+    summary: "El método visual de porciones para comer fuera en menús del día o cenas de empresa manteniendo la recomposición corporal.",
+    fullContent: `
+      <h3>1. El Método Visual Marcos TSD para Comer Fuera</h3>
+      <p>No necesitas llevar una báscula a un restaurante en Madrid. Usamos referencias anatómicas de tu propia mano:</p>
+      <ul>
+        <li><strong>Proteínas:</strong> 1 o 2 palmas completas de la mano (carne magra, pescado, huevos, tofu).</li>
+        <li><strong>Verduras y Hortalizas:</strong> 2 puños cerrados de vegetales variados.</li>
+        <li><strong>Carbohidratos Complejos:</strong> 1 ahuecado de la mano (patata, arroz, legumbres, quinoa).</li>
+        <li><strong>Grasas Saludables:</strong> 1 falange del pulgar (aceite de oliva virgen extra, frutos secos, aguacate).</li>
+      </ul>
+    `
+  }
+];
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Lucide Icons
@@ -8,7 +145,88 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // 2. Mobile Menu Toggle
+  // 2. Render Instagram Transcribed Posts Grid if Container Exists
+  const instagramGridContainer = document.getElementById('instagramPostsGrid');
+  if (instagramGridContainer) {
+    instagramGridContainer.innerHTML = instagramPostsData.map(post => `
+      <article class="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm instagram-card-hover flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 overflow-hidden group">
+            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-3 left-3">
+              <span class="text-[11px] font-bold px-3 py-1 rounded-full border ${post.badgeColor}">
+                ${post.category}
+              </span>
+            </div>
+            <a href="${post.instagramUrl}" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 text-white flex items-center justify-center hover:bg-pink-600 transition-colors shadow-lg" title="Ver en Instagram @marcostsd.rehab">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="p-6">
+            <div class="text-[11px] text-slate-400 font-semibold mb-2 flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5 text-pink-500"></i>
+              <span>${post.date}</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 leading-snug hover:text-emerald-600 transition-colors cursor-pointer read-post-btn" data-post-id="${post.id}">
+              ${post.title}
+            </h3>
+
+            <p class="text-xs text-slate-600 mt-2.5 leading-relaxed line-clamp-3">
+              ${post.summary}
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 pb-6 pt-0 flex items-center justify-between gap-2 border-t border-slate-100 mt-4">
+          <button class="read-post-btn text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 cursor-pointer pt-4" data-post-id="${post.id}">
+            <span>Leer post ampliado</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+
+          <a href="${post.instagramUrl}" target="_blank" rel="noopener noreferrer" class="pt-4 text-xs font-semibold text-slate-500 hover:text-pink-600 flex items-center gap-1">
+            <span>Ver Instagram ↗</span>
+          </a>
+        </div>
+      </article>
+    `).join('');
+
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  }
+
+  // 3. Post Modal Reader
+  const postModal = document.getElementById('postReaderModal');
+  const closePostModalBtn = document.getElementById('closePostModal');
+  const postModalTitle = document.getElementById('postModalTitle');
+  const postModalCategory = document.getElementById('postModalCategory');
+  const postModalContent = document.getElementById('postModalContent');
+  const postModalIgLink = document.getElementById('postModalIgLink');
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.read-post-btn');
+    if (btn) {
+      const postId = btn.getAttribute('data-post-id');
+      const post = instagramPostsData.find(p => p.id === postId);
+      if (post && postModal) {
+        if (postModalTitle) postModalTitle.textContent = post.title;
+        if (postModalCategory) postModalCategory.textContent = post.category;
+        if (postModalContent) postModalContent.innerHTML = post.fullContent;
+        if (postModalIgLink) postModalIgLink.href = post.instagramUrl;
+        postModal.classList.remove('hidden');
+      }
+    }
+  });
+
+  if (closePostModalBtn && postModal) {
+    closePostModalBtn.addEventListener('click', () => {
+      postModal.classList.add('hidden');
+    });
+  }
+
+  // 4. Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
 
@@ -17,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.classList.toggle('hidden');
     });
 
-    // Close drawer when clicking any link inside
     const drawerLinks = mobileDrawer.querySelectorAll('a, button');
     drawerLinks.forEach((link) => {
       link.addEventListener('click', () => {
@@ -26,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. FAQ Accordion Toggle
+  // 5. FAQ Accordion Toggle
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach((item) => {
     const btn = item.querySelector('.faq-button');
@@ -37,7 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         const isOpen = !content.classList.contains('hidden');
 
-        // Close all other FAQs
         document.querySelectorAll('.faq-answer').forEach((el) => el.classList.add('hidden'));
         document.querySelectorAll('.faq-icon').forEach((el) => el.classList.remove('rotate-180'));
 
@@ -49,12 +265,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Booking Modal System
+  // 6. Booking Modal System
   const bookingModal = document.getElementById('bookingModal');
   const closeModalBtns = document.querySelectorAll('.close-booking-modal');
   const openModalBtns = document.querySelectorAll('.open-booking-modal');
 
-  // Step containers inside modal
   const step1 = document.getElementById('bookingStep1');
   const step2 = document.getElementById('bookingStep2');
   const step3 = document.getElementById('bookingStep3');
@@ -66,12 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnStep3Back = document.getElementById('btnStep3Back');
   const bookingForm = document.getElementById('bookingForm');
 
-  // Goal options buttons in Step 1
   const goalOptionBtns = document.querySelectorAll('.goal-option-btn');
   let selectedGoal = 'Recomposición Corporal de 90 Días';
   let selectedModality = 'presencial';
 
-  // Pre-select program logic
   openModalBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       const programTitle = btn.getAttribute('data-program');
@@ -91,7 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Goal Select handler
   goalOptionBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       goalOptionBtns.forEach((b) => {
@@ -106,7 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Modality Selector
   const modalityBtns = document.querySelectorAll('.modality-btn');
   modalityBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -120,7 +331,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Step Navigation
   if (btnStep1Next) {
     btnStep1Next.addEventListener('click', () => {
       if (step1 && step2) {
@@ -161,7 +371,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Booking Form Submission
   if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -189,7 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
         stepSuccess.classList.remove('hidden');
       }
 
-      // Trigger Confetti
       if (window.confetti) {
         window.confetti({
           particleCount: 100,
@@ -222,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Lead Magnet Form Handler
+  // 7. Lead Magnet Form Handler
   const leadMagnetForm = document.getElementById('leadMagnetForm');
   const leadMagnetSuccess = document.getElementById('leadMagnetSuccess');
 
@@ -257,7 +465,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Storage helper for contacts
   function saveLeadToStorage(data) {
     try {
       const leads = JSON.parse(localStorage.getItem('nutricion_leads') || '[]');
