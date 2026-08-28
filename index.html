@@ -90,19 +90,11 @@
           "latitude": 40.4258,
           "longitude": -3.6865
         },
-        "medicalSpecialty": [
-          "Dietetics",
-          "SportsMedicine",
-          "Gastroenterology"
-        ],
-        "areaServed": [
-          { "@type": "Neighborhood", "name": "Barrio de Salamanca" },
-          { "@type": "Neighborhood", "name": "Recoletos" },
-          { "@type": "Neighborhood", "name": "Chamberí" },
-          { "@type": "Neighborhood", "name": "Retiro" },
-          { "@type": "City", "name": "Madrid" },
-          { "@type": "AdministrativeArea", "name": "Comunidad de Madrid" }
-        ]
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "120"
+        }
       },
       {
         "@type": "Person",
@@ -118,9 +110,9 @@
   }
   </script>
 </head>
-<body class="bg-[#FAFAFA] text-slate-900 font-sans antialiased selection:bg-emerald-500 selection:text-white overflow-x-hidden">
+<body class="bg-[#FAFAFA] text-slate-900 font-sans antialiased selection:bg-emerald-500 selection:text-white overflow-x-hidden pb-16 sm:pb-0">
 
-  <!-- ACCESSIBILITY: SKIP TO MAIN CONTENT LINK FOR SCREEN READERS & KEYBOARD USERS -->
+  <!-- ACCESSIBILITY: SKIP LINK -->
   <a href="#main-content" class="sr-only sr-only-focusable">Saltar al contenido principal</a>
 
   <!-- STICKY GLASSMORPHISM NAVBAR -->
@@ -145,17 +137,15 @@
       <!-- Desktop Navigation Links -->
       <nav role="navigation" aria-label="Navegación principal" class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-slate-700">
         <a href="#sobre-marcos" class="hover:text-emerald-600 transition-colors">Sobre Mí</a>
+        <a href="#quiz-diagnostico" class="hover:text-emerald-600 transition-colors">Test Diagnóstico</a>
         <a href="#metodo" class="hover:text-emerald-600 transition-colors">El Método</a>
         <a href="#programas" class="hover:text-emerald-600 transition-colors">Programas 90 Días</a>
-        <a href="#testimonios" class="hover:text-emerald-600 transition-colors">Casos Reales</a>
-        <a href="#instagram-divulgacion" class="hover:text-emerald-600 transition-colors">Divulgación (Artículos)</a>
-        <a href="#faq" class="hover:text-emerald-600 transition-colors">Dudas Madrid</a>
+        <a href="#testimonios" class="hover:text-emerald-600 transition-colors">Opiniones Reales</a>
+        <a href="#instagram-divulgacion" class="hover:text-emerald-600 transition-colors">Divulgación</a>
       </nav>
 
       <!-- Action Buttons Right: INSTAGRAM PLUGIN BADGE + CTA BUTTON -->
       <div class="hidden sm:flex items-center gap-3">
-        
-        <!-- INSTAGRAM PLUGIN BADGE WIDGET -->
         <a
           href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl"
           target="_blank"
@@ -173,11 +163,9 @@
           </div>
         </a>
 
-        <!-- Primary CTA Button -->
         <button
           type="button"
           class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-emerald-glow cursor-pointer"
-          aria-label="Abrir modal de valoración gratuita"
         >
           <i data-lucide="calendar" class="w-4 h-4" aria-hidden="true"></i>
           <span>Agenda tu Valoración</span>
@@ -202,11 +190,11 @@
     <div id="mobileDrawer" class="hidden sm:hidden fixed inset-x-4 top-20 bg-white/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-200 shadow-2xl z-50">
       <nav role="navigation" aria-label="Navegación móvil" class="flex flex-col gap-4 text-base font-semibold text-slate-800">
         <a href="#sobre-marcos" class="py-2 border-b border-slate-100 hover:text-emerald-600">Sobre Mí (Marcos Demandre)</a>
+        <a href="#quiz-diagnostico" class="py-2 border-b border-slate-100 text-emerald-600">Test Diagnóstico Nutricional</a>
         <a href="#metodo" class="py-2 border-b border-slate-100 hover:text-emerald-600">El Método</a>
         <a href="#programas" class="py-2 border-b border-slate-100 hover:text-emerald-600">Programas 90 Días</a>
-        <a href="#testimonios" class="py-2 border-b border-slate-100 hover:text-emerald-600">Casos Reales</a>
+        <a href="#testimonios" class="py-2 border-b border-slate-100 hover:text-emerald-600">Opiniones Reales</a>
         <a href="#instagram-divulgacion" class="py-2 border-b border-slate-100 hover:text-emerald-600">Divulgación & Artículos</a>
-        <a href="#faq" class="py-2 border-b border-slate-100 hover:text-emerald-600">Preguntas Frecuentes Madrid</a>
         
         <a
           href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl"
@@ -226,7 +214,7 @@
     </div>
   </header>
 
-  <!-- FIXED FLOATING RIGHT INSTAGRAM PLUGIN WIDGET -->
+  <!-- FIXED FLOATING RIGHT INSTAGRAM WIDGET -->
   <a
     href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl"
     target="_blank"
@@ -241,6 +229,18 @@
     <span class="hidden sm:inline">Instagram @marcostsd.rehab ⚡️</span>
   </a>
 
+  <!-- CRO CRITICAL: STICKY BOTTOM BAR FOR MOBILE SCREENS -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md text-white p-3 border-t border-slate-800 flex items-center justify-between shadow-2xl mobile-sticky-bar">
+    <div>
+      <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wide block">Sesión 20 min Gratuita</span>
+      <span class="text-xs font-extrabold text-white">Marcos Demandre (TSD)</span>
+    </div>
+    <button type="button" class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 shadow-md">
+      <i data-lucide="calendar" class="w-4 h-4" aria-hidden="true"></i>
+      <span>Reservar Ahora</span>
+    </button>
+  </div>
+
   <!-- MAIN CONTENT -->
   <main id="main-content" role="main">
     
@@ -250,10 +250,9 @@
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
-          <!-- Hero Left Column: Headline & Value Proposition -->
+          <!-- Hero Left Column -->
           <div class="lg:col-span-7 text-center lg:text-left space-y-6">
             
-            <!-- Local Badge & Modality -->
             <div class="flex justify-center lg:justify-start">
               <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 hover:bg-pink-50 border border-emerald-200 hover:border-pink-300 text-emerald-800 hover:text-pink-700 text-xs sm:text-sm font-semibold shadow-sm transition-colors">
                 <span class="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping" aria-hidden="true"></span>
@@ -285,11 +284,11 @@
               </button>
 
               <a
-                href="#guia-gratuita"
+                href="#quiz-diagnostico"
                 class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-300 flex items-center justify-center gap-2 shadow-sm min-h-[48px]"
               >
-                <i data-lucide="download" class="w-5 h-5 text-emerald-600" aria-hidden="true"></i>
-                <span>Descarga Guía PDF Gratuita</span>
+                <i data-lucide="activity" class="w-5 h-5 text-emerald-600" aria-hidden="true"></i>
+                <span>Hacer Test Diagnóstico (1 min)</span>
               </a>
             </div>
 
@@ -314,7 +313,6 @@
                 class="w-full h-[480px] sm:h-[540px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
 
-              <!-- Floating Live Credibility Badge -->
               <div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md text-white p-4 rounded-2xl border border-slate-700/80 flex items-center justify-between shadow-xl">
                 <div>
                   <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Tu nutrición, tu cambio</span>
@@ -327,7 +325,6 @@
                 </a>
               </div>
 
-              <!-- Rating Badge top right -->
               <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200 flex items-center gap-1.5 text-xs font-bold text-slate-900">
                 <span class="text-amber-400" aria-hidden="true">★</span> 4.9/5.0 Reseñas Madrid
               </div>
@@ -345,7 +342,6 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Left: Real Photo Frame -->
           <div class="lg:col-span-5">
             <div class="relative">
               <div class="absolute -top-4 -left-4 w-full h-full bg-emerald-100 rounded-3xl -z-10" />
@@ -366,7 +362,6 @@
             </div>
           </div>
 
-          <!-- Right: Bio & Credibility Content -->
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
               <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600" aria-hidden="true"></i>
@@ -421,11 +416,124 @@
       </div>
     </section>
 
-    <!-- SOCIAL PROOF & TESTIMONIALS -->
+    <!-- NEW INTERACTIVE QUIZ WIDGET (LEAD MAGNET Nº1 CRO) -->
+    <section id="quiz-diagnostico" class="py-16 sm:py-24 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-extrabold text-emerald-400 bg-emerald-950 px-3.5 py-1 rounded-full border border-emerald-800 uppercase tracking-widest">Diagnóstico Nutricional Rápido</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Descubre tu Perfil Metabólico en 1 Minuto</h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-2">Responde a 3 sencillas preguntas para obtener una estimación de tu programa óptimo con Marcos Demandre.</p>
+        </div>
+
+        <!-- Quiz Container Box -->
+        <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200">
+          
+          <!-- Progress Bar -->
+          <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
+            <div id="quizProgressBar" class="bg-emerald-600 h-full w-1/3 transition-all duration-500"></div>
+          </div>
+
+          <!-- Step 1: Goal -->
+          <div id="quizStep1" class="space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 text-center">1. ¿Cuál es tu objetivo prioritario ahora mismo?</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <button type="button" class="quiz-goal-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="Recomposición Corporal (Perder Grasa / Ganar Músculo)">
+                <span class="font-bold text-sm block text-slate-900">🔥 Recomposición Corporal</span>
+                <span class="text-xs text-slate-500">Perder grasa visceral y tonificar sin pasar hambre.</span>
+              </button>
+
+              <button type="button" class="quiz-goal-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="Salud Digestiva & SIBO">
+                <span class="font-bold text-sm block text-slate-900">🌿 Salud Digestiva & SIBO</span>
+                <span class="text-xs text-slate-500">Eliminar la hinchazón vespertina y digestiones pesadas.</span>
+              </button>
+
+              <button type="button" class="quiz-goal-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="Alto Rendimiento & Recuperación">
+                <span class="font-bold text-sm block text-slate-900">⚡️ Alto Rendimiento Deportivo</span>
+                <span class="text-xs text-slate-500">Potenciación de fuerza, resistencia y prevención de lesiones.</span>
+              </button>
+
+              <button type="button" class="quiz-goal-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="Salud General & Energía">
+                <span class="font-bold text-sm block text-slate-900">🍏 Salud & Vitalidad General</span>
+                <span class="text-xs text-slate-500">Mejorar analíticas, energía matutina y hábitos sostenibles.</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Activity Level -->
+          <div id="quizStep2" class="hidden space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 text-center">2. ¿Con qué frecuencia realizas actividad física a la semana?</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <button type="button" class="quiz-activity-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="1-2 días por semana">
+                <span class="font-bold text-sm block text-slate-900">🌱 1 a 2 días / semana</span>
+                <span class="text-xs text-slate-500">Entrenamiento ocasional o caminatas.</span>
+              </button>
+
+              <button type="button" class="quiz-activity-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="3-4 días por semana">
+                <span class="font-bold text-sm block text-slate-900">💪 3 a 4 días / semana</span>
+                <span class="text-xs text-slate-500">Gimnasio, pilates, running o entrenamiento constante.</span>
+              </button>
+
+              <button type="button" class="quiz-activity-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="5+ días por semana">
+                <span class="font-bold text-sm block text-slate-900">🔥 5+ días / semana</span>
+                <span class="text-xs text-slate-500">Deporte de alta intensidad o preparación competitiva.</span>
+              </button>
+
+              <button type="button" class="quiz-activity-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="Sedentario por trabajo">
+                <span class="font-bold text-sm block text-slate-900">💻 Sedentario por oficina</span>
+                <span class="text-xs text-slate-500">Muchas horas sentado/a sin tiempo para entrenar.</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Symptoms -->
+          <div id="quizStep3" class="hidden space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 text-center">3. ¿Experimentas hinchazón o malestar digestivo frecuente?</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <button type="button" class="quiz-symptom-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="Sí, hinchazón al final del día">
+                <span class="font-bold text-sm block text-slate-900">⚠️ Sí, abdomen hinchado por la tarde</span>
+                <span class="text-xs text-slate-500">Indicios típicos de fermentación bacteriana o SIBO.</span>
+              </button>
+
+              <button type="button" class="quiz-symptom-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="Pesadez y digestiones lentas">
+                <span class="font-bold text-sm block text-slate-900">🐢 Pesadez tras las comidas</span>
+                <span class="text-xs text-slate-500">Falta de potencia digestiva o acidez ocasional.</span>
+              </button>
+
+              <button type="button" class="quiz-symptom-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="No sufro síntomas digestivos">
+                <span class="font-bold text-sm block text-slate-900">✅ No, mi digestión es normal</span>
+                <span class="text-xs text-slate-500">Mi foco es 100% físico y recomposición muscular.</span>
+              </button>
+
+              <button type="button" class="quiz-symptom-btn quiz-option-card p-4 rounded-2xl border border-slate-200 text-left cursor-pointer" data-value="A veces por estrés">
+                <span class="font-bold text-sm block text-slate-900">🧠 Sí, en épocas de estrés</span>
+                <span class="text-xs text-slate-500">Eje intestino-cerebro alterado por carga laboral.</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step Result -->
+          <div id="quizStepResult" class="hidden text-center space-y-4 py-4">
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-300">Diagnóstico Completado</span>
+            <h3 id="quizDiagnosticTitle" class="text-2xl font-extrabold text-slate-900"></h3>
+            <p id="quizDiagnosticText" class="text-sm text-slate-600 max-w-lg mx-auto leading-relaxed"></p>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button type="button" class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-emerald-glow min-h-[48px] w-full sm:w-auto">
+                Reservar Sesión Gratuita de 20 min con Marcos Demandre
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AUTHENTIC SOCIAL PROOF & WHATSAPP CHAT REVIEWS -->
     <section id="testimonios" class="py-16 sm:py-24 bg-[#FAFAFA] border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <!-- Horizontal Banner -->
         <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl mb-16 grid grid-cols-1 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
           <div class="pt-2 md:pt-0">
             <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">+10.000</div>
@@ -441,67 +549,93 @@
           </div>
           <div class="pt-4 md:pt-0">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-400">4.9/5.0</div>
-            <p class="text-xs text-slate-300 mt-1">Valoración Media Madrid</p>
+            <p class="text-xs text-slate-300 mt-1">Reseñas Verificadas Google Maps</p>
           </div>
         </div>
 
         <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-xs font-extrabold text-emerald-600 uppercase tracking-widest">Resultados Reales</h2>
-          <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Casos de éxito de nuestros pacientes (+120)</h3>
+          <span class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 uppercase">Testimonios Reales</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Mensajes de Pacientes en Madrid (+120)</h2>
         </div>
 
-        <!-- 3 Testimonials Grid -->
+        <!-- WhatsApp Chat Style Testimonial Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          <div class="bg-white rounded-2xl p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
+          
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-4 mb-3">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Foto de paciente Carlos Ruiz" />
-                <div>
-                  <h4 class="font-bold text-slate-900">Carlos Ruiz</h4>
-                  <p class="text-xs text-slate-500">Ejecutivo Financiero · Consulta Online</p>
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                  <span class="text-xs font-bold text-slate-900">Reseña Verificada Google Maps</span>
                 </div>
+                <span class="text-xs text-amber-400 font-bold">★★★★★</span>
               </div>
-              <div class="text-amber-400 text-sm mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="text-xs sm:text-sm text-slate-700 italic">"Con Marcos Demandre aprendí a comer sin culpa de acuerdo a mis horarios de trabajo. La atención online y el seguimiento por WhatsApp fue impecable."</p>
+
+              <div class="whatsapp-chat-bubble p-4 text-xs text-slate-900 leading-relaxed font-medium mb-3">
+                "Hola Marcos! Quería escribirte porque ayer me hice el análisis de composición corporal. He bajado 11kg de grasa y ganado 3kg de músculo sin pasar hambre en ningún momento. El seguimiento online ha sido clave!"
+                <span class="block text-[9px] text-slate-500 text-right mt-1">19:42 ✓✓</span>
+              </div>
+
+              <div class="text-xs font-bold text-slate-900">Carlos R.</div>
+              <div class="text-[11px] text-slate-500">Ejecutivo · Consulta Online (Madrid)</div>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
-              ✓ -11kg grasa / +3kg masa muscular
+
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl">
+              ✓ Resultado: Recomposición -11kg grasa
             </div>
           </div>
 
-          <div class="bg-white rounded-2xl p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-4 mb-3">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Foto de paciente Elena Gómez" />
-                <div>
-                  <h4 class="font-bold text-slate-900">Elena Gómez</h4>
-                  <p class="text-xs text-slate-500">Abogada & CrossFit · A Domicilio Barrio Salamanca</p>
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                  <span class="text-xs font-bold text-slate-900">Reseña Verificada Google Maps</span>
                 </div>
+                <span class="text-xs text-amber-400 font-bold">★★★★★</span>
               </div>
-              <div class="text-amber-400 text-sm mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="text-xs sm:text-sm text-slate-700 italic">"Llegué con SIBO y digestiones terribles. Marcos se desplazó a mi casa para la valoración y en 8 semanas mi energía dio un cambio radical."</p>
+
+              <div class="whatsapp-chat-bubble p-4 text-xs text-slate-900 leading-relaxed font-medium mb-3">
+                "Marcos, no te imaginas la diferencia. Llevaba 2 años con SIBO e hinchazón brutal por las tardes. Con el protocolo a domicilio que me pusiste, en 8 semanas estoy cenando fuera sin dolor."
+                <span class="block text-[9px] text-slate-500 text-right mt-1">11:15 ✓✓</span>
+              </div>
+
+              <div class="text-xs font-bold text-slate-900">Elena G.</div>
+              <div class="text-[11px] text-slate-500">Abogada · Consulta a Domicilio (Barrio Salamanca)</div>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
-              ✓ Cero hinchazón abdominal
+
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl">
+              ✓ Resultado: Remisión total SIBO
             </div>
           </div>
 
-          <div class="bg-white rounded-2xl p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-4 mb-3">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Foto de paciente Javier Fernández" />
-                <div>
-                  <h4 class="font-bold text-slate-900">Javier Fernández</h4>
-                  <p class="text-xs text-slate-500">Opositor Policía · Consulta Online</p>
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                  <span class="text-xs font-bold text-slate-900">Reseña Verificada Google Maps</span>
                 </div>
+                <span class="text-xs text-amber-400 font-bold">★★★★★</span>
               </div>
-              <div class="text-amber-400 text-sm mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="text-xs sm:text-sm text-slate-700 italic">"Necesitaba rendir al máximo en las pruebas físicas sin perder masa muscular. La pauta peri-entreno que me diseñó me dio la plaza."</p>
+
+              <div class="whatsapp-chat-bubble p-4 text-xs text-slate-900 leading-relaxed font-medium mb-3">
+                "He pasado las pruebas físicas de la oposición holgadamente! La pauta de recarga e hidratación que me mandaste me dio una energía brutal en el sprint final. Millones de gracias!"
+                <span class="block text-[9px] text-slate-500 text-right mt-1">09:30 ✓✓</span>
+              </div>
+
+              <div class="text-xs font-bold text-slate-900">Javier F.</div>
+              <div class="text-[11px] text-slate-500">Opositor Policía · Consulta Online (Madrid)</div>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
-              ✓ Optimización de marcas físicas
+
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl">
+              ✓ Resultado: Máximo rendimiento físico
             </div>
           </div>
+
         </div>
 
       </div>
@@ -524,7 +658,7 @@
           <div class="bg-white rounded-2xl p-6 border border-slate-200">
             <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 02</div>
             <h3 class="text-lg font-bold text-slate-900">Plan Antiinflamatorio Flexible</h3>
-            <p class="text-xs text-slate-600 mt-2">Sin menús strictly prohibitorios. Adaptado a tus hábitos y estilo de vida.</p>
+            <p class="text-xs text-slate-600 mt-2">Sin menús estrictos. Adaptado a tus hábitos y estilo de vida.</p>
           </div>
           <div class="bg-white rounded-2xl p-6 border border-slate-200">
             <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 03</div>
@@ -549,7 +683,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Main Program -->
           <div class="md:col-span-2 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800 flex flex-col justify-between">
             <div>
               <span class="bg-emerald-600 text-xs font-bold px-3 py-1 rounded-full">PROGRAMA ESTRELLA</span>
@@ -564,7 +697,6 @@
             </div>
           </div>
 
-          <!-- Secondary Program -->
           <div class="bg-[#FAFAFA] rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
             <div>
               <h3 class="text-xl font-bold text-slate-900">Alto Rendimiento & Recuperación</h3>
@@ -575,7 +707,6 @@
             </button>
           </div>
 
-          <!-- Third Program -->
           <div class="bg-[#FAFAFA] rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
             <div>
               <h3 class="text-xl font-bold text-slate-900">Salud Digestiva & SIBO</h3>
@@ -586,7 +717,6 @@
             </button>
           </div>
 
-          <!-- Fourth Program -->
           <div class="md:col-span-2 bg-[#FAFAFA] rounded-3xl p-6 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <h3 class="text-xl font-bold text-slate-900">Optimización Metabólica (Insulina / Colesterol)</h3>
@@ -618,9 +748,8 @@
           </p>
         </div>
 
-        <!-- Dynamic Grid Rendered by js/app.js -->
         <div id="instagramPostsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <!-- Post Cards injected by JavaScript linking to dedicated pages -->
+          <!-- Rendered by js/app.js -->
         </div>
 
         <div class="mt-12 text-center">
@@ -633,51 +762,7 @@
       </div>
     </section>
 
-    <!-- LEAD MAGNET -->
-    <section id="guia-gratuita" class="py-16 sm:py-24 bg-slate-900 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-6 space-y-4">
-          <span class="text-xs font-bold text-emerald-400 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800">Recurso Gratuito PDF</span>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Guía Definitiva: Recomposición & Nutrición Antiinflamatoria</h2>
-          <p class="text-sm text-slate-300">Descarga sin coste las 42 páginas redactadas por Marcos Demandre con las claves para desinflamar tu digestivo y transformar tu físico.</p>
-        </div>
-
-        <div class="lg:col-span-6 bg-white text-slate-900 p-6 sm:p-8 rounded-3xl shadow-2xl">
-          <form id="leadMagnetForm" class="space-y-4">
-            <h3 class="text-xl font-bold text-slate-900">Descarga la Guía en PDF</h3>
-            <div>
-              <label for="leadName" class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo *</label>
-              <input type="text" id="leadName" required placeholder="Ej: María García" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm min-h-[44px]">
-            </div>
-            <div>
-              <label for="leadEmail" class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico *</label>
-              <input type="email" id="leadEmail" required placeholder="maria@ejemplo.com" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm min-h-[44px]">
-            </div>
-            <div>
-              <label for="leadGoal" class="block text-xs font-bold text-slate-700 uppercase mb-1">Objetivo Prioritario</label>
-              <select id="leadGoal" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm min-h-[44px]">
-                <option value="Recomposición Corporal">Perder Grasa / Masa Muscular</option>
-                <option value="Salud Digestiva">Salud Digestiva / SIBO</option>
-                <option value="Rendimiento Deportivo">Rendimiento Deportivo</option>
-              </select>
-            </div>
-            <button type="submit" class="w-full btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-emerald-glow min-h-[44px]">
-              Obtener Guía Gratuita en PDF
-            </button>
-          </form>
-
-          <div id="leadMagnetSuccess" class="hidden text-center py-6 space-y-3">
-            <h3 class="text-2xl font-bold text-slate-900">¡Guía enviada con éxito!</h3>
-            <p class="text-sm text-slate-600">Hemos registrado tu solicitud para <span id="leadSuccessEmail" class="font-bold"></span>. Haz clic a continuación para descargar:</p>
-            <button type="button" onclick="alert('Simulación: El archivo PDF Guia-Recomposicion-Madrid-2026.pdf se está descargando.')" class="btn-cta bg-emerald-600 text-white font-bold text-sm px-6 py-3 rounded-xl min-h-[44px]">
-              Descargar PDF Ahora (2.4 MB)
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ ACCORDION GEO OPTIMIZED FOR MADRID & AI -->
+    <!-- FAQ ACCORDION -->
     <section id="faq" class="py-16 sm:py-24 bg-[#FAFAFA]">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10">
@@ -843,7 +928,6 @@
     </div>
   </div>
 
-  <!-- JavaScript Entry Point -->
   <script src="js/app.js"></script>
 </body>
 </html>

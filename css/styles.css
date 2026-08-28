@@ -1,5 +1,5 @@
 /* Styles for Pure HTML/CSS/JS Version of Nutrición Marcos Demandre Madrid 
- * Fully Optimized for Responsive Web Design, WCAG 2.1 AA Accessibility & Google Core Web Vitals
+ * Fully Optimized for Responsive Web Design, WCAG 2.1 AA Accessibility, Google Core Web Vitals & CRO
  */
 
 :root {
@@ -143,9 +143,39 @@ a.btn-cta,
   box-shadow: 0 15px 35px -5px rgba(220, 39, 67, 0.55);
 }
 
+/* Sticky Bottom Mobile Bar (CRO High-Impact) */
+.mobile-sticky-bar {
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* WhatsApp Style Chat Testimonial Bubble */
+.whatsapp-chat-bubble {
+  background: #E7FFDB;
+  border-radius: 1rem 1rem 0.2rem 1rem;
+  position: relative;
+}
+
+/* Quiz Option Card Animation */
+.quiz-option-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quiz-option-card:hover {
+  transform: translateY(-2px);
+  border-color: #059669;
+  background-color: #ecfdf5;
+}
+
+.quiz-option-card.selected {
+  border-color: #059669;
+  background-color: #ecfdf5;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+}
+
 /* Print Styles for Accessibility */
 @media print {
-  header, footer, .floating-ig-widget, #bookingModal, #postReaderModal {
+  header, footer, .floating-ig-widget, .mobile-sticky-bar, #bookingModal, #postReaderModal {
     display: none !important;
   }
   body {

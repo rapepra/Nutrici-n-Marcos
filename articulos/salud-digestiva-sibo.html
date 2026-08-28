@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#059669">
   <title>Salud Digestiva & SIBO: Protocolo Antiinflamatorio en 3 Fases | Marcos Demandre</title>
-  <meta name="description" content="Tratamiento nutricional especializado para SIBO, colon irritable e hinchazón abdominal permanente por Marcos Demandre (TSD). Servicio 100% Online y Consulta a Domicilio en Madrid.">
+  <meta name="description" content="Tratamiento nutricional de máxima evidencia para SIBO, colon irritable e hinchazón abdominal por Marcos Demandre (TSD). Servicio 100% Online y Consulta a Domicilio en Madrid.">
   <meta name="keywords" content="sibo madrid, nutricionista sibo madrid, marcos demandre, salud digestiva madrid, nutricionista colon irritable, marcostsd.rehab">
   <meta name="author" content="Marcos Demandre - Técnico Superior en Dietética">
   <meta name="robots" content="index, follow">
@@ -15,12 +16,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <style>
-    body { background-color: #FAFAFA; color: #0f172a; font-family: 'Inter', sans-serif; }
-    .glass-nav { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px); border: 1px solid rgba(226, 232, 240, 0.8); }
-    .btn-cta { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 14px 0 rgba(5, 150, 105, 0.3); }
-    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.45); }
-  </style>
+  <link rel="stylesheet" href="../css/styles.css">
 
   <script type="application/ld+json">
   {
@@ -44,12 +40,15 @@
 </head>
 <body class="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-emerald-500 selection:text-white">
 
+  <!-- ACCESSIBILITY SKIP LINK -->
+  <a href="#main-article" class="sr-only sr-only-focusable">Saltar al contenido principal</a>
+
   <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3">
+  <header role="banner" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3">
     <div class="max-w-7xl mx-auto glass-nav rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-sm">
       <a href="../index.html" class="flex items-center gap-2.5">
         <div class="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-emerald-500/40">
-          <img src="../assets/images/marcos-nutricionista.png" alt="Marcos Demandre" class="w-full h-full object-cover object-top" />
+          <img src="../assets/images/marcos-nutricionista.png" alt="Marcos Demandre" width="40" height="40" class="w-full h-full object-cover object-top" />
         </div>
         <div class="flex flex-col">
           <span class="font-extrabold text-slate-900 tracking-tight text-base sm:text-lg">MARCOS DEMANDRE</span>
@@ -58,12 +57,12 @@
       </a>
 
       <div class="flex items-center gap-3">
-        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold hover:bg-pink-100 transition-colors">
-          <i data-lucide="instagram" class="w-4 h-4 text-pink-600"></i>
+        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold hover:bg-pink-100 transition-colors min-h-[44px]">
+          <i data-lucide="instagram" class="w-4 h-4 text-pink-600" aria-hidden="true"></i>
           <span>@marcostsd.rehab</span>
         </a>
-        <a href="../index.html#hero" class="btn-cta bg-emerald-600 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl flex items-center gap-2 shadow-emerald-glow">
-          <i data-lucide="calendar" class="w-4 h-4"></i>
+        <a href="../index.html#hero" class="btn-cta bg-emerald-600 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl flex items-center gap-2 shadow-emerald-glow min-h-[44px]">
+          <i data-lucide="calendar" class="w-4 h-4" aria-hidden="true"></i>
           <span>Agenda Valoración</span>
         </a>
       </div>
@@ -71,13 +70,13 @@
   </header>
 
   <!-- ARTICLE HEADER -->
-  <article class="pt-32 pb-20 max-w-4xl mx-auto px-4 sm:px-6">
+  <main id="main-article" role="main" class="pt-32 pb-20 max-w-4xl mx-auto px-4 sm:px-6">
     
-    <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium">
+    <nav role="navigation" aria-label="Migas de pan" class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium">
       <a href="../index.html" class="hover:text-emerald-600">Inicio</a>
-      <span>/</span>
+      <span aria-hidden="true">/</span>
       <a href="../index.html#instagram-divulgacion" class="hover:text-emerald-600">Divulgación</a>
-      <span>/</span>
+      <span aria-hidden="true">/</span>
       <span class="text-slate-900">Salud Digestiva & SIBO</span>
     </nav>
 
@@ -91,49 +90,102 @@
 
     <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-white border border-slate-200 mb-10 shadow-sm">
       <div class="flex items-center gap-3">
-        <img src="../assets/images/marcos-nutricionista.png" class="w-12 h-12 rounded-full object-cover object-top ring-2 ring-emerald-500/40" alt="Marcos Demandre" />
+        <img src="../assets/images/marcos-nutricionista.png" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover object-top ring-2 ring-emerald-500/40" alt="Marcos Demandre" />
         <div>
           <div class="font-bold text-slate-900 text-sm">Por Marcos Demandre (TSD)</div>
           <div class="text-xs text-slate-500">Técnico Superior en Dietética · Consulta 100% Online y A Domicilio en Madrid</div>
         </div>
       </div>
 
-      <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-pink-600 bg-pink-50 px-3.5 py-2 rounded-xl border border-pink-200 hover:bg-pink-100 transition-colors">
-        <i data-lucide="instagram" class="w-4 h-4 text-pink-600"></i>
+      <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-pink-600 bg-pink-50 px-3.5 py-2.5 rounded-xl border border-pink-200 hover:bg-pink-100 transition-colors min-h-[44px]">
+        <i data-lucide="instagram" class="w-4 h-4 text-pink-600" aria-hidden="true"></i>
         <span>Ver en @marcostsd.rehab ↗</span>
       </a>
     </div>
 
     <div class="rounded-3xl overflow-hidden border border-slate-200 mb-10 shadow-lg">
-      <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80" alt="Salud digestiva SIBO Marcos Demandre" class="w-full h-80 sm:h-96 object-cover" />
+      <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80" width="1200" height="600" loading="lazy" decoding="async" alt="Salud digestiva y nutrición clínica Marcos Demandre" class="w-full h-80 sm:h-96 object-cover" />
     </div>
 
-    <div class="prose prose-lg prose-slate max-w-none space-y-6 text-slate-700 leading-relaxed">
+    <!-- MAIN ARTICLE BODY -->
+    <article class="prose prose-lg prose-slate max-w-none space-y-6 text-slate-700 leading-relaxed">
       
       <p class="text-lg font-medium text-slate-800 leading-relaxed">
-        La hinchazón abdominal al final del día, los gases atrapados y las digestiones pesadas no son normales. Como <strong>Marcos Demandre (TSD)</strong>, abordo problemas digestivos como el sobrecrecimiento bacteriano (SIBO), el síndrome de intestino irritable (SII) y la gastritis mediante un protocolo clínico estructurado en 3 fases.
+        Levantarse con el vientre plano y llegar al final de la tarde sintiendo una distensión severa parecida a un "embarazo de meses" no es normal ni algo con lo que debas convivir. Como <strong>Marcos Demandre (TSD)</strong>, abordo diariamente en mis consultas (Online y A Domicilio en Madrid) casos de sobrecrecimiento bacteriano en el intestino delgado (SIBO por Hidrógeno o Metano), disfunción del Complejo Motor Migratorio (CMM) y síndromes de intestino irritable.
       </p>
 
-      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">1. El Protocolo Digestivo de Marcos Demandre</h2>
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">1. La Fisiopatología del SIBO y la Disbiosis Intestinal</h2>
+      <p>
+        El intestino delgado está diseñado para la absorción de nutrientes, manteniendo una densidad bacteriana muy reducida en comparación con el colon. Cuando los mecanismos de limpieza (ácido clorhídrico estomacal, bilis y las ondas peristálticas de barrido nocturno) fallan, las bacterias colonizadoras migran hacia arriba y fermentan prematuramente los carbohidratos, generando gases de hidrógeno, metano o sulfuro de hidrógeno.
+      </p>
 
-      <div class="space-y-4 my-6">
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-slate-900 text-base">Fase 1: Eliminación Estructurada (Low FODMAP)</h3>
-          <p class="text-sm text-slate-600 mt-1">Retiramos temporalmente los carbohidratos altamente fermentables para reducir la fermentación bacteriana en el intestino delgado.</p>
+      <!-- FASES CLINICAS DETALLADAS -->
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">2. Protocolo Clínico de 3 Fases por Marcos Demandre</h2>
+
+      <div class="space-y-6 my-8">
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase">Fase 1 (Semanas 1 a 4)</span>
+          <h3 class="font-bold text-slate-900 text-lg mt-2">Eliminación Estructurada Low FODMAP</h3>
+          <p class="text-sm text-slate-600 mt-2">
+            Retirada temporal de oligosacáridos, disacáridos, monosacáridos y polioles fermentables. Reducimos en un 85% el alimento sustrato de las bacterias desplazadas para permitir la cicatrización del epitelio.
+          </p>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-slate-900 text-base">Fase 2: Reparación de la Mucosa Intestinal</h3>
-          <p class="text-sm text-slate-600 mt-1">Aportamos nutrientes clave como L-Glutamina, Zinc Carnosina y Polifenoles para restaurar la permeabilidad del epitelio digestivo.</p>
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <span class="text-xs font-bold text-teal-700 bg-teal-100 px-3 py-1 rounded-full uppercase">Fase 2 (Semanas 4 a 8)</span>
+          <h3 class="font-bold text-slate-900 text-lg mt-2">Reparación de la Mucosa & Procinéticos</h3>
+          <p class="text-sm text-slate-600 mt-2">
+            Aporte de L-Glutamina bioasimilable, Zinc Carnosina, Polifenoles y procinéticos naturales (extracto de jengibre y alcachofa) para activar las ondas de limpieza intestinal.
+          </p>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-slate-900 text-base">Fase 3: Reintroducción Guiada & Tolerancia</h3>
-          <p class="text-sm text-slate-600 mt-1">Reintroducimos grupo por grupo los alimentos eliminados para identificar tus umbrales individuales y devolverte la libertad al comer fuera en Madrid.</p>
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <span class="text-xs font-bold text-blue-700 bg-blue-100 px-3 py-1 rounded-full uppercase">Fase 3 (Semanas 8 a 12)</span>
+          <h3 class="font-bold text-slate-900 text-lg mt-2">Reintroducción Guiada & Diversidad Microbiótica</h3>
+          <p class="text-sm text-slate-600 mt-2">
+            Reintroducimos grupo por grupo los alimentos para evaluar el umbral de tolerancia individual, garantizando que el paciente pueda comer fuera en cualquier restaurante de Madrid sin hinchazón.
+          </p>
         </div>
       </div>
 
-    </div>
+      <!-- TABLA DE ALIMENTOS RECOMENDADOS VS DESACONSEJADOS EN FASE 1 -->
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Tabla de Alimentos en la Fase de Rescate Intestinal</h2>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+          <thead class="bg-slate-900 text-white">
+            <tr>
+              <th class="p-3.5 font-bold">Grupo de Alimentos</th>
+              <th class="p-3.5 font-bold text-emerald-400">Permitidos (Bajo FODMAP)</th>
+              <th class="p-3.5 font-bold text-rose-400">Evitar Temporalmente</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+              <td class="p-3.5 font-bold">Verduras</td>
+              <td class="p-3.5">Zanahoria, calabacín sin piel, espinacas baby, pepino, acelgas.</td>
+              <td class="p-3.5">Ajo, cebolla, alcachofas, espárragos, coliflor, coles de Bruselas.</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold">Frutas</td>
+              <td class="p-3.5">Arándanos, fresas, frambuesas, plátano verde (1/2), kiwi.</td>
+              <td class="p-3.5">Manzana, pera, sandía, cerezas, ciruelas, frutas desecadas.</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold">Proteínas Magras</td>
+              <td class="p-3.5">Pollo, pavo, ternera magra, huevos, pescado azul fresco.</td>
+              <td class="p-3.5">Embutidos procesados con lactosa o ajo en polvo adicionado.</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold">Carbohidratos</td>
+              <td class="p-3.5">Arroz blanco/basmati, patata cocida enfriada (almidón resistente).</td>
+              <td class="p-3.5">Trigo, centeno, cebada, legumbres no procesadas.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </article>
 
     <!-- CTA BANNER BOX -->
     <div class="mt-12 p-8 rounded-3xl bg-slate-900 text-white shadow-2xl text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -143,15 +195,15 @@
         <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-md">Solicita tu valoración inicial de 20 minutos (100% Online o A Domicilio en Madrid).</p>
       </div>
 
-      <a href="../index.html#hero" class="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-emerald-glow flex-shrink-0">
+      <a href="../index.html#hero" class="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-emerald-glow flex-shrink-0 min-h-[44px]">
         Agendar Valoración Ahora
       </a>
     </div>
 
-  </article>
+  </main>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 text-white py-10 border-t border-slate-800 text-xs">
+  <footer role="contentinfo" class="bg-slate-950 text-white py-10 border-t border-slate-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
       <div>
         <div class="font-extrabold text-base">MARCOS DEMANDRE Nutrición Madrid</div>

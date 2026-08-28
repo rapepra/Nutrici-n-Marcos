@@ -1,6 +1,6 @@
 /**
  * Vanilla JavaScript application logic for Nutrición Marcos Demandre (html-css branch)
- * Includes Instagram profile integration (@marcostsd.rehab) & post transcription reader.
+ * Includes Instagram profile integration, dedicated article links, Quiz logic & CRO mobile sticky bar.
  */
 
 const INSTAGRAM_URL = "https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl";
@@ -18,18 +18,7 @@ const instagramPostsData = [
     summary: "Transcribimos y ampliamos el análisis de Marcos Demandre (TSD) sobre cómo acelerar la regeneración tisular entre sesiones combinando periodización proteica y modulación del estrés.",
     fullContent: `
       <h3>1. El Mito del Sobrenentrenamiento vs. Bajo Descanso Nutricional</h3>
-      <p>Muchos deportistas en Madrid atribuyen el dolor articular persistente o la falta de fuerza al "sobreentrenamiento". En el 80% de los casos evaluados en consulta por Marcos Demandre en Madrid (Online y A Domicilio), el problema real es una falta de potencia sustratal: no se aportan la leucina ni los micronutrientes cofactores necesarios para la síntesis de colágeno durante la ventana de reparación nocturna.</p>
-      
-      <h3>2. Protocolo de Potenciación Nutricional (Método Marcos Demandre TSD)</h3>
-      <ul>
-        <li><strong>Peri-entreno estructurado:</strong> Ingesta de 0.4g/kg de proteína de alto valor biológico junto a carbohidratos de bajo índice glucémico pre-sesión para preservar el glucógeno muscular.</li>
-        <li><strong>Modulación Antiinflamatoria:</strong> Ratio Omega 3/6 optimizado mediante alimentos reales (pescado azul, nueces, semillas) reduciendo el dolor articular tardío (DOMS).</li>
-        <li><strong>Hidratación e Ionización:</strong> Reposición de sodio y magnesio ajustados al nivel de sudoración en entrenamientos intensos en Madrid.</li>
-      </ul>
-
-      <p class="mt-4 italic bg-emerald-50 p-4 rounded-xl text-emerald-900 border border-emerald-200">
-        💡 <strong>Conclusión Marcos Demandre:</strong> "La masa muscular no se destruye en el gimnasio, se reconstruye en el plato. Ajusta tus macros a la exigencia de tus entrenamientos."
-      </p>
+      <p>Muchos deportistas en Madrid atribuyen el dolor articular persistente o la falta de fuerza al "sobreentrenamiento". En el 80% de los casos evaluados por Marcos Demandre en Madrid (Online y A Domicilio), el problema real es una falta de potencia sustratal: no se aportan la leucina ni los micronutrientes cofactores necesarios para la síntesis de colágeno durante la ventana de reparación nocturna.</p>
     `
   },
   {
@@ -44,19 +33,7 @@ const instagramPostsData = [
     summary: "Explicación detallada de Marcos Demandre sobre por qué el déficit calórico agresivo provoca pérdida de masa magra, ralentización tiroidea y efecto rebote rápido.",
     fullContent: `
       <h3>1. La trampa del peso balanza vs. Composición Corporal</h3>
-      <p>Cuando reduces drásticamente las calorías sin una pauta adaptada, el peso que pierdes en las primeras semanas es principalmente agua, glucógeno y proteína muscular. Al disminuir la masa magra, tu gasto calórico en reposo cae drásticamente.</p>
-
-      <h3>2. La Estrategia de Recomposición en 90 Días</h3>
-      <p>En el programa de Marcos Demandre aplicamos un déficit leve o neutro calórico (Cycling Calórico) enfocado en:</p>
-      <ul>
-        <li>Aumentar la densidad nutricional sin reducir el volumen del plato.</li>
-        <li>Mantener la tasa metabólica activa mediante estímulo de fuerza y aporte proteico óptimo (1.8g - 2.2g / kg).</li>
-        <li>Evaluación de grasa visceral y masa magra en Madrid (Servicio Online & A Domicilio).</li>
-      </ul>
-
-      <p class="mt-4 italic bg-emerald-50 p-4 rounded-xl text-emerald-900 border border-emerald-200">
-        💡 <strong>Conclusión Marcos Demandre:</strong> "El objetivo no es comer menos, es enseñarle a tu organismo a usar la grasa acumulada como combustible sin sacrificar tu musculatura."
-      </p>
+      <p>Cuando reduces drásticamente las calorías sin una pauta adaptada, el peso que pierdes en las primeras semanas es principalmente agua, glucógeno y proteína muscular.</p>
     `
   },
   {
@@ -71,14 +48,7 @@ const instagramPostsData = [
     summary: "Cómo abordar la hinchazón permanente, gases molestos y disbiosis intestinal mediante el protocolo por fases de nutrición clínica de Marcos Demandre.",
     fullContent: `
       <h3>1. ¿Por qué estás hinchado/a todas las tardes?</h3>
-      <p>La inflamación intestinal recurrente suele ser síntoma de sobrecrecimiento bacteriano (SIBO), falta de ácido clorhídrico estomacal o alteración del Complejo Motor Migratorio (CMM).</p>
-
-      <h3>2. Protocolo Clínico de 3 Fases de Marcos Demandre</h3>
-      <ol>
-        <li><strong>Fase 1: Eliminación Estructurada (Low FODMAP):</strong> Retirada temporal de carbohidratos fermentables que alimentan a las bacterias desplazadas.</li>
-        <li><strong>Fase 2: Reparación Intestinal:</strong> Aporte de glutamina, zinc carnosina y polifenoles para restaurar las uniones estrechas del epitelio digestivo.</li>
-        <li><strong>Fase 3: Reintroducción & Tolerancia:</strong> Probamos uno a uno los grupos de alimentos para devolverte la libertad al comer fuera en Madrid.</li>
-      </ol>
+      <p>La inflamación intestinal recurrente suele ser síntoma de sobrecrecimiento bacteriano (SIBO) o alteración del Complejo Motor Migratorio (CMM).</p>
     `
   },
   {
@@ -93,7 +63,7 @@ const instagramPostsData = [
     summary: "El ayuno no es mágico por sí solo: Marcos Demandre desglosa cuándo ayuda a regular la insulina y cuándo destruye la recuperación en deportistas de alto rendimiento.",
     fullContent: `
       <h3>1. ¿Sirve el ayuno intermitente 16/8 para perder grasa?</h3>
-      <p>El ayuno 16/8 es simplemente una herramienta para controlar la ventana de ingesta. Si dentro de las 8 horas de comida consumes más calorías de las que gastas, no perderás grasa. Sin embargo, en personas con resistencia a la insulina o mala sensibilidad matutina a los carbohidratos, resulta extremadamente útil.</p>
+      <p>El ayuno 16/8 es simplemente una herramienta para controlar la ventana de ingesta. Si dentro de las 8 horas de comida consumes más calorías de las que gastas, no perderás grasa.</p>
     `
   },
   {
@@ -108,7 +78,7 @@ const instagramPostsData = [
     summary: "Nutrientes específicos y suplementación clínica recomendados por Marcos Demandre para recortar semanas en la cicatrización de tendones, ligamentos y roturas fibrilares.",
     fullContent: `
       <h3>1. Nutrición durante la Fase Inmovilizada o de Baja Carga</h3>
-      <p>Tras una lesión deportiva, el error común es reducir drásticamente las calorías por miedo a engordar. Sin embargo, el proceso de cicatrización tisular eleva la tasa metabólica en reposo entre un 15% y un 50%.</p>
+      <p>Tras una lesión deportiva, el error común es reducir drásticamente las calorías por miedo a engordar.</p>
     `
   },
   {
@@ -123,7 +93,7 @@ const instagramPostsData = [
     summary: "El método visual de porciones diseñado por Marcos Demandre para comer fuera en restaurantes del Barrio de Salamanca o Madrid centro manteniendo tus objetivos.",
     fullContent: `
       <h3>1. El Método Visual Marcos Demandre para Comer Fuera</h3>
-      <p>No necesitas llevar una báscula a un restaurante en Madrid. Usamos referencias anatómicas de tu propia mano para porciones de proteínas, carbohidratos, verduras y grasas saludables.</p>
+      <p>No necesitas llevar una báscula a un restaurante en Madrid. Usamos referencias anatómicas de tu propia mano.</p>
     `
   }
 ];
@@ -141,26 +111,26 @@ document.addEventListener('DOMContentLoaded', () => {
       <article class="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm instagram-card-hover flex flex-col justify-between">
         <div>
           <div class="relative h-48 overflow-hidden group">
-            <a href="${post.articleUrl}">
-              <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <a href="${post.articleUrl}" aria-label="Leer artículo ${post.title}">
+              <img src="${post.image}" alt="${post.title}" width="400" height="240" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </a>
             <div class="absolute top-3 left-3">
               <span class="text-[11px] font-bold px-3 py-1 rounded-full border ${post.badgeColor}">
                 ${post.category}
               </span>
             </div>
-            <a href="${post.instagramUrl}" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 text-white flex items-center justify-center hover:bg-pink-600 transition-colors shadow-lg" title="Ver en Instagram @marcostsd.rehab">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
+            <a href="${post.instagramUrl}" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 text-white flex items-center justify-center hover:bg-pink-600 transition-colors shadow-lg" title="Ver en Instagram @marcostsd.rehab" aria-label="Instagram oficial">
+              <i data-lucide="instagram" class="w-4 h-4" aria-hidden="true"></i>
             </a>
           </div>
 
           <div class="p-6">
             <div class="text-[11px] text-slate-400 font-semibold mb-2 flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-3.5 h-3.5 text-pink-500"></i>
+              <i data-lucide="calendar" class="w-3.5 h-3.5 text-pink-500" aria-hidden="true"></i>
               <span>${post.date}</span>
             </div>
 
-            <h3 class="text-lg font-bold text-slate-900 leading-snug hover:text-emerald-600 transition-colors cursor-pointer">
+            <h3 class="text-lg font-bold text-slate-900 leading-snug hover:text-emerald-600 transition-colors">
               <a href="${post.articleUrl}">
                 ${post.title}
               </a>
@@ -173,12 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="px-6 pb-6 pt-0 flex items-center justify-between gap-2 border-t border-slate-100 mt-4">
-          <a href="${post.articleUrl}" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 cursor-pointer pt-4">
+          <a href="${post.articleUrl}" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 cursor-pointer pt-4 min-h-[44px]">
             <span>Leer artículo completo (SEO)</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5" aria-hidden="true"></i>
           </a>
 
-          <a href="${post.instagramUrl}" target="_blank" rel="noopener noreferrer" class="pt-4 text-xs font-semibold text-slate-500 hover:text-pink-600 flex items-center gap-1">
+          <a href="${post.instagramUrl}" target="_blank" rel="noopener noreferrer" class="pt-4 text-xs font-semibold text-slate-500 hover:text-pink-600 flex items-center gap-1 min-h-[44px]">
             <span>Instagram ↗</span>
           </a>
         </div>
@@ -190,53 +160,77 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 3. Post Modal Reader
-  const postModal = document.getElementById('postReaderModal');
-  const closePostModalBtn = document.getElementById('closePostModal');
-  const postModalTitle = document.getElementById('postModalTitle');
-  const postModalCategory = document.getElementById('postModalCategory');
-  const postModalContent = document.getElementById('postModalContent');
-  const postModalIgLink = document.getElementById('postModalIgLink');
+  // 3. INTERACTIVE QUIZ WIDGET SYSTEM (CRO LEAD MAGNET)
+  const quizStep1 = document.getElementById('quizStep1');
+  const quizStep2 = document.getElementById('quizStep2');
+  const quizStep3 = document.getElementById('quizStep3');
+  const quizStepResult = document.getElementById('quizStepResult');
+  const quizProgressBar = document.getElementById('quizProgressBar');
 
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.read-post-btn');
-    if (btn) {
-      const postId = btn.getAttribute('data-post-id');
-      const post = instagramPostsData.find(p => p.id === postId);
-      if (post && postModal) {
-        if (postModalTitle) postModalTitle.textContent = post.title;
-        if (postModalCategory) postModalCategory.textContent = post.category;
-        if (postModalContent) postModalContent.innerHTML = post.fullContent;
-        if (postModalIgLink) postModalIgLink.href = post.instagramUrl;
-        postModal.classList.remove('hidden');
+  let quizAnswers = {
+    goal: '',
+    activity: '',
+    symptoms: ''
+  };
+
+  const quizGoalBtns = document.querySelectorAll('.quiz-goal-btn');
+  quizGoalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      quizGoalBtns.forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      quizAnswers.goal = btn.getAttribute('data-value') || '';
+
+      if (quizStep1 && quizStep2) {
+        quizStep1.classList.add('hidden');
+        quizStep2.classList.remove('hidden');
+        if (quizProgressBar) quizProgressBar.style.width = '66%';
       }
-    }
+    });
   });
 
-  if (closePostModalBtn && postModal) {
-    closePostModalBtn.addEventListener('click', () => {
-      postModal.classList.add('hidden');
+  const quizActivityBtns = document.querySelectorAll('.quiz-activity-btn');
+  quizActivityBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      quizActivityBtns.forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      quizAnswers.activity = btn.getAttribute('data-value') || '';
+
+      if (quizStep2 && quizStep3) {
+        quizStep2.classList.add('hidden');
+        quizStep3.classList.remove('hidden');
+        if (quizProgressBar) quizProgressBar.style.width = '100%';
+      }
     });
-  }
+  });
 
-  // 4. Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileDrawer = document.getElementById('mobileDrawer');
+  const quizSymptomBtns = document.querySelectorAll('.quiz-symptom-btn');
+  quizSymptomBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      quizAnswers.symptoms = btn.getAttribute('data-value') || '';
 
-  if (mobileMenuBtn && mobileDrawer) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('hidden');
+      if (quizStep3 && quizStepResult) {
+        quizStep3.classList.add('hidden');
+        quizStepResult.classList.remove('hidden');
+        
+        const quizDiagnosticTitle = document.getElementById('quizDiagnosticTitle');
+        const quizDiagnosticText = document.getElementById('quizDiagnosticText');
+
+        if (quizAnswers.goal.includes('Digestiva') || quizAnswers.symptoms.includes('Hinchazón')) {
+          if (quizDiagnosticTitle) quizDiagnosticTitle.textContent = "Perfil detectado: Protocolo Antiinflamatorio & Digestivo 90 Días";
+          if (quizDiagnosticText) quizDiagnosticText.textContent = "Tus respuestas indican indicios de disbiosis o inflamación intestinal. Marcos Demandre puede aplicar un protocolo por fases sin fármacos agresivos.";
+        } else {
+          if (quizDiagnosticTitle) quizDiagnosticTitle.textContent = "Perfil detectado: Recomposición Corporal & Potenciación Muscular";
+          if (quizDiagnosticText) quizDiagnosticText.textContent = "Eres candidato/a óptimo/a para el programa de 90 Días para bajar porcentaje graso preservando masa muscular.";
+        }
+
+        if (window.confetti) {
+          window.confetti({ particleCount: 70, spread: 60, origin: { y: 0.7 } });
+        }
+      }
     });
+  });
 
-    const drawerLinks = mobileDrawer.querySelectorAll('a, button');
-    drawerLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.add('hidden');
-      });
-    });
-  }
-
-  // 5. FAQ Accordion Toggle
+  // 4. FAQ Accordion Toggle
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach((item) => {
     const btn = item.querySelector('.faq-button');
@@ -252,13 +246,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!isOpen) {
           content.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
           if (icon) icon.classList.add('rotate-180');
+        } else {
+          btn.setAttribute('aria-expanded', 'false');
         }
       });
     }
   });
 
-  // 6. Booking Modal System
+  // 5. Booking Modal System
   const bookingModal = document.getElementById('bookingModal');
   const closeModalBtns = document.querySelectorAll('.close-booking-modal');
   const openModalBtns = document.querySelectorAll('.open-booking-modal');
@@ -329,7 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (step1 && step2) {
         step1.classList.add('hidden');
         step2.classList.remove('hidden');
-        updateStepBar(2);
       }
     });
   }
@@ -339,7 +335,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (step1 && step2) {
         step2.classList.add('hidden');
         step1.classList.remove('hidden');
-        updateStepBar(1);
       }
     });
   }
@@ -349,7 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (step2 && step3) {
         step2.classList.add('hidden');
         step3.classList.remove('hidden');
-        updateStepBar(3);
       }
     });
   }
@@ -359,7 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (step2 && step3) {
         step3.classList.add('hidden');
         step2.classList.remove('hidden');
-        updateStepBar(2);
       }
     });
   }
@@ -407,65 +400,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (step2) step2.classList.add('hidden');
     if (step3) step3.classList.add('hidden');
     if (stepSuccess) stepSuccess.classList.add('hidden');
-    updateStepBar(1);
   }
 
-  function updateStepBar(currentStep) {
-    const bars = document.querySelectorAll('.step-bar');
-    bars.forEach((bar, idx) => {
-      if (idx + 1 <= currentStep) {
-        bar.classList.remove('bg-slate-200');
-        bar.classList.add('bg-emerald-600');
-      } else {
-        bar.classList.remove('bg-emerald-600');
-        bar.classList.add('bg-slate-200');
-      }
+  // 6. Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+
+  if (mobileMenuBtn && mobileDrawer) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileDrawer.classList.toggle('hidden');
     });
-  }
 
-  // 7. Lead Magnet Form Handler
-  const leadMagnetForm = document.getElementById('leadMagnetForm');
-  const leadMagnetSuccess = document.getElementById('leadMagnetSuccess');
-
-  if (leadMagnetForm) {
-    leadMagnetForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('leadName').value;
-      const email = document.getElementById('leadEmail').value;
-      const goal = document.getElementById('leadGoal').value;
-
-      const leadData = { name, email, goal, createdAt: new Date().toISOString() };
-      console.info('[Lead Magnet Captured for Marcos Demandre]:', leadData);
-      saveLeadToStorage(leadData);
-
-      if (leadMagnetForm && leadMagnetSuccess) {
-        leadMagnetForm.classList.add('hidden');
-        leadMagnetSuccess.classList.remove('hidden');
-
-        const successEmailSpan = document.getElementById('leadSuccessEmail');
-        if (successEmailSpan) successEmailSpan.textContent = email;
-      }
-
-      if (window.confetti) {
-        window.confetti({
-          particleCount: 80,
-          spread: 70,
-          origin: { y: 0.7 },
-          colors: ['#059669', '#10b981', '#34d399']
-        });
-      }
+    const drawerLinks = mobileDrawer.querySelectorAll('a, button');
+    drawerLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.add('hidden');
+        if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
     });
-  }
-
-  function saveLeadToStorage(data) {
-    try {
-      const leads = JSON.parse(localStorage.getItem('nutricion_leads') || '[]');
-      leads.push(data);
-      localStorage.setItem('nutricion_leads', JSON.stringify(leads));
-    } catch (e) {
-      console.error(e);
-    }
   }
 
   function saveBookingToStorage(data) {
