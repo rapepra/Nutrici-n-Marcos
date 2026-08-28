@@ -1,103 +1,649 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥗</text></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO / GEO Meta Tags -->
-    <title>Nutricionista Clínico y Deportivo en Madrid | Marcos Nutrición</title>
-    <meta name="description" content="Nutricionista clínico y deportivo en Madrid (Barrio de Salamanca y Online). Especialista en recomposición corporal de 90 días, salud digestiva (SIBO/Colon irritable) y rendimiento físico sin dietas extremas." />
-    <meta name="keywords" content="nutricionista madrid, nutricionista deportivo madrid, nutricionista clinico barrio de salamanca, recomposicion corporal madrid, nutricion antiinflamatoria, sesion de valoracion gratuita nutricion" />
-    <meta name="author" content="Marcos - Nutricionista Colegiado Madrid" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://marcosnutricion.es/" />
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nutricionista Clínico y Deportivo en Madrid | Marcos Nutrición" />
-    <meta property="og:description" content="Transforma tu físico y tu energía sin dietas extremas. Consulta presencial en Calle Serrano (Madrid) y programa online 100% personalizado." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" />
-    <meta property="og:locale" content="es_ES" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & GEO Meta Tags -->
+  <title>Nutricionista Clínico y Deportivo en Madrid | Marcos Nutrición</title>
+  <meta name="description" content="Nutricionista clínico y deportivo en Madrid (Barrio de Salamanca y Online). Especialista en recomposición corporal de 90 días, salud digestiva (SIBO/Colon irritable) y rendimiento físico sin dietas extremas.">
+  <meta name="keywords" content="nutricionista madrid, nutricionista deportivo madrid, nutricionista clinico barrio de salamanca, recomposicion corporal madrid, nutricion antiinflamatoria, sesion de valoracion gratuita nutricion">
+  <meta name="author" content="Marcos - Nutricionista Colegiado Madrid">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://marcosnutricion.es/">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nutricionista Clínico y Deportivo en Madrid | Marcos Nutrición">
+  <meta property="og:description" content="Transforma tu físico y tu energía sin dietas extremas. Consulta presencial en Calle Serrano (Madrid) y programa online 100% personalizado.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="es_ES">
 
-    <!-- Schema Markup JSON-LD (LocalBusiness, MedicalBusiness, Person, FAQPage) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": ["MedicalBusiness", "LocalBusiness"],
-          "@id": "https://marcosnutricion.es/#clinic",
-          "name": "Marcos Nutrición Clínica y Deportiva Madrid",
-          "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=80",
-          "url": "https://marcosnutricion.es",
-          "telephone": "+34910000000",
-          "priceRange": "$$",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Calle de Serrano, 45",
-            "addressLocality": "Madrid",
-            "postalCode": "28001",
-            "addressRegion": "Madrid",
-            "addressCountry": "ES"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 40.4258,
-            "longitude": -3.6865
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "20:00"
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#FAFAFA",
+            emerald: {
+              50: "#ecfdf5",
+              100: "#d1fae5",
+              200: "#a7f3d0",
+              500: "#10b981",
+              600: "#059669",
+              700: "#047857",
+              900: "#064e3b",
             }
-          ],
-          "medicalSpecialty": [
-            "Dietetics",
-            "SportsMedicine",
-            "Gastroenterology"
-          ],
-          "areaServed": [
-            {
-              "@type": "City",
-              "name": "Madrid"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Comunidad de Madrid"
-            }
-          ]
-        },
-        {
-          "@type": "Person",
-          "@id": "https://marcosnutricion.es/#person",
-          "name": "Marcos",
-          "jobTitle": "Nutricionista Clínico y Deportivo Colegiado",
-          "worksFor": {
-            "@id": "https://marcosnutricion.es/#clinic"
           },
-          "alumniOf": "Universidad Complutense de Madrid",
-          "knowsAbout": [
-            "Recomposición Corporal",
-            "Nutrición Deportiva",
-            "Salud Digestiva y SIBO",
-            "Nutrición Antiinflamatoria",
-            "Metabolismo"
-          ]
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
         }
-      ]
+      }
     }
-    </script>
-  </head>
-  <body class="bg-[#FAFAFA] text-slate-900 font-sans antialiased selection:bg-emerald-500 selection:text-white overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  </script>
+
+  <!-- Lucide Icons & Confetti Library CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema Markup JSON-LD (MedicalBusiness, LocalBusiness, Person, FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["MedicalBusiness", "LocalBusiness"],
+        "@id": "https://marcosnutricion.es/#clinic",
+        "name": "Marcos Nutrición Clínica y Deportiva Madrid",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=80",
+        "url": "https://marcosnutricion.es",
+        "telephone": "+34910000000",
+        "email": "contacto@marcosnutricion.es",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle de Serrano, 45",
+          "addressLocality": "Madrid",
+          "postalCode": "28001",
+          "addressRegion": "Comunidad de Madrid",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.4258,
+          "longitude": -3.6865
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          }
+        ],
+        "medicalSpecialty": [
+          "Dietetics",
+          "SportsMedicine",
+          "Gastroenterology"
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Madrid"
+          },
+          {
+            "@type": "Neighborhood",
+            "name": "Barrio de Salamanca"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://marcosnutricion.es/#person",
+        "name": "Marcos",
+        "jobTitle": "Nutricionista Clínico y Deportivo",
+        "worksFor": {
+          "@id": "https://marcosnutricion.es/#clinic"
+        },
+        "alumniOf": "Universidad Complutense de Madrid"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-[#FAFAFA] text-slate-900 font-sans antialiased selection:bg-emerald-500 selection:text-white overflow-x-hidden">
+
+  <!-- STICKY GLASSMORPHISM NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4">
+    <div class="max-w-7xl mx-auto glass-nav rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-sm">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-md transition-transform duration-300 group-hover:scale-105">
+          M
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-slate-900 tracking-tight text-base sm:text-lg leading-tight">
+            MARCOS <span class="text-emerald-600 font-medium text-xs sm:text-sm">Nutrición</span>
+          </span>
+          <span class="text-[10px] text-slate-500 font-medium flex items-center gap-1">
+            <i data-lucide="map-pin" class="w-3 h-3 text-emerald-600"></i> Madrid · Barrio de Salamanca
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <a href="#metodo" class="hover:text-emerald-600 transition-colors">El Método</a>
+        <a href="#programas" class="hover:text-emerald-600 transition-colors">Programas 90 Días</a>
+        <a href="#testimonios" class="hover:text-emerald-600 transition-colors">Casos Reales</a>
+        <a href="#guia-gratuita" class="hover:text-emerald-600 transition-colors">Guía PDF</a>
+        <a href="#faq" class="hover:text-emerald-600 transition-colors">Dudas Madrid</a>
+      </nav>
+
+      <!-- Primary CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button
+          class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-emerald-glow cursor-pointer"
+        >
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Agenda tu Valoración</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 sm:hidden">
+        <button class="open-booking-modal btn-cta bg-emerald-600 text-white p-2 rounded-lg">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+        </button>
+        <button id="mobileMenuBtn" class="p-2 text-slate-700 rounded-lg">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileDrawer" class="hidden sm:hidden fixed inset-x-4 top-20 bg-white/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-200 shadow-2xl z-50">
+      <nav class="flex flex-col gap-4 text-base font-semibold text-slate-800">
+        <a href="#metodo" class="py-2 border-b border-slate-100 hover:text-emerald-600">El Método</a>
+        <a href="#programas" class="py-2 border-b border-slate-100 hover:text-emerald-600">Programas 90 Días</a>
+        <a href="#testimonios" class="py-2 border-b border-slate-100 hover:text-emerald-600">Casos Reales</a>
+        <a href="#guia-gratuita" class="py-2 border-b border-slate-100 hover:text-emerald-600">Guía PDF Gratuita</a>
+        <a href="#faq" class="py-2 border-b border-slate-100 hover:text-emerald-600">Preguntas Frecuentes Madrid</a>
+        <button class="open-booking-modal mt-2 btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          <span>Agenda tu Valoración Gratuita</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden emerald-gradient-glow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        
+        <!-- Local Badge -->
+        <div class="flex justify-center mb-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-semibold shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping"></span>
+            <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600"></i>
+            <span>Nutricionista en Madrid · Barrio de Salamanca (Consulta Presencial & Online)</span>
+          </div>
+        </div>
+
+        <!-- H1 Benefit Title -->
+        <div class="max-w-4xl mx-auto space-y-6">
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Transforma tu físico y tu energía <br class="hidden sm:inline">
+            <span class="bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 bg-clip-text text-transparent">
+              sin dietas extremas ni efecto rebote
+            </span>
+          </h1>
+
+          <!-- H2 Subtitle -->
+          <h2 class="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+            Programa clínico y deportivo personalizado en <strong class="font-semibold text-slate-900">Madrid</strong>. 
+            Optimizamos tu composición corporal, salud digestiva y vitalidad con ciencia y adherencia real.
+          </h2>
+
+          <!-- Action Buttons -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <button
+              class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg px-8 py-4 rounded-xl flex items-center justify-center gap-3 shadow-emerald-glow cursor-pointer"
+            >
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              <span>Agenda tu Sesión de Valoración Gratuita</span>
+            </button>
+
+            <a
+              href="#guia-gratuita"
+              class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-300 flex items-center justify-center gap-2 shadow-sm"
+            >
+              <i data-lucide="download" class="w-5 h-5 text-emerald-600"></i>
+              <span>Descarga Guía PDF Gratuita</span>
+            </a>
+          </div>
+
+          <!-- Trust Signals -->
+          <div class="pt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Sin permanencia</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Bioimpedancia médica Madrid</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Colegiado N.º MAD-0842</span>
+          </div>
+        </div>
+
+        <!-- Metric Showcase Card -->
+        <div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
+          <div class="rounded-3xl p-6 sm:p-8 bg-white border border-slate-200/80 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left">
+              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xl">-8kg</div>
+                <div>
+                  <div class="text-xs font-semibold text-slate-500 uppercase">Grasa Corporal</div>
+                  <div class="text-base font-bold text-slate-900">Sin perder músculo</div>
+                  <div class="text-xs text-emerald-600 font-medium mt-0.5">Media en 90 Días</div>
+                </div>
+              </div>
+              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-xl">100%</div>
+                <div>
+                  <div class="text-xs font-semibold text-slate-500 uppercase">Plan Flexible</div>
+                  <div class="text-base font-bold text-slate-900">Adaptado a tu vida</div>
+                  <div class="text-xs text-slate-500 font-medium mt-0.5">Comida real de Madrid</div>
+                </div>
+              </div>
+              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xl">⚡</div>
+                <div>
+                  <div class="text-xs font-semibold text-slate-500 uppercase">Energía & Digestión</div>
+                  <div class="text-base font-bold text-slate-900">Cero hinchazón</div>
+                  <div class="text-xs text-teal-600 font-medium mt-0.5">Salud digestiva óptima</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF & TESTIMONIALS -->
+    <section id="testimonios" class="py-16 sm:py-24 bg-white border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <!-- Horizontal Banner -->
+        <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl mb-16 grid grid-cols-1 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
+          <div class="pt-2 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">+10.000</div>
+            <p class="text-xs text-slate-300 mt-1">Comunidad activa en Madrid</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">+1.200</div>
+            <p class="text-xs text-slate-300 mt-1">Pacientes transformados</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">98.4%</div>
+            <p class="text-xs text-slate-300 mt-1">Sostenibilidad a 12 meses</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-400">4.9/5.0</div>
+            <p class="text-xs text-slate-300 mt-1">Valoración Google Madrid</p>
+          </div>
+        </div>
+
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-xs font-extrabold text-emerald-600 uppercase tracking-widest">Resultados Reales en Madrid</h2>
+          <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Casos de éxito de nuestros pacientes</h3>
+        </div>
+
+        <!-- 3 Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div class="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-3">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Carlos Ruiz">
+                <div>
+                  <h4 class="font-bold text-slate-900">Carlos Ruiz</h4>
+                  <p class="text-xs text-slate-500">Ejecutivo Financiero · Madrid</p>
+                </div>
+              </div>
+              <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-700 italic">"Con Marcos aprendí a comer sin culpa de acuerdo a mis horarios de trabajo en Madrid. La bioimpedancia en consulta me motivó muchísimo."</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
+              ✓ -11kg grasa / +3kg masa muscular
+            </div>
+          </div>
+
+          <div class="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-3">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Elena Gómez">
+                <div>
+                  <h4 class="font-bold text-slate-900">Elena Gómez</h4>
+                  <p class="text-xs text-slate-500">Abogada & CrossFit · Chamberí</p>
+                </div>
+              </div>
+              <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-700 italic">"Llegué con SIBO y problemas digestivos severos. El protocolo de nutrición antiinflamatoria en 8 semanas me devolvió la energía."</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
+              ✓ Cero hinchazón abdominal
+            </div>
+          </div>
+
+          <div class="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-3">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Javier Fernández">
+                <div>
+                  <h4 class="font-bold text-slate-900">Javier Fernández</h4>
+                  <p class="text-xs text-slate-500">Opositor Policía · Retiro</p>
+                </div>
+              </div>
+              <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-700 italic">"Necesitaba rendir al máximo en las pruebas físicas de la oposición sin perder masa muscular. La pauta que me diseñó en Madrid fue clave."</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
+              ✓ Optimización de marcas físicas
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section id="metodo" class="py-16 sm:py-24 bg-[#FAFAFA]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 uppercase">Ciencia Aplicada</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">El Método Marcos: 4 Pasos para tu Transformación</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 01</div>
+            <h3 class="text-lg font-bold text-slate-900">Diagnóstico 360° & Bioimpedancia</h3>
+            <p class="text-xs text-slate-600 mt-2">Medimos porcentaje exacto de grasa corporal y masa muscular con tecnología médica en Madrid.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 02</div>
+            <h3 class="text-lg font-bold text-slate-900">Plan Antiinflamatorio Flexible</h3>
+            <p class="text-xs text-slate-600 mt-2">Sin menús estrictos. Diseñado según tu estilo de vida y restaurantes en Madrid.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 03</div>
+            <h3 class="text-lg font-bold text-slate-900">Acompañamiento Continuo</h3>
+            <p class="text-xs text-slate-600 mt-2">Ajustes semanales de macronutrientes para evitar estancamientos.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 04</div>
+            <h3 class="text-lg font-bold text-slate-900">Garantía Cero Efecto Rebote</h3>
+            <p class="text-xs text-slate-600 mt-2">Educación nutricional profunda para que mantengas los resultados de por vida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID SERVICES -->
+    <section id="programas" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase">Programas Integrales</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3">Programas de Alto Valor</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Main Program -->
+          <div class="md:col-span-2 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <span class="bg-emerald-600 text-xs font-bold px-3 py-1 rounded-full">PROGRAMA ESTRELLA</span>
+              <h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-4">Recomposición Integral de 90 Días</h3>
+              <p class="text-sm sm:text-base text-slate-300 mt-2 max-w-xl">Quema grasa rebelde y gana masa muscular simultáneamente sin pasarte el día midiendo calorías. Medición de bioimpedancia clínica mensual en Madrid.</p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span class="text-xs text-emerald-400 font-semibold">Presencial Calle Serrano / Online</span>
+              <button class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl" data-program="Recomposición Integral de 90 Días">
+                Solicitar Plaza 90 Días
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary Program -->
+          <div class="bg-[#FAFAFA] rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">Alto Rendimiento Deportivo</h3>
+              <p class="text-xs text-slate-600 mt-2">Periodización nutricional según fases de carga, entrenamientos de fuerza o competiciones.</p>
+            </div>
+            <button class="open-booking-modal mt-6 w-full bg-white text-slate-900 font-bold text-xs py-3 rounded-xl border border-slate-300" data-program="Alto Rendimiento Deportivo">
+              Consultar Disponibilidad
+            </button>
+          </div>
+
+          <!-- Third Program -->
+          <div class="bg-[#FAFAFA] rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">Salud Digestiva & SIBO</h3>
+              <p class="text-xs text-slate-600 mt-2">Tratamiento especializado para SIBO, colon irritable e inflamación intestinal en Madrid.</p>
+            </div>
+            <button class="open-booking-modal mt-6 w-full bg-white text-slate-900 font-bold text-xs py-3 rounded-xl border border-slate-300" data-program="Salud Digestiva & SIBO">
+              Consultar Disponibilidad
+            </button>
+          </div>
+
+          <!-- Fourth Program -->
+          <div class="md:col-span-2 bg-[#FAFAFA] rounded-3xl p-6 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">Optimización Metabólica (Insulina / Colesterol)</h3>
+              <p class="text-xs text-slate-600 mt-1">Revierte parámetros alterados en tus análisis de sangre con pautas clínicas.</p>
+            </div>
+            <button class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl" data-program="Optimización Metabólica">
+              Agendar Valoración Clínica
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEAD MAGNET -->
+    <section id="guia-gratuita" class="py-16 sm:py-24 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-emerald-400 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800">Recurso Gratuito PDF</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Guía Definitiva: Recomposición & Nutrición Antiinflamatoria</h2>
+          <p class="text-sm text-slate-300">Descarga sin coste las 42 páginas con las claves para desinflamar tu digestivo y transformar tu físico en Madrid.</p>
+        </div>
+
+        <div class="lg:col-span-6 bg-white text-slate-900 p-6 sm:p-8 rounded-3xl shadow-2xl">
+          <form id="leadMagnetForm" class="space-y-4">
+            <h3 class="text-xl font-bold text-slate-900">Descarga la Guía en PDF</h3>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo *</label>
+              <input type="text" id="leadName" required placeholder="Ej: María García" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico *</label>
+              <input type="email" id="leadEmail" required placeholder="maria@ejemplo.com" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Objetivo Prioritario</label>
+              <select id="leadGoal" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+                <option value="Recomposición Corporal">Perder Grasa / Masa Muscular</option>
+                <option value="Salud Digestiva">Salud Digestiva / SIBO</option>
+                <option value="Rendimiento Deportivo">Rendimiento Deportivo</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-emerald-glow">
+              Obtener Guía Gratuita en PDF
+            </button>
+          </form>
+
+          <div id="leadMagnetSuccess" class="hidden text-center py-6 space-y-3">
+            <h3 class="text-2xl font-bold text-slate-900">¡Guía enviada con éxito!</h3>
+            <p class="text-sm text-slate-600">Hemos registrado tu solicitud para <span id="leadSuccessEmail" class="font-bold"></span>. Haz clic a continuación para descargar:</p>
+            <button onclick="alert('Simulación: El archivo PDF Guia-Recomposicion-Madrid-2026.pdf se está descargando.')" class="btn-cta bg-emerald-600 text-white font-bold text-sm px-6 py-3 rounded-xl">
+              Descargar PDF Ahora (2.4 MB)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section id="faq" class="py-16 sm:py-24 bg-[#FAFAFA]">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl font-extrabold text-center text-slate-900 mb-8">Preguntas Frecuentes Madrid</h2>
+
+        <div class="space-y-3">
+          <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5">
+            <button class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center">
+              <span>¿Dónde está ubicada la consulta presencial en Madrid?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
+              Estamos ubicados en Calle de Serrano 45, Barrio de Salamanca, Madrid (Metro Rubén Darío / Núñez de Balboa).
+            </div>
+          </div>
+
+          <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5">
+            <button class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center">
+              <span>¿En qué consiste la primera sesión de valoración gratuita?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
+              Es una llamada de 20 minutos o consulta rápida en Madrid donde analizamos tus objetivos e historial antes de proponerte un programa.
+            </div>
+          </div>
+
+          <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5">
+            <button class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center">
+              <span>¿Puedo realizar el programa 100% Online?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
+              Sí, contamos con plataforma online propia y seguimiento continuo por WhatsApp con los mismos resultados.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-white py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <div class="font-extrabold text-base text-white">MARCOS Nutrición Madrid</div>
+        <div class="text-slate-400 mt-1">Calle Serrano 45 · Barrio de Salamanca · Madrid</div>
+      </div>
+      <div class="text-slate-400">© 2026 Marcos Nutrición. Colegiado N.º MAD-0842.</div>
+    </div>
+  </footer>
+
+  <!-- MULTI-STEP BOOKING MODAL -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 max-w-lg w-full relative">
+      <button class="close-booking-modal absolute top-4 right-4 text-slate-400 font-bold text-lg">✕</button>
+
+      <!-- Step 1 -->
+      <div id="bookingStep1">
+        <h3 class="text-xl font-extrabold text-slate-900">Reserva tu Valoración Gratuita</h3>
+        <p class="text-xs text-slate-500 mt-1 mb-4">Paso 1: Selecciona tu programa de interés</p>
+
+        <div class="space-y-2 mb-6">
+          <button type="button" class="goal-option-btn w-full text-left p-3 rounded-xl border border-emerald-600 bg-emerald-50 text-emerald-950 text-xs font-semibold" data-value="Recomposición Integral de 90 Días">
+            Recomposición Integral de 90 Días
+          </button>
+          <button type="button" class="goal-option-btn w-full text-left p-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-700 text-xs font-medium" data-value="Salud Digestiva & SIBO">
+            Salud Digestiva & SIBO
+          </button>
+          <button type="button" class="goal-option-btn w-full text-left p-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-700 text-xs font-medium" data-value="Alto Rendimiento Deportivo">
+            Alto Rendimiento Deportivo
+          </button>
+        </div>
+
+        <div class="flex justify-end">
+          <button id="btnStep1Next" type="button" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">
+            Siguiente →
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div id="bookingStep2" class="hidden">
+        <h3 class="text-xl font-extrabold text-slate-900">Formato y Horario</h3>
+        <p class="text-xs text-slate-500 mt-1 mb-4">Paso 2: Elige modalidad de consulta</p>
+
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <button type="button" class="modality-btn p-3 rounded-xl border border-emerald-600 bg-emerald-50 text-xs font-bold text-left" data-modality="presencial">
+            📍 Presencial Madrid
+          </button>
+          <button type="button" class="modality-btn p-3 rounded-xl border border-slate-200 bg-slate-50 text-xs font-bold text-left" data-modality="online">
+            🌐 Consulta Online
+          </button>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferencia Horaria</label>
+          <select id="bookingSchedule" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+            <option value="Tardes (16:00 - 20:00)">Tardes (16:00 - 20:00)</option>
+            <option value="Mañanas (09:00 - 14:00)">Mañanas (09:00 - 14:00)</option>
+          </select>
+        </div>
+
+        <div class="flex justify-between">
+          <button id="btnStep2Back" type="button" class="text-xs text-slate-500 font-bold">← Atrás</button>
+          <button id="btnStep2Next" type="button" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div id="bookingStep3" class="hidden">
+        <h3 class="text-xl font-extrabold text-slate-900">Datos de Contacto</h3>
+        <p class="text-xs text-slate-500 mt-1 mb-4">Paso 3: Confirma tu solicitud</p>
+
+        <form id="bookingForm" class="space-y-3">
+          <input type="text" id="bookingName" required placeholder="Nombre y Apellidos *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+          <input type="tel" id="bookingPhone" required placeholder="Teléfono / WhatsApp *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+          <input type="email" id="bookingEmail" required placeholder="Email *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+
+          <div class="flex justify-between items-center pt-2">
+            <button id="btnStep3Back" type="button" class="text-xs text-slate-500 font-bold">← Atrás</button>
+            <button type="submit" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">
+              Confirmar Reserva Gratuita
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step Success -->
+      <div id="bookingStepSuccess" class="hidden text-center py-6 space-y-3">
+        <h3 class="text-2xl font-bold text-emerald-600">¡Reserva Solicitada con Éxito!</h3>
+        <p class="text-xs text-slate-600">Te contactaremos en menos de 24h laborables por WhatsApp/Teléfono para confirmar tu hora en Madrid.</p>
+        <button class="close-booking-modal btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript Entry Point -->
+  <script src="js/app.js"></script>
+</body>
 </html>
