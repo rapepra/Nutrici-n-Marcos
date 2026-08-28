@@ -1,4 +1,4 @@
-/* Styles for Pure HTML/CSS/JS Version of Nutrición Marcos Madrid */
+/* Styles for Pure HTML/CSS/JS Version of Nutrición Marcos Demandre Madrid */
 
 :root {
   --bg-main: #FAFAFA;
@@ -17,7 +17,7 @@ html {
 
 /* Glassmorphism Sticky Navbar */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(226, 232, 240, 0.8);
@@ -43,9 +43,23 @@ html {
   background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.12) 0%, rgba(250, 250, 250, 0) 70%);
 }
 
-/* Instagram Gradient Badge */
+/* Instagram Plugin Widget & Gradient */
 .bg-instagram-gradient {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.instagram-plugin-badge {
+  background: linear-gradient(135deg, rgba(240, 148, 51, 0.1) 0%, rgba(220, 39, 67, 0.1) 50%, rgba(188, 24, 136, 0.1) 100%);
+  border: 1px solid rgba(220, 39, 67, 0.25);
+  transition: all 0.25s ease;
+}
+
+.instagram-plugin-badge:hover {
+  background: linear-gradient(135deg, #f09433 0%, #dc2743 50%, #bc1888 100%);
+  color: #ffffff !important;
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(220, 39, 67, 0.35);
+  transform: translateY(-1px);
 }
 
 .instagram-card-hover {
@@ -56,6 +70,17 @@ html {
   transform: translateY(-4px);
   border-color: rgba(220, 39, 67, 0.4);
   box-shadow: 0 12px 30px -10px rgba(220, 39, 67, 0.15);
+}
+
+/* Floating Right Instagram Plugin */
+.floating-ig-widget {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px -5px rgba(220, 39, 67, 0.4);
+}
+
+.floating-ig-widget:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px -5px rgba(220, 39, 67, 0.55);
 }
 
 /* Custom Scrollbar */

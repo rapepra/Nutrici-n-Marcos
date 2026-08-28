@@ -1,5 +1,5 @@
 /**
- * Vanilla JavaScript application logic for Nutrición Marcos Madrid (html-css branch)
+ * Vanilla JavaScript application logic for Nutrición Marcos Demandre (html-css branch)
  * Includes Instagram profile integration (@marcostsd.rehab) & post transcription reader.
  */
 
@@ -11,23 +11,23 @@ const instagramPostsData = [
     title: "La Clave de la Recuperación & Potenciación Muscular sin Inflamación Crónica",
     category: "Recuperación & Fuerza",
     badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
-    date: "Publicado en @marcostsd.rehab",
+    date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
     instagramUrl: INSTAGRAM_URL,
-    summary: "Transcribimos y ampliamos el análisis de Marcos (TSD) sobre cómo acelerar la regeneración tisular entre sesiones de entrenamiento combinando periodización proteica y modulación del estrés.",
+    summary: "Transcribimos y ampliamos el análisis de Marcos Demandre (TSD) sobre cómo acelerar la regeneración tisular entre sesiones combinando periodización proteica y modulación del estrés.",
     fullContent: `
       <h3>1. El Mito del Sobrenentrenamiento vs. Bajo Descanso Nutricional</h3>
-      <p>Muchos deportistas en Madrid atribuyen el dolor articular persistente o la falta de fuerza al "sobreentrenamiento". En el 80% de los casos evaluados en consulta, el problema real es una falta de potencia sustratal: no se aportan la leucina ni los micronutrientes cofactores necesarios para la síntesis de colágeno durante la ventana de reparación nocturna.</p>
+      <p>Muchos deportistas en Madrid atribuyen el dolor articular persistente o la falta de fuerza al "sobreentrenamiento". En el 80% de los casos evaluados en consulta por Marcos Demandre en el Barrio de Salamanca, el problema real es una falta de potencia sustratal: no se aportan la leucina ni los micronutrientes cofactores necesarios para la síntesis de colágeno durante la ventana de reparación nocturna.</p>
       
-      <h3>2. Protocolo de Potenciación Nutricional (Método Marcos TSD)</h3>
+      <h3>2. Protocolo de Potenciación Nutricional (Método Marcos Demandre TSD)</h3>
       <ul>
         <li><strong>Peri-entreno estructurado:</strong> Ingesta de 0.4g/kg de proteína de alto valor biológico junto a carbohidratos de bajo índice glucémico pre-sesión para preservar el glucógeno muscular.</li>
         <li><strong>Modulación Antiinflamatoria:</strong> Ratio Omega 3/6 optimizado mediante alimentos reales (pescado azul, nueces, semillas) reduciendo el dolor articular tardío (DOMS).</li>
-        <li><strong>Hidratación e Ionización:</strong> Reposición de sodio y magnesio ajustados al nivel de sudoración en entrenamientos intensos.</li>
+        <li><strong>Hidratación e Ionización:</strong> Reposición de sodio y magnesio ajustados al nivel de sudoración en entrenamientos intensos en Madrid.</li>
       </ul>
 
       <p class="mt-4 italic bg-emerald-50 p-4 rounded-xl text-emerald-900 border border-emerald-200">
-        💡 <strong>Conclusión Marcos TSD:</strong> "La masa muscular no se destruye en el gimnasio, se reconstruye en el plato. Ajusta tus macros a la exigencia de tus entrenamientos."
+        💡 <strong>Conclusión Marcos Demandre:</strong> "La masa muscular no se destruye en el gimnasio, se reconstruye en el plato. Ajusta tus macros a la exigencia de tus entrenamientos."
       </p>
     `
   },
@@ -36,24 +36,24 @@ const instagramPostsData = [
     title: "Recomposición Corporal de 90 Días: Por qué las Dietas de 1200 kcal Destruyen tu Metabolismo",
     category: "Recomposición Corporal",
     badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    date: "Publicado en @marcostsd.rehab",
+    date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80",
     instagramUrl: INSTAGRAM_URL,
-    summary: "Explicación detallada de por qué el déficit calórico agresivo provoca pérdida de masa magra, ralentización tiroidea y efecto rebote rápido al volver a comer normal.",
+    summary: "Explicación detallada de Marcos Demandre sobre por qué el déficit calórico agresivo provoca pérdida de masa magra, ralentización tiroidea y efecto rebote rápido.",
     fullContent: `
       <h3>1. La trampa del peso balanza vs. Composición Corporal</h3>
       <p>Cuando reduces drásticamente las calorías sin una pauta adaptada, el peso que pierdes en las primeras semanas es principalmente agua, glucógeno y proteína muscular. Al disminuir la masa magra, tu gasto calórico en reposo cae drásticamente.</p>
 
       <h3>2. La Estrategia de Recomposición en 90 Días</h3>
-      <p>En el programa de Marcos TSD aplicamos un déficit leve o neutro calórico (Cycling Calórico) enfocado en:</p>
+      <p>En el programa de Marcos Demandre aplicamos un déficit leve o neutro calórico (Cycling Calórico) enfocado en:</p>
       <ul>
         <li>Aumentar la densidad nutricional sin reducir el volumen del plato.</li>
         <li>Mantener la tasa metabólica activa mediante estímulo de fuerza y aporte proteico óptimo (1.8g - 2.2g / kg).</li>
-        <li>Medición de grasa visceral y masa magra mediante bioimpedancia médica mensual en Madrid.</li>
+        <li>Medición de grasa visceral y masa magra mediante bioimpedancia médica mensual en Calle Serrano, Madrid.</li>
       </ul>
 
       <p class="mt-4 italic bg-emerald-50 p-4 rounded-xl text-emerald-900 border border-emerald-200">
-        💡 <strong>Conclusión Marcos TSD:</strong> "El objetivo no es comer menos, es enseñarle a tu organismo a usar la grasa acumulada como combustible sin sacrificar tu musculatura."
+        💡 <strong>Conclusión Marcos Demandre:</strong> "El objetivo no es comer menos, es enseñarle a tu organismo a usar la grasa acumulada como combustible sin sacrificar tu musculatura."
       </p>
     `
   },
@@ -62,19 +62,19 @@ const instagramPostsData = [
     title: "Salud Digestiva & SIBO: Protocolo Antiinflamatorio en 3 Fases Clínicas",
     category: "Salud Digestiva",
     badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
-    date: "Publicado en @marcostsd.rehab",
+    date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
     instagramUrl: INSTAGRAM_URL,
-    summary: "Cómo abordar la hinchazón permanente, gases molestos y disbiosis intestinal mediante el protocolo por fases de nutrición clínica de Marcos TSD.",
+    summary: "Cómo abordar la hinchazón permanente, gases molestos y disbiosis intestinal mediante el protocolo por fases de nutrición clínica de Marcos Demandre.",
     fullContent: `
       <h3>1. ¿Por qué estás hinchado/a todas las tardes?</h3>
       <p>La inflamación intestinal recurrente suele ser síntoma de sobrecrecimiento bacteriano (SIBO), falta de ácido clorhídrico estomacal o alteración del Complejo Motor Migratorio (CMM). Comer a deshoras o alimentos ultraprocesados agrava el problema.</p>
 
-      <h3>2. Protocolo Clínico de 3 Fases</h3>
+      <h3>2. Protocolo Clínico de 3 Fases de Marcos Demandre</h3>
       <ol>
         <li><strong>Fase 1: Eliminación Estructurada (Low FODMAP):</strong> Retirada temporal de carbohidratos fermentables que alimentan a las bacterias desplazadas.</li>
         <li><strong>Fase 2: Reparación Intestinal:</strong> Aporte de glutamina, zinc carnosina y polifenoles para restaurar las uniones estrechas del epitelio digestivo.</li>
-        <li><strong>Fase 3: Reintroducción & Tolerancia:</strong> Probamos uno a uno los grupos de alimentos para devolverte la libertad de comer en cualquier restaurante de Madrid sin hinchazón.</li>
+        <li><strong>Fase 3: Reintroducción & Tolerancia:</strong> Probamos uno a uno los grupos de alimentos para devolverte la libertad de comer en cualquier restaurante del Barrio de Salamanca sin hinchazón.</li>
       </ol>
     `
   },
@@ -83,10 +83,10 @@ const instagramPostsData = [
     title: "Ayuno Intermitente vs. Adherencia Real: Mito vs. Realidad Científica",
     category: "Mitos & Evidencia",
     badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
-    date: "Publicado en @marcostsd.rehab",
+    date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80",
     instagramUrl: INSTAGRAM_URL,
-    summary: "El ayuno no es mágico por sí solo: desglosamos cuándo ayuda a regular la insulina y cuándo destruye la recuperación en deportistas de alto rendimiento.",
+    summary: "El ayuno no es mágico por sí solo: Marcos Demandre desglosa cuándo ayuda a regular la insulina y cuándo destruye la recuperación en deportistas de alto rendimiento.",
     fullContent: `
       <h3>1. ¿Sirve el ayuno intermitente 16/8 para perder grasa?</h3>
       <p>El ayuno 16/8 es simplemente una herramienta para controlar la ventana de ingesta. Si dentro de las 8 horas de comida consumes más calorías de las que gastas, no perderás grasa. Sin embargo, en personas con resistencia a la insulina o mala sensibilidad matutina a los carbohidratos, resulta extremadamente útil.</p>
@@ -100,10 +100,9 @@ const instagramPostsData = [
     title: "Nutrición y Recuperación de Lesiones Musculares y Articulares",
     category: "Rehabilitación TSD",
     badgeColor: "bg-rose-100 text-rose-800 border-rose-200",
-    date: "Publicado en @marcostsd.rehab",
+    date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
-    instagramUrl: INSTAGRAM_URL,
-    summary: "Nutrientes específicos y suplementación clínica para recortar semanas en la cicatrización de tendones, ligamentos y roturas fibrilares.",
+    summary: "Nutrientes específicos y suplementación clínica recomendados por Marcos Demandre para recortar semanas en la cicatrización de tendones, ligamentos y roturas fibrilares.",
     fullContent: `
       <h3>1. Nutrición durante la Fase Inmovilizada o de Baja Carga</h3>
       <p>Tras una lesión deportiva, el error común es reducir drásticamente las calorías por miedo a engordar. Sin embargo, el proceso de cicatrización tisular eleva la tasa metabólica en reposo entre un 15% y un 50%.</p>
@@ -122,12 +121,12 @@ const instagramPostsData = [
     title: "Cómo Estructurar tu Plato Nutricional en Madrid sin Medir al Gramo",
     category: "Estilo de Vida",
     badgeColor: "bg-blue-100 text-blue-800 border-blue-200",
-    date: "Publicado en @marcostsd.rehab",
+    date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
     instagramUrl: INSTAGRAM_URL,
-    summary: "El método visual de porciones para comer fuera en menús del día o cenas de empresa manteniendo la recomposición corporal.",
+    summary: "El método visual de porciones diseñado por Marcos Demandre para comer fuera en restaurantes del Barrio de Salamanca o Recoletos manteniendo tus objetivos.",
     fullContent: `
-      <h3>1. El Método Visual Marcos TSD para Comer Fuera</h3>
+      <h3>1. El Método Visual Marcos Demandre para Comer Fuera</h3>
       <p>No necesitas llevar una báscula a un restaurante en Madrid. Usamos referencias anatómicas de tu propia mano:</p>
       <ul>
         <li><strong>Proteínas:</strong> 1 o 2 palmas completas de la mano (carne magra, pescado, huevos, tofu).</li>
@@ -145,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // 2. Render Instagram Transcribed Posts Grid if Container Exists
+  // 2. Render Instagram Transcribed Posts Grid
   const instagramGridContainer = document.getElementById('instagramPostsGrid');
   if (instagramGridContainer) {
     instagramGridContainer.innerHTML = instagramPostsData.map(post => `
@@ -282,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookingForm = document.getElementById('bookingForm');
 
   const goalOptionBtns = document.querySelectorAll('.goal-option-btn');
-  let selectedGoal = 'Recomposición Corporal de 90 Días';
+  let selectedGoal = 'Recomposición Integral de 90 Días';
   let selectedModality = 'presencial';
 
   openModalBtns.forEach((btn) => {
@@ -390,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
         createdAt: new Date().toISOString()
       };
 
-      console.info('[Booking Submitted]:', payload);
+      console.info('[Booking Submitted for Marcos Demandre]:', payload);
       saveBookingToStorage(payload);
 
       if (step3 && stepSuccess) {
@@ -443,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const goal = document.getElementById('leadGoal').value;
 
       const leadData = { name, email, goal, createdAt: new Date().toISOString() };
-      console.info('[Lead Magnet Captured]:', leadData);
+      console.info('[Lead Magnet Captured for Marcos Demandre]:', leadData);
       saveLeadToStorage(leadData);
 
       if (leadMagnetForm && leadMagnetSuccess) {
