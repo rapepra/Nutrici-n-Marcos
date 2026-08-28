@@ -1,4 +1,6 @@
-/* Styles for Pure HTML/CSS/JS Version of Nutrición Marcos Demandre Madrid */
+/* Styles for Pure HTML/CSS/JS Version of Nutrición Marcos Demandre Madrid 
+ * Fully Optimized for Responsive Web Design, WCAG 2.1 AA Accessibility & Google Core Web Vitals
+ */
 
 :root {
   --bg-main: #FAFAFA;
@@ -13,11 +15,69 @@ html {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Accessibility: Screen Reader Only Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:focus-visible {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: #059669;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Accessible Focus Visible Outlines for Keyboard Navigation */
+:focus-visible {
+  outline: 3px solid #059669 !important;
+  outline-offset: 3px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #059669 !important;
+  outline-offset: 3px !important;
+}
+
+/* Ensure minimum touch target size (44px x 44px) for mobile accessibility */
+button,
+a.btn-cta,
+.instagram-plugin-badge,
+.faq-button {
+  min-height: 44px;
 }
 
 /* Glassmorphism Sticky Navbar */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(226, 232, 240, 0.8);
@@ -81,6 +141,17 @@ html {
 .floating-ig-widget:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 15px 35px -5px rgba(220, 39, 67, 0.55);
+}
+
+/* Print Styles for Accessibility */
+@media print {
+  header, footer, .floating-ig-widget, #bookingModal, #postReaderModal {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
 }
 
 /* Custom Scrollbar */

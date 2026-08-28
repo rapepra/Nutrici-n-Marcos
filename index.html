@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#059669">
   
   <!-- SEO & GEO Deep Local Optimization (Madrid: Online & A Domicilio) -->
   <title>Marcos Demandre | Nutricionista Clínico y Deportivo en Madrid (Online & A Domicilio)</title>
@@ -58,7 +59,7 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Schema Markup JSON-LD (MedicalBusiness, LocalBusiness, Person, FAQPage GEO Optimized) -->
+  <!-- Schema Markup JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -119,27 +120,30 @@
 </head>
 <body class="bg-[#FAFAFA] text-slate-900 font-sans antialiased selection:bg-emerald-500 selection:text-white overflow-x-hidden">
 
+  <!-- ACCESSIBILITY: SKIP TO MAIN CONTENT LINK FOR SCREEN READERS & KEYBOARD USERS -->
+  <a href="#main-content" class="sr-only sr-only-focusable">Saltar al contenido principal</a>
+
   <!-- STICKY GLASSMORPHISM NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4">
+  <header role="banner" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4">
     <div class="max-w-7xl mx-auto glass-nav rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-sm">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-2.5 group">
+      <a href="#" class="flex items-center gap-2.5 group" aria-label="Ir al inicio de Marcos Demandre Nutrición">
         <div class="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-emerald-500/40 transition-transform duration-300 group-hover:scale-105">
-          <img src="assets/images/marcos-nutricionista.png" alt="Marcos Demandre Nutricionista" class="w-full h-full object-cover object-top" />
+          <img src="assets/images/marcos-nutricionista.png" alt="Retrato de Marcos Demandre Nutricionista" width="40" height="40" class="w-full h-full object-cover object-top" />
         </div>
         <div class="flex flex-col">
           <span class="font-extrabold text-slate-900 tracking-tight text-base sm:text-lg leading-tight">
             MARCOS DEMANDRE <span class="text-emerald-600 font-medium text-xs sm:text-sm">Nutrición</span>
           </span>
           <span class="text-[10px] text-slate-500 font-medium flex items-center gap-1">
-            <i data-lucide="globe" class="w-3 h-3 text-emerald-600"></i> Online & Consulta a Domicilio (Madrid)
+            <i data-lucide="globe" class="w-3 h-3 text-emerald-600" aria-hidden="true"></i> Online & Consulta a Domicilio (Madrid)
           </span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-slate-700">
+      <nav role="navigation" aria-label="Navegación principal" class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-slate-700">
         <a href="#sobre-marcos" class="hover:text-emerald-600 transition-colors">Sobre Mí</a>
         <a href="#metodo" class="hover:text-emerald-600 transition-colors">El Método</a>
         <a href="#programas" class="hover:text-emerald-600 transition-colors">Programas 90 Días</a>
@@ -158,9 +162,10 @@
           rel="noopener noreferrer"
           class="instagram-plugin-badge px-3.5 py-2 rounded-xl flex items-center gap-2 text-xs font-bold text-slate-800 cursor-pointer"
           title="Ver perfil oficial de Instagram de Marcos Demandre (@marcostsd.rehab)"
+          aria-label="Instagram oficial de Marcos Demandre @marcostsd.rehab"
         >
           <div class="w-6 h-6 rounded-lg bg-instagram-gradient text-white flex items-center justify-center shadow-sm">
-            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+            <i data-lucide="instagram" class="w-3.5 h-3.5" aria-hidden="true"></i>
           </div>
           <div class="flex flex-col text-left leading-none">
             <span class="text-[11px] font-extrabold tracking-tight">@marcostsd.rehab</span>
@@ -170,30 +175,32 @@
 
         <!-- Primary CTA Button -->
         <button
+          type="button"
           class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-emerald-glow cursor-pointer"
+          aria-label="Abrir modal de valoración gratuita"
         >
-          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <i data-lucide="calendar" class="w-4 h-4" aria-hidden="true"></i>
           <span>Agenda tu Valoración</span>
         </button>
       </div>
 
       <!-- Mobile Hamburger Button -->
       <div class="flex items-center gap-2 sm:hidden">
-        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="p-2 text-pink-600 bg-pink-50 rounded-lg">
-          <i data-lucide="instagram" class="w-5 h-5"></i>
+        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="p-2.5 text-pink-600 bg-pink-50 rounded-lg" aria-label="Perfil de Instagram">
+          <i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i>
         </a>
-        <button class="open-booking-modal btn-cta bg-emerald-600 text-white p-2 rounded-lg">
-          <i data-lucide="calendar" class="w-5 h-5"></i>
+        <button type="button" class="open-booking-modal btn-cta bg-emerald-600 text-white p-2.5 rounded-lg" aria-label="Agenda tu valoración">
+          <i data-lucide="calendar" class="w-5 h-5" aria-hidden="true"></i>
         </button>
-        <button id="mobileMenuBtn" class="p-2 text-slate-700 rounded-lg">
-          <i data-lucide="menu" class="w-6 h-6"></i>
+        <button type="button" id="mobileMenuBtn" class="p-2.5 text-slate-700 rounded-lg" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Abrir menú de navegación">
+          <i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Drawer Menu -->
     <div id="mobileDrawer" class="hidden sm:hidden fixed inset-x-4 top-20 bg-white/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-200 shadow-2xl z-50">
-      <nav class="flex flex-col gap-4 text-base font-semibold text-slate-800">
+      <nav role="navigation" aria-label="Navegación móvil" class="flex flex-col gap-4 text-base font-semibold text-slate-800">
         <a href="#sobre-marcos" class="py-2 border-b border-slate-100 hover:text-emerald-600">Sobre Mí (Marcos Demandre)</a>
         <a href="#metodo" class="py-2 border-b border-slate-100 hover:text-emerald-600">El Método</a>
         <a href="#programas" class="py-2 border-b border-slate-100 hover:text-emerald-600">Programas 90 Días</a>
@@ -205,14 +212,14 @@
           href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl"
           target="_blank"
           rel="noopener noreferrer"
-          class="bg-instagram-gradient text-white text-sm font-bold p-3 rounded-xl flex items-center justify-center gap-2 text-center"
+          class="bg-instagram-gradient text-white text-sm font-bold p-3.5 rounded-xl flex items-center justify-center gap-2 text-center min-h-[44px]"
         >
-          <i data-lucide="instagram" class="w-5 h-5"></i>
+          <i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i>
           <span>Visitar Instagram @marcostsd.rehab ↗</span>
         </a>
 
-        <button class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2">
-          <i data-lucide="calendar" class="w-5 h-5"></i>
+        <button type="button" class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 min-h-[44px]">
+          <i data-lucide="calendar" class="w-5 h-5" aria-hidden="true"></i>
           <span>Agenda tu Valoración Gratuita</span>
         </button>
       </nav>
@@ -224,17 +231,18 @@
     href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl"
     target="_blank"
     rel="noopener noreferrer"
-    class="floating-ig-widget fixed right-4 bottom-24 z-40 bg-gradient-to-r from-pink-500 via-red-500 to-amber-500 text-white p-3 rounded-full sm:rounded-2xl shadow-2xl flex items-center gap-2.5 text-xs font-bold hover:opacity-95 transition-all group"
+    class="floating-ig-widget fixed right-4 bottom-24 z-40 bg-gradient-to-r from-pink-500 via-red-500 to-amber-500 text-white p-3.5 rounded-full sm:rounded-2xl shadow-2xl flex items-center gap-2.5 text-xs font-bold hover:opacity-95 transition-all group min-h-[44px]"
     title="Ir directamente a Instagram @marcostsd.rehab"
+    aria-label="Acceder a perfil de Instagram @marcostsd.rehab"
   >
     <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
-      <i data-lucide="instagram" class="w-4 h-4"></i>
+      <i data-lucide="instagram" class="w-4 h-4" aria-hidden="true"></i>
     </div>
     <span class="hidden sm:inline">Instagram @marcostsd.rehab ⚡️</span>
   </a>
 
   <!-- MAIN CONTENT -->
-  <main>
+  <main id="main-content" role="main">
     
     <!-- HERO SECTION -->
     <section id="hero" class="relative pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden emerald-gradient-glow">
@@ -248,8 +256,8 @@
             <!-- Local Badge & Modality -->
             <div class="flex justify-center lg:justify-start">
               <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 hover:bg-pink-50 border border-emerald-200 hover:border-pink-300 text-emerald-800 hover:text-pink-700 text-xs sm:text-sm font-semibold shadow-sm transition-colors">
-                <span class="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping"></span>
-                <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600"></i>
+                <span class="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping" aria-hidden="true"></span>
+                <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600" aria-hidden="true"></i>
                 <span>Nutrición 100% Online & A Domicilio (Madrid · Barrio de Salamanca)</span>
               </a>
             </div>
@@ -269,26 +277,27 @@
             <!-- Action Buttons -->
             <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
               <button
-                class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg px-8 py-4 rounded-xl flex items-center justify-center gap-3 shadow-emerald-glow cursor-pointer"
+                type="button"
+                class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg px-8 py-4 rounded-xl flex items-center justify-center gap-3 shadow-emerald-glow cursor-pointer min-h-[48px]"
               >
-                <i data-lucide="calendar" class="w-5 h-5"></i>
+                <i data-lucide="calendar" class="w-5 h-5" aria-hidden="true"></i>
                 <span>Agenda tu Sesión de Valoración Gratuita</span>
               </button>
 
               <a
                 href="#guia-gratuita"
-                class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-300 flex items-center justify-center gap-2 shadow-sm"
+                class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-300 flex items-center justify-center gap-2 shadow-sm min-h-[48px]"
               >
-                <i data-lucide="download" class="w-5 h-5 text-emerald-600"></i>
+                <i data-lucide="download" class="w-5 h-5 text-emerald-600" aria-hidden="true"></i>
                 <span>Descarga Guía PDF Gratuita</span>
               </a>
             </div>
 
             <!-- Trust Signals -->
             <div class="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-500 font-medium">
-              <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Sin permanencia</span>
-              <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> 100% Online & A Domicilio</span>
-              <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> TSD & Recuperación</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600" aria-hidden="true"></i> Sin permanencia</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600" aria-hidden="true"></i> 100% Online & A Domicilio</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600" aria-hidden="true"></i> TSD & Recuperación</span>
             </div>
 
           </div>
@@ -299,7 +308,9 @@
               
               <img 
                 src="assets/images/marcos-nutricionista.png" 
-                alt="Marcos Demandre Nutricionista Clínico y Deportivo en Madrid - Tu nutrición, tu cambio" 
+                alt="Retrato profesional de Marcos Demandre Nutricionista Clínico y Deportivo en Madrid holding smoothie" 
+                width="480"
+                height="540"
                 class="w-full h-[480px] sm:h-[540px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
 
@@ -311,14 +322,14 @@
                   <span class="text-[11px] text-slate-300 block">Nutricionista Online & A Domicilio Madrid</span>
                 </div>
 
-                <a href="#sobre-marcos" class="w-10 h-10 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition-colors shadow-md">
-                  <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                <a href="#sobre-marcos" class="w-10 h-10 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition-colors shadow-md" aria-label="Ir a sección Sobre Mí">
+                  <i data-lucide="arrow-down" class="w-5 h-5" aria-hidden="true"></i>
                 </a>
               </div>
 
               <!-- Rating Badge top right -->
               <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200 flex items-center gap-1.5 text-xs font-bold text-slate-900">
-                <span class="text-amber-400">★</span> 4.9/5.0 Reseñas Madrid
+                <span class="text-amber-400" aria-hidden="true">★</span> 4.9/5.0 Reseñas Madrid
               </div>
 
             </div>
@@ -329,7 +340,7 @@
       </div>
     </section>
 
-    <!-- SECTION: SOBRE MARCOS DEMANDRE (CREDIBILIDAD Y AUTORIDAD REAL) -->
+    <!-- SECTION: SOBRE MARCOS DEMANDRE -->
     <section id="sobre-marcos" class="py-16 sm:py-24 bg-white border-y border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -340,7 +351,11 @@
               <div class="absolute -top-4 -left-4 w-full h-full bg-emerald-100 rounded-3xl -z-10" />
               <img 
                 src="assets/images/marcos-nutricionista.png" 
-                alt="Marcos Demandre Nutricionista en consulta Madrid" 
+                alt="Marcos Demandre Nutricionista atendiendo en Madrid" 
+                width="480"
+                height="480"
+                loading="lazy"
+                decoding="async"
                 class="w-full rounded-3xl shadow-xl object-cover h-[480px] object-top border border-slate-200"
               />
               
@@ -354,7 +369,7 @@
           <!-- Right: Bio & Credibility Content -->
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
-              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600" aria-hidden="true"></i>
               <span>Garantía de Atención Profesional y Cercana</span>
             </div>
 
@@ -373,30 +388,30 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div class="p-4 rounded-2xl bg-[#FAFAFA] border border-slate-200 flex items-start gap-3">
-                <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold flex-shrink-0">🎓</div>
+                <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold flex-shrink-0" aria-hidden="true">🎓</div>
                 <div>
-                  <h4 class="font-bold text-slate-900 text-sm">Formación TSD</h4>
+                  <h3 class="font-bold text-slate-900 text-sm">Formación TSD</h3>
                   <p class="text-xs text-slate-500 mt-0.5">Especialización en fisiopatología digestiva y nutrición de fuerza.</p>
                 </div>
               </div>
 
               <div class="p-4 rounded-2xl bg-[#FAFAFA] border border-slate-200 flex items-start gap-3">
-                <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold flex-shrink-0">🚗</div>
+                <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold flex-shrink-0" aria-hidden="true">🚗</div>
                 <div>
-                  <h4 class="font-bold text-slate-900 text-sm">A Domicilio & Online</h4>
+                  <h3 class="font-bold text-slate-900 text-sm">A Domicilio & Online</h3>
                   <p class="text-xs text-slate-500 mt-0.5">Se traslada a tu ubicación o consulta 100% digital.</p>
                 </div>
               </div>
             </div>
 
             <div class="pt-4 flex flex-wrap items-center gap-4">
-              <button class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-emerald-glow">
+              <button type="button" class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-emerald-glow min-h-[44px]">
                 Conocer mi caso con Marcos Demandre
               </button>
 
-              <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-pink-600 hover:text-pink-700 flex items-center gap-1.5">
-                <i data-lucide="instagram" class="w-4 h-4"></i>
-                <span>Ver en @marcostsd.rehab ↗</span>
+              <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-pink-600 hover:text-pink-700 flex items-center gap-1.5 min-h-[44px]">
+                <i data-lucide="instagram" class="w-4 h-4" aria-hidden="true"></i>
+                <span>Ver su día a día en @marcostsd.rehab ↗</span>
               </a>
             </div>
 
@@ -410,7 +425,7 @@
     <section id="testimonios" class="py-16 sm:py-24 bg-[#FAFAFA] border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <!-- Horizontal Banner (Updated to +120 transformed patients) -->
+        <!-- Horizontal Banner -->
         <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl mb-16 grid grid-cols-1 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
           <div class="pt-2 md:pt-0">
             <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">+10.000</div>
@@ -440,13 +455,13 @@
           <div class="bg-white rounded-2xl p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-center gap-4 mb-3">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Carlos Ruiz">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Foto de paciente Carlos Ruiz" />
                 <div>
                   <h4 class="font-bold text-slate-900">Carlos Ruiz</h4>
                   <p class="text-xs text-slate-500">Ejecutivo Financiero · Consulta Online</p>
                 </div>
               </div>
-              <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+              <div class="text-amber-400 text-sm mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
               <p class="text-xs sm:text-sm text-slate-700 italic">"Con Marcos Demandre aprendí a comer sin culpa de acuerdo a mis horarios de trabajo. La atención online y el seguimiento por WhatsApp fue impecable."</p>
             </div>
             <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
@@ -457,13 +472,13 @@
           <div class="bg-white rounded-2xl p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-center gap-4 mb-3">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Elena Gómez">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Foto de paciente Elena Gómez" />
                 <div>
                   <h4 class="font-bold text-slate-900">Elena Gómez</h4>
                   <p class="text-xs text-slate-500">Abogada & CrossFit · A Domicilio Barrio Salamanca</p>
                 </div>
               </div>
-              <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+              <div class="text-amber-400 text-sm mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
               <p class="text-xs sm:text-sm text-slate-700 italic">"Llegué con SIBO y digestiones terribles. Marcos se desplazó a mi casa para la valoración y en 8 semanas mi energía dio un cambio radical."</p>
             </div>
             <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
@@ -474,13 +489,13 @@
           <div class="bg-white rounded-2xl p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-center gap-4 mb-3">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Javier Fernández">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Foto de paciente Javier Fernández" />
                 <div>
                   <h4 class="font-bold text-slate-900">Javier Fernández</h4>
                   <p class="text-xs text-slate-500">Opositor Policía · Consulta Online</p>
                 </div>
               </div>
-              <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+              <div class="text-amber-400 text-sm mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
               <p class="text-xs sm:text-sm text-slate-700 italic">"Necesitaba rendir al máximo en las pruebas físicas sin perder masa muscular. La pauta peri-entreno que me diseñó me dio la plaza."</p>
             </div>
             <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-lg inline-block">
@@ -509,7 +524,7 @@
           <div class="bg-white rounded-2xl p-6 border border-slate-200">
             <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 02</div>
             <h3 class="text-lg font-bold text-slate-900">Plan Antiinflamatorio Flexible</h3>
-            <p class="text-xs text-slate-600 mt-2">Sin menús estrictos. Adaptado a tus hábitos y estilo de vida.</p>
+            <p class="text-xs text-slate-600 mt-2">Sin menús strictly prohibitorios. Adaptado a tus hábitos y estilo de vida.</p>
           </div>
           <div class="bg-white rounded-2xl p-6 border border-slate-200">
             <div class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-fit mb-3">PASO 03</div>
@@ -543,7 +558,7 @@
             </div>
             <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
               <span class="text-xs text-emerald-400 font-semibold">100% Online / A Domicilio en Madrid</span>
-              <button class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl" data-program="Recomposición Integral de 90 Días">
+              <button type="button" class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl min-h-[44px]" data-program="Recomposición Integral de 90 Días">
                 Solicitar Plaza 90 Días
               </button>
             </div>
@@ -555,7 +570,7 @@
               <h3 class="text-xl font-bold text-slate-900">Alto Rendimiento & Recuperación</h3>
               <p class="text-xs text-slate-600 mt-2">Periodización nutricional según fases de carga, fisioterapia o lesiones musculares.</p>
             </div>
-            <button class="open-booking-modal mt-6 w-full bg-white text-slate-900 font-bold text-xs py-3 rounded-xl border border-slate-300" data-program="Alto Rendimiento Deportivo">
+            <button type="button" class="open-booking-modal mt-6 w-full bg-white text-slate-900 font-bold text-xs py-3.5 rounded-xl border border-slate-300 min-h-[44px]" data-program="Alto Rendimiento Deportivo">
               Consultar Disponibilidad
             </button>
           </div>
@@ -566,7 +581,7 @@
               <h3 class="text-xl font-bold text-slate-900">Salud Digestiva & SIBO</h3>
               <p class="text-xs text-slate-600 mt-2">Tratamiento especializado para SIBO, colon irritable e inflamación intestinal.</p>
             </div>
-            <button class="open-booking-modal mt-6 w-full bg-white text-slate-900 font-bold text-xs py-3 rounded-xl border border-slate-300" data-program="Salud Digestiva & SIBO">
+            <button type="button" class="open-booking-modal mt-6 w-full bg-white text-slate-900 font-bold text-xs py-3.5 rounded-xl border border-slate-300 min-h-[44px]" data-program="Salud Digestiva & SIBO">
               Consultar Disponibilidad
             </button>
           </div>
@@ -577,7 +592,7 @@
               <h3 class="text-xl font-bold text-slate-900">Optimización Metabólica (Insulina / Colesterol)</h3>
               <p class="text-xs text-slate-600 mt-1">Revierte parámetros alterados en tus análisis de sangre con pautas clínicas.</p>
             </div>
-            <button class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl" data-program="Optimización Metabólica">
+            <button type="button" class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl min-h-[44px]" data-program="Optimización Metabólica">
               Agendar Valoración Clínica
             </button>
           </div>
@@ -592,7 +607,7 @@
         
         <div class="text-center max-w-3xl mx-auto mb-12">
           <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold mb-3 hover:bg-pink-100 transition-colors">
-            <i data-lucide="instagram" class="w-4 h-4 text-pink-600"></i>
+            <i data-lucide="instagram" class="w-4 h-4 text-pink-600" aria-hidden="true"></i>
             <span>@marcostsd.rehab en Instagram</span>
           </a>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -603,14 +618,14 @@
           </p>
         </div>
 
-        <!-- Dynamic Grid Rendered by js/app.js (Links directly to articulos/*.html) -->
+        <!-- Dynamic Grid Rendered by js/app.js -->
         <div id="instagramPostsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <!-- Post Cards injected by JavaScript linking to dedicated pages -->
         </div>
 
         <div class="mt-12 text-center">
-          <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-amber-500 hover:opacity-95 text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg transition-all">
-            <i data-lucide="instagram" class="w-5 h-5"></i>
+          <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-amber-500 hover:opacity-95 text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg transition-all min-h-[44px]">
+            <i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i>
             <span>Ver perfil completo en Instagram (@marcostsd.rehab) ↗</span>
           </a>
         </div>
@@ -631,22 +646,22 @@
           <form id="leadMagnetForm" class="space-y-4">
             <h3 class="text-xl font-bold text-slate-900">Descarga la Guía en PDF</h3>
             <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo *</label>
-              <input type="text" id="leadName" required placeholder="Ej: María García" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+              <label for="leadName" class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo *</label>
+              <input type="text" id="leadName" required placeholder="Ej: María García" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm min-h-[44px]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico *</label>
-              <input type="email" id="leadEmail" required placeholder="maria@ejemplo.com" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+              <label for="leadEmail" class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico *</label>
+              <input type="email" id="leadEmail" required placeholder="maria@ejemplo.com" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm min-h-[44px]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Objetivo Prioritario</label>
-              <select id="leadGoal" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm">
+              <label for="leadGoal" class="block text-xs font-bold text-slate-700 uppercase mb-1">Objetivo Prioritario</label>
+              <select id="leadGoal" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm min-h-[44px]">
                 <option value="Recomposición Corporal">Perder Grasa / Masa Muscular</option>
                 <option value="Salud Digestiva">Salud Digestiva / SIBO</option>
                 <option value="Rendimiento Deportivo">Rendimiento Deportivo</option>
               </select>
             </div>
-            <button type="submit" class="w-full btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-emerald-glow">
+            <button type="submit" class="w-full btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-emerald-glow min-h-[44px]">
               Obtener Guía Gratuita en PDF
             </button>
           </form>
@@ -654,7 +669,7 @@
           <div id="leadMagnetSuccess" class="hidden text-center py-6 space-y-3">
             <h3 class="text-2xl font-bold text-slate-900">¡Guía enviada con éxito!</h3>
             <p class="text-sm text-slate-600">Hemos registrado tu solicitud para <span id="leadSuccessEmail" class="font-bold"></span>. Haz clic a continuación para descargar:</p>
-            <button onclick="alert('Simulación: El archivo PDF Guia-Recomposicion-Madrid-2026.pdf se está descargando.')" class="btn-cta bg-emerald-600 text-white font-bold text-sm px-6 py-3 rounded-xl">
+            <button type="button" onclick="alert('Simulación: El archivo PDF Guia-Recomposicion-Madrid-2026.pdf se está descargando.')" class="btn-cta bg-emerald-600 text-white font-bold text-sm px-6 py-3 rounded-xl min-h-[44px]">
               Descargar PDF Ahora (2.4 MB)
             </button>
           </div>
@@ -672,9 +687,9 @@
 
         <div class="space-y-3">
           <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5">
-            <button class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center">
+            <button type="button" class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center min-h-[44px]" aria-expanded="false">
               <span>¿Cómo es la modalidad de consulta con Marcos Demandre en Madrid?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform" aria-hidden="true"></i>
             </button>
             <div class="faq-answer text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
               Marcos Demandre atiende en modalidad 100% Online y también ofrece Consulta a Domicilio, desplazándose directamente a la ubicación del cliente en Madrid y alrededores (Barrio de Salamanca, Chamberí, Retiro, etc.).
@@ -682,9 +697,9 @@
           </div>
 
           <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5">
-            <button class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center">
+            <button type="button" class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center min-h-[44px]" aria-expanded="false">
               <span>¿Cuánta experiencia tiene Marcos Demandre y cuántos pacientes ha transformado?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform" aria-hidden="true"></i>
             </button>
             <div class="faq-answer hidden text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
               Marcos Demandre cuenta con una trayectoria comprobada acompañando con éxito a más de 120 pacientes en procesos de recomposición corporal, salud digestiva (SIBO) y recuperación deportiva.
@@ -692,9 +707,9 @@
           </div>
 
           <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5">
-            <button class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center">
+            <button type="button" class="faq-button w-full text-left font-bold text-slate-900 flex justify-between items-center min-h-[44px]" aria-expanded="false">
               <span>¿En qué consiste la primera sesión de valoración gratuita con Marcos Demandre?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform" aria-hidden="true"></i>
             </button>
             <div class="faq-answer hidden text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
               Es una consulta inicial de 20 minutos donde Marcos Demandre evalúa tu estado actual, tus objetivos de recomposición corporal e historial para proponer tu plan personalizado.
@@ -707,10 +722,10 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 text-white py-12 border-t border-slate-800 text-xs">
+  <footer role="contentinfo" class="bg-slate-950 text-white py-12 border-t border-slate-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between gap-6 items-center">
       <div class="flex items-center gap-3">
-        <img src="assets/images/marcos-nutricionista.png" class="w-10 h-10 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Marcos Demandre" />
+        <img src="assets/images/marcos-nutricionista.png" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 rounded-full object-cover ring-2 ring-emerald-500/40" alt="Logotipo Marcos Demandre" />
         <div>
           <div class="font-extrabold text-base text-white flex items-center gap-2">
             MARCOS DEMANDRE Nutrición
@@ -723,8 +738,8 @@
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-slate-900 hover:bg-pink-900/40 text-slate-200 hover:text-pink-300 px-4 py-2 rounded-xl border border-slate-800 transition-colors">
-          <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i>
+        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-slate-900 hover:bg-pink-900/40 text-slate-200 hover:text-pink-300 px-4 py-2.5 rounded-xl border border-slate-800 transition-colors min-h-[44px]">
+          <i data-lucide="instagram" class="w-4 h-4 text-pink-500" aria-hidden="true"></i>
           <span>@marcostsd.rehab (Instagram Oficial)</span>
         </a>
       </div>
@@ -734,29 +749,29 @@
   </footer>
 
   <!-- MULTI-STEP BOOKING MODAL -->
-  <div id="bookingModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 max-w-lg w-full relative">
-      <button class="close-booking-modal absolute top-4 right-4 text-slate-400 font-bold text-lg">✕</button>
+  <div id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 max-w-lg w-full relative shadow-2xl">
+      <button type="button" class="close-booking-modal absolute top-4 right-4 text-slate-400 hover:text-slate-800 font-bold text-lg p-2 min-h-[44px] min-w-[44px]" aria-label="Cerrar modal de reserva">✕</button>
 
       <!-- Step 1 -->
       <div id="bookingStep1">
-        <h3 class="text-xl font-extrabold text-slate-900">Reserva tu Valoración con Marcos Demandre</h3>
+        <h2 id="bookingModalTitle" class="text-xl font-extrabold text-slate-900">Reserva tu Valoración con Marcos Demandre</h2>
         <p class="text-xs text-slate-500 mt-1 mb-4">Paso 1: Selecciona tu programa de interés</p>
 
         <div class="space-y-2 mb-6">
-          <button type="button" class="goal-option-btn w-full text-left p-3 rounded-xl border border-emerald-600 bg-emerald-50 text-emerald-950 text-xs font-semibold" data-value="Recomposición Integral de 90 Días">
+          <button type="button" class="goal-option-btn w-full text-left p-3.5 rounded-xl border border-emerald-600 bg-emerald-50 text-emerald-950 text-xs font-semibold min-h-[44px]" data-value="Recomposición Integral de 90 Días">
             Recomposición Integral de 90 Días
           </button>
-          <button type="button" class="goal-option-btn w-full text-left p-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-700 text-xs font-medium" data-value="Salud Digestiva & SIBO">
+          <button type="button" class="goal-option-btn w-full text-left p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-700 text-xs font-medium min-h-[44px]" data-value="Salud Digestiva & SIBO">
             Salud Digestiva & SIBO
           </button>
-          <button type="button" class="goal-option-btn w-full text-left p-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-700 text-xs font-medium" data-value="Alto Rendimiento & Recuperación">
+          <button type="button" class="goal-option-btn w-full text-left p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-700 text-xs font-medium min-h-[44px]" data-value="Alto Rendimiento & Recuperación">
             Alto Rendimiento & Recuperación
           </button>
         </div>
 
         <div class="flex justify-end">
-          <button id="btnStep1Next" type="button" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">
+          <button id="btnStep1Next" type="button" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl min-h-[44px]">
             Siguiente →
           </button>
         </div>
@@ -768,25 +783,25 @@
         <p class="text-xs text-slate-500 mt-1 mb-4">Paso 2: Elige modalidad de consulta</p>
 
         <div class="grid grid-cols-2 gap-3 mb-4">
-          <button type="button" class="modality-btn p-3 rounded-xl border border-emerald-600 bg-emerald-50 text-xs font-bold text-left" data-modality="online">
+          <button type="button" class="modality-btn p-3.5 rounded-xl border border-emerald-600 bg-emerald-50 text-xs font-bold text-left min-h-[44px]" data-modality="online">
             🌐 100% Online (Videollamada)
           </button>
-          <button type="button" class="modality-btn p-3 rounded-xl border border-slate-200 bg-slate-50 text-xs font-bold text-left" data-modality="domicilio">
+          <button type="button" class="modality-btn p-3.5 rounded-xl border border-slate-200 bg-slate-50 text-xs font-bold text-left min-h-[44px]" data-modality="domicilio">
             🚗 A Domicilio (Madrid)
           </button>
         </div>
 
         <div class="mb-6">
-          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferencia Horaria</label>
-          <select id="bookingSchedule" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+          <label for="bookingSchedule" class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferencia Horaria</label>
+          <select id="bookingSchedule" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs min-h-[44px]">
             <option value="Tardes (16:00 - 20:00)">Tardes (16:00 - 20:00)</option>
             <option value="Mañanas (09:00 - 14:00)">Mañanas (09:00 - 14:00)</option>
           </select>
         </div>
 
         <div class="flex justify-between">
-          <button id="btnStep2Back" type="button" class="text-xs text-slate-500 font-bold">← Atrás</button>
-          <button id="btnStep2Next" type="button" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">Siguiente →</button>
+          <button id="btnStep2Back" type="button" class="text-xs text-slate-500 font-bold p-2 min-h-[44px]">← Atrás</button>
+          <button id="btnStep2Next" type="button" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl min-h-[44px]">Siguiente →</button>
         </div>
       </div>
 
@@ -796,13 +811,22 @@
         <p class="text-xs text-slate-500 mt-1 mb-4">Paso 3: Confirma tu solicitud con Marcos Demandre</p>
 
         <form id="bookingForm" class="space-y-3">
-          <input type="text" id="bookingName" required placeholder="Nombre y Apellidos *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs">
-          <input type="tel" id="bookingPhone" required placeholder="Teléfono / WhatsApp *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs">
-          <input type="email" id="bookingEmail" required placeholder="Email *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+          <div>
+            <label for="bookingName" class="sr-only">Nombre y Apellidos</label>
+            <input type="text" id="bookingName" required placeholder="Nombre y Apellidos *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs min-h-[44px]">
+          </div>
+          <div>
+            <label for="bookingPhone" class="sr-only">Teléfono o WhatsApp</label>
+            <input type="tel" id="bookingPhone" required placeholder="Teléfono / WhatsApp *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs min-h-[44px]">
+          </div>
+          <div>
+            <label for="bookingEmail" class="sr-only">Correo Electrónico</label>
+            <input type="email" id="bookingEmail" required placeholder="Email *" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs min-h-[44px]">
+          </div>
 
           <div class="flex justify-between items-center pt-2">
-            <button id="btnStep3Back" type="button" class="text-xs text-slate-500 font-bold">← Atrás</button>
-            <button type="submit" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">
+            <button id="btnStep3Back" type="button" class="text-xs text-slate-500 font-bold p-2 min-h-[44px]">← Atrás</button>
+            <button type="submit" class="btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl min-h-[44px]">
               Confirmar Reserva Gratuita
             </button>
           </div>
@@ -813,7 +837,7 @@
       <div id="bookingStepSuccess" class="hidden text-center py-6 space-y-3">
         <h3 class="text-2xl font-bold text-emerald-600">¡Reserva Solicitada con Éxito!</h3>
         <p class="text-xs text-slate-600">El equipo de Marcos Demandre te contactará en menos de 24h laborables por WhatsApp/Teléfono para confirmar tu horario.</p>
-        <button class="close-booking-modal btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3 rounded-xl">Cerrar</button>
+        <button type="button" class="close-booking-modal btn-cta bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl min-h-[44px]">Cerrar</button>
       </div>
 
     </div>

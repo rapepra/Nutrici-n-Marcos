@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#059669">
   <title>La Clave de la Recuperación & Potenciación Muscular sin Inflamación | Marcos Demandre</title>
   <meta name="description" content="Guía clínica y científica por Marcos Demandre (TSD): descubre cómo acelerar la reparación del tejido muscular, eliminar el dolor articular tardío y optimizar el rendimiento sin inflamación crónica. Consulta Online y A Domicilio en Madrid.">
   <meta name="keywords" content="recuperacion muscular madrid, marcos demandre, nutricionista deportivo madrid, potenciacion muscular, nutricion lesiones, nutricionista barrio de salamanca, marcostsd.rehab">
@@ -22,15 +23,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-  <style>
-    body { background-color: #FAFAFA; color: #0f172a; font-family: 'Inter', sans-serif; }
-    .glass-nav { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px); border: 1px solid rgba(226, 232, 240, 0.8); }
-    .btn-cta { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 14px 0 rgba(5, 150, 105, 0.3); }
-    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.45); }
-    .bg-instagram-gradient { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-  </style>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../css/styles.css">
 
   <!-- Article Schema JSON-LD -->
   <script type="application/ld+json">
@@ -47,22 +42,23 @@
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Marcos Demandre Nutrición Madrid",
-      "logo": { "@type": "ImageObject", "url": "../assets/images/marcos-nutricionista.png" }
+      "name": "Marcos Demandre Nutrición Madrid"
     },
-    "datePublished": "2026-08-28",
-    "description": "Protocolo de periodización proteica peri-entreno y modulación del estrés mecánico para deportistas en Madrid."
+    "datePublished": "2026-08-28"
   }
   </script>
 </head>
 <body class="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-emerald-500 selection:text-white">
 
+  <!-- ACCESSIBILITY: SKIP LINK -->
+  <a href="#main-article" class="sr-only sr-only-focusable">Saltar al artículo principal</a>
+
   <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3">
+  <header role="banner" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3">
     <div class="max-w-7xl mx-auto glass-nav rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-sm">
-      <a href="../index.html" class="flex items-center gap-2.5">
+      <a href="../index.html" class="flex items-center gap-2.5" aria-label="Ir al inicio de Marcos Demandre Nutrición">
         <div class="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-emerald-500/40">
-          <img src="../assets/images/marcos-nutricionista.png" alt="Marcos Demandre" class="w-full h-full object-cover object-top" />
+          <img src="../assets/images/marcos-nutricionista.png" alt="Marcos Demandre Nutricionista" width="40" height="40" class="w-full h-full object-cover object-top" />
         </div>
         <div class="flex flex-col">
           <span class="font-extrabold text-slate-900 tracking-tight text-base sm:text-lg">MARCOS DEMANDRE</span>
@@ -71,27 +67,27 @@
       </a>
 
       <div class="flex items-center gap-3">
-        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold hover:bg-pink-100 transition-colors">
-          <i data-lucide="instagram" class="w-4 h-4 text-pink-600"></i>
+        <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold hover:bg-pink-100 transition-colors min-h-[44px]">
+          <i data-lucide="instagram" class="w-4 h-4 text-pink-600" aria-hidden="true"></i>
           <span>@marcostsd.rehab</span>
         </a>
-        <a href="../index.html#hero" class="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl flex items-center gap-2 shadow-emerald-glow">
-          <i data-lucide="calendar" class="w-4 h-4"></i>
+        <a href="../index.html#hero" class="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl flex items-center gap-2 shadow-emerald-glow min-h-[44px]">
+          <i data-lucide="calendar" class="w-4 h-4" aria-hidden="true"></i>
           <span>Agenda Valoración</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- ARTICLE HEADER -->
-  <article class="pt-32 pb-20 max-w-4xl mx-auto px-4 sm:px-6">
+  <!-- ARTICLE CONTENT -->
+  <main id="main-article" role="main" class="pt-32 pb-20 max-w-4xl mx-auto px-4 sm:px-6">
     
-    <!-- Breadcrumb -->
-    <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium">
+    <!-- Breadcrumb Navigation -->
+    <nav role="navigation" aria-label="Migas de pan" class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium">
       <a href="../index.html" class="hover:text-emerald-600">Inicio</a>
-      <span>/</span>
+      <span aria-hidden="true">/</span>
       <a href="../index.html#instagram-divulgacion" class="hover:text-emerald-600">Divulgación</a>
-      <span>/</span>
+      <span aria-hidden="true">/</span>
       <span class="text-slate-900">Recuperación & Potenciación</span>
     </nav>
 
@@ -106,26 +102,26 @@
     <!-- Author & Location Bar -->
     <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-white border border-slate-200 mb-10 shadow-sm">
       <div class="flex items-center gap-3">
-        <img src="../assets/images/marcos-nutricionista.png" class="w-12 h-12 rounded-full object-cover object-top ring-2 ring-emerald-500/40" alt="Marcos Demandre" />
+        <img src="../assets/images/marcos-nutricionista.png" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover object-top ring-2 ring-emerald-500/40" alt="Marcos Demandre" />
         <div>
           <div class="font-bold text-slate-900 text-sm">Por Marcos Demandre (TSD)</div>
           <div class="text-xs text-slate-500">Especialista en Nutrición Clínica & Recuperación · Consulta Online y A Domicilio en Madrid</div>
         </div>
       </div>
 
-      <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-pink-600 bg-pink-50 px-3.5 py-2 rounded-xl border border-pink-200 hover:bg-pink-100 transition-colors">
-        <i data-lucide="instagram" class="w-4 h-4 text-pink-600"></i>
+      <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-pink-600 bg-pink-50 px-3.5 py-2.5 rounded-xl border border-pink-200 hover:bg-pink-100 transition-colors min-h-[44px]">
+        <i data-lucide="instagram" class="w-4 h-4 text-pink-600" aria-hidden="true"></i>
         <span>Ver en @marcostsd.rehab ↗</span>
       </a>
     </div>
 
     <!-- Featured Image -->
     <div class="rounded-3xl overflow-hidden border border-slate-200 mb-10 shadow-lg">
-      <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" alt="Recuperación muscular Marcos Demandre" class="w-full h-80 sm:h-96 object-cover" />
+      <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" width="1200" height="600" loading="lazy" decoding="async" alt="Atleta entrenando fuerza y recuperación física" class="w-full h-80 sm:h-96 object-cover" />
     </div>
 
     <!-- MAIN BODY CONTENT -->
-    <div class="prose prose-lg prose-slate max-w-none space-y-6 text-slate-700 leading-relaxed">
+    <article class="prose prose-lg prose-slate max-w-none space-y-6 text-slate-700 leading-relaxed">
       
       <p class="text-lg font-medium text-slate-800 leading-relaxed">
         El dolor articular recurrente, la pesadez muscular prolongada tras el gimnasio y la falta de progresión en las cargas no suelen ser síntoma de falta de esfuerzo. En el 80% de los deportistas que atiendo en Madrid mediante consulta <strong>100% Online y A Domicilio (con desplazamiento a la ubicación del cliente en Barrio de Salamanca, Chamberí o alrededores)</strong>, el verdadero cuello de botella es una baja potencia sustratal e hiperinflamación sistémica de bajo grado.
@@ -173,25 +169,25 @@
         Si buscas acelerar tu recuperación muscular y optimizar tu rendimiento físico sin lesiones en Madrid, trabajo de forma <strong>100% Online y con Consulta a Domicilio (me desplazo directamente a tu hogar u oficina en Barrio de Salamanca, Retiro o Madrid centro)</strong>.
       </p>
 
-    </div>
+    </article>
 
     <!-- CTA BANNER BOX -->
-    <div class="mt-12 p-8 rounded-3xl bg-slate-900 text-white shadow-2xl relative overflow-hidden text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="mt-12 p-8 rounded-3xl bg-slate-900 text-white shadow-2xl text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
       <div>
         <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Sesión Gratuita 20 Minutos</span>
         <h3 class="text-2xl font-extrabold text-white">¿Quieres acelerar tu recuperación física?</h3>
         <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-md">Solicita tu valoración inicial con Marcos Demandre (Online o A Domicilio en Madrid).</p>
       </div>
 
-      <a href="../index.html#hero" class="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-emerald-glow flex-shrink-0">
+      <a href="../index.html#hero" class="btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-emerald-glow flex-shrink-0 min-h-[44px]">
         Agendar Valoración Ahora
       </a>
     </div>
 
-  </article>
+  </main>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 text-white py-10 border-t border-slate-800 text-xs">
+  <footer role="contentinfo" class="bg-slate-950 text-white py-10 border-t border-slate-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
       <div>
         <div class="font-extrabold text-base">MARCOS DEMANDRE Nutrición Madrid</div>
