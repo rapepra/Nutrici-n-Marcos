@@ -13,11 +13,12 @@ const instagramPostsData = [
     badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
     date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+    articleUrl: "articulos/recuperacion-potenciacion-muscular.html",
     instagramUrl: INSTAGRAM_URL,
     summary: "Transcribimos y ampliamos el análisis de Marcos Demandre (TSD) sobre cómo acelerar la regeneración tisular entre sesiones combinando periodización proteica y modulación del estrés.",
     fullContent: `
       <h3>1. El Mito del Sobrenentrenamiento vs. Bajo Descanso Nutricional</h3>
-      <p>Muchos deportistas en Madrid atribuyen el dolor articular persistente o la falta de fuerza al "sobreentrenamiento". En el 80% de los casos evaluados en consulta por Marcos Demandre en el Barrio de Salamanca, el problema real es una falta de potencia sustratal: no se aportan la leucina ni los micronutrientes cofactores necesarios para la síntesis de colágeno durante la ventana de reparación nocturna.</p>
+      <p>Muchos deportistas en Madrid atribuyen el dolor articular persistente o la falta de fuerza al "sobreentrenamiento". En el 80% de los casos evaluados en consulta por Marcos Demandre en Madrid (Online y A Domicilio), el problema real es una falta de potencia sustratal: no se aportan la leucina ni los micronutrientes cofactores necesarios para la síntesis de colágeno durante la ventana de reparación nocturna.</p>
       
       <h3>2. Protocolo de Potenciación Nutricional (Método Marcos Demandre TSD)</h3>
       <ul>
@@ -38,6 +39,7 @@ const instagramPostsData = [
     badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
     date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80",
+    articleUrl: "articulos/recomposicion-corporal-90-dias.html",
     instagramUrl: INSTAGRAM_URL,
     summary: "Explicación detallada de Marcos Demandre sobre por qué el déficit calórico agresivo provoca pérdida de masa magra, ralentización tiroidea y efecto rebote rápido.",
     fullContent: `
@@ -49,7 +51,7 @@ const instagramPostsData = [
       <ul>
         <li>Aumentar la densidad nutricional sin reducir el volumen del plato.</li>
         <li>Mantener la tasa metabólica activa mediante estímulo de fuerza y aporte proteico óptimo (1.8g - 2.2g / kg).</li>
-        <li>Medición de grasa visceral y masa magra mediante bioimpedancia médica mensual en Calle Serrano, Madrid.</li>
+        <li>Evaluación de grasa visceral y masa magra en Madrid (Servicio Online & A Domicilio).</li>
       </ul>
 
       <p class="mt-4 italic bg-emerald-50 p-4 rounded-xl text-emerald-900 border border-emerald-200">
@@ -64,17 +66,18 @@ const instagramPostsData = [
     badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
     date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    articleUrl: "articulos/salud-digestiva-sibo.html",
     instagramUrl: INSTAGRAM_URL,
     summary: "Cómo abordar la hinchazón permanente, gases molestos y disbiosis intestinal mediante el protocolo por fases de nutrición clínica de Marcos Demandre.",
     fullContent: `
       <h3>1. ¿Por qué estás hinchado/a todas las tardes?</h3>
-      <p>La inflamación intestinal recurrente suele ser síntoma de sobrecrecimiento bacteriano (SIBO), falta de ácido clorhídrico estomacal o alteración del Complejo Motor Migratorio (CMM). Comer a deshoras o alimentos ultraprocesados agrava el problema.</p>
+      <p>La inflamación intestinal recurrente suele ser síntoma de sobrecrecimiento bacteriano (SIBO), falta de ácido clorhídrico estomacal o alteración del Complejo Motor Migratorio (CMM).</p>
 
       <h3>2. Protocolo Clínico de 3 Fases de Marcos Demandre</h3>
       <ol>
         <li><strong>Fase 1: Eliminación Estructurada (Low FODMAP):</strong> Retirada temporal de carbohidratos fermentables que alimentan a las bacterias desplazadas.</li>
         <li><strong>Fase 2: Reparación Intestinal:</strong> Aporte de glutamina, zinc carnosina y polifenoles para restaurar las uniones estrechas del epitelio digestivo.</li>
-        <li><strong>Fase 3: Reintroducción & Tolerancia:</strong> Probamos uno a uno los grupos de alimentos para devolverte la libertad de comer en cualquier restaurante del Barrio de Salamanca sin hinchazón.</li>
+        <li><strong>Fase 3: Reintroducción & Tolerancia:</strong> Probamos uno a uno los grupos de alimentos para devolverte la libertad al comer fuera en Madrid.</li>
       </ol>
     `
   },
@@ -85,14 +88,12 @@ const instagramPostsData = [
     badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
     date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80",
+    articleUrl: "articulos/ayuno-intermitente-mitos.html",
     instagramUrl: INSTAGRAM_URL,
     summary: "El ayuno no es mágico por sí solo: Marcos Demandre desglosa cuándo ayuda a regular la insulina y cuándo destruye la recuperación en deportistas de alto rendimiento.",
     fullContent: `
       <h3>1. ¿Sirve el ayuno intermitente 16/8 para perder grasa?</h3>
       <p>El ayuno 16/8 es simplemente una herramienta para controlar la ventana de ingesta. Si dentro de las 8 horas de comida consumes más calorías de las que gastas, no perderás grasa. Sin embargo, en personas con resistencia a la insulina o mala sensibilidad matutina a los carbohidratos, resulta extremadamente útil.</p>
-
-      <h3>2. Cuándo NO hacer Ayuno Intermitente</h3>
-      <p>Si entrenas fuerza a primera hora de la mañana con cargas elevadas o si sufres de ansiedad por la comida en las horas previas a acostarte, forzar el ayuno aumentará los niveles de cortisol y el catabolismo muscular.</p>
     `
   },
   {
@@ -102,18 +103,12 @@ const instagramPostsData = [
     badgeColor: "bg-rose-100 text-rose-800 border-rose-200",
     date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+    articleUrl: "articulos/nutricion-lesiones-musculares.html",
+    instagramUrl: INSTAGRAM_URL,
     summary: "Nutrientes específicos y suplementación clínica recomendados por Marcos Demandre para recortar semanas en la cicatrización de tendones, ligamentos y roturas fibrilares.",
     fullContent: `
       <h3>1. Nutrición durante la Fase Inmovilizada o de Baja Carga</h3>
       <p>Tras una lesión deportiva, el error común es reducir drásticamente las calorías por miedo a engordar. Sin embargo, el proceso de cicatrización tisular eleva la tasa metabólica en reposo entre un 15% y un 50%.</p>
-
-      <h3>2. Los 4 Pilares de la Remodelación del Tejido</h3>
-      <ul>
-        <li><strong>Proteína Elevada (2.0g-2.5g/kg):</strong> Crucial para prevenir la atrofia muscular inducida por desuso.</li>
-        <li><strong>Péptidos de Colágeno + Vitamina C:</strong> Consumidos 45 minutos antes de la fisioterapia o carga mecánica para dirigir la síntesis de colágeno al tendón dañado.</li>
-        <li><strong>Omega 3 de Alta Pureza (EPA/DHA):</strong> Modula la fase de inflamación aguda sin frenar el proceso fisiológico de reparación.</li>
-        <li><strong>Creatina Monohidrato (5g/día):</strong> Mantiene la hidratación celular muscular durante el periodo de inactividad.</li>
-      </ul>
     `
   },
   {
@@ -123,17 +118,12 @@ const instagramPostsData = [
     badgeColor: "bg-blue-100 text-blue-800 border-blue-200",
     date: "Publicado en @marcostsd.rehab por Marcos Demandre",
     image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    articleUrl: "articulos/plato-nutricional-madrid.html",
     instagramUrl: INSTAGRAM_URL,
-    summary: "El método visual de porciones diseñado por Marcos Demandre para comer fuera en restaurantes del Barrio de Salamanca o Recoletos manteniendo tus objetivos.",
+    summary: "El método visual de porciones diseñado por Marcos Demandre para comer fuera en restaurantes del Barrio de Salamanca o Madrid centro manteniendo tus objetivos.",
     fullContent: `
       <h3>1. El Método Visual Marcos Demandre para Comer Fuera</h3>
-      <p>No necesitas llevar una báscula a un restaurante en Madrid. Usamos referencias anatómicas de tu propia mano:</p>
-      <ul>
-        <li><strong>Proteínas:</strong> 1 o 2 palmas completas de la mano (carne magra, pescado, huevos, tofu).</li>
-        <li><strong>Verduras y Hortalizas:</strong> 2 puños cerrados de vegetales variados.</li>
-        <li><strong>Carbohidratos Complejos:</strong> 1 ahuecado de la mano (patata, arroz, legumbres, quinoa).</li>
-        <li><strong>Grasas Saludables:</strong> 1 falange del pulgar (aceite de oliva virgen extra, frutos secos, aguacate).</li>
-      </ul>
+      <p>No necesitas llevar una báscula a un restaurante en Madrid. Usamos referencias anatómicas de tu propia mano para porciones de proteínas, carbohidratos, verduras y grasas saludables.</p>
     `
   }
 ];
@@ -151,7 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <article class="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm instagram-card-hover flex flex-col justify-between">
         <div>
           <div class="relative h-48 overflow-hidden group">
-            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <a href="${post.articleUrl}">
+              <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </a>
             <div class="absolute top-3 left-3">
               <span class="text-[11px] font-bold px-3 py-1 rounded-full border ${post.badgeColor}">
                 ${post.category}
@@ -168,8 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <span>${post.date}</span>
             </div>
 
-            <h3 class="text-lg font-bold text-slate-900 leading-snug hover:text-emerald-600 transition-colors cursor-pointer read-post-btn" data-post-id="${post.id}">
-              ${post.title}
+            <h3 class="text-lg font-bold text-slate-900 leading-snug hover:text-emerald-600 transition-colors cursor-pointer">
+              <a href="${post.articleUrl}">
+                ${post.title}
+              </a>
             </h3>
 
             <p class="text-xs text-slate-600 mt-2.5 leading-relaxed line-clamp-3">
@@ -179,13 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="px-6 pb-6 pt-0 flex items-center justify-between gap-2 border-t border-slate-100 mt-4">
-          <button class="read-post-btn text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 cursor-pointer pt-4" data-post-id="${post.id}">
-            <span>Leer post ampliado</span>
+          <a href="${post.articleUrl}" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 cursor-pointer pt-4">
+            <span>Leer artículo completo (SEO)</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </button>
+          </a>
 
           <a href="${post.instagramUrl}" target="_blank" rel="noopener noreferrer" class="pt-4 text-xs font-semibold text-slate-500 hover:text-pink-600 flex items-center gap-1">
-            <span>Ver Instagram ↗</span>
+            <span>Instagram ↗</span>
           </a>
         </div>
       </article>
@@ -282,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const goalOptionBtns = document.querySelectorAll('.goal-option-btn');
   let selectedGoal = 'Recomposición Integral de 90 Días';
-  let selectedModality = 'presencial';
+  let selectedModality = 'online';
 
   openModalBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -326,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       btn.classList.remove('border-slate-200', 'bg-slate-50');
       btn.classList.add('border-emerald-600', 'bg-emerald-50', 'text-emerald-950');
-      selectedModality = btn.getAttribute('data-modality') || 'presencial';
+      selectedModality = btn.getAttribute('data-modality') || 'online';
     });
   });
 
