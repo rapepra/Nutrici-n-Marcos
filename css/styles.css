@@ -1,5 +1,5 @@
 /* Styles for Pure HTML/CSS/JS Version of Nutrición Marcos Demandre Madrid 
- * Fully Optimized for Responsive Web Design, WCAG 2.1 AA Accessibility, Google Core Web Vitals, CRO & Maximum Monetization Sales Funnel
+ * Fully Optimized for Responsive Web Design, WCAG 2.1 AA Accessibility, Mobile Simplification & Conversion
  */
 
 :root {
@@ -133,35 +133,37 @@ a.btn-cta,
   box-shadow: 0 12px 30px -10px rgba(220, 39, 67, 0.15);
 }
 
-/* Floating Right Instagram Plugin */
-.floating-ig-widget {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px -5px rgba(220, 39, 67, 0.4);
+/* Floating Right Instagram Plugin (Desktop Only) */
+@media (min-width: 640px) {
+  .floating-ig-widget {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px -5px rgba(220, 39, 67, 0.4);
+  }
+
+  .floating-ig-widget:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px -5px rgba(220, 39, 67, 0.55);
+  }
+
+  /* WhatsApp Direct Floating Button (Desktop Only) */
+  .whatsapp-floating-btn {
+    background-color: #25D366;
+    color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .whatsapp-floating-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.7);
+  }
 }
 
-.floating-ig-widget:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 35px -5px rgba(220, 39, 67, 0.55);
-}
-
-/* WhatsApp Direct Floating Button */
-.whatsapp-floating-btn {
-  background-color: #25D366;
-  color: #ffffff;
-  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.whatsapp-floating-btn:hover {
-  background-color: #128C7E;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.7);
-}
-
-/* Sticky Bottom Mobile Bar */
-.mobile-sticky-bar {
-  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+/* Unified Mobile Bottom Dock (Replaces overlapping floating buttons on mobile) */
+.mobile-bottom-dock {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* WhatsApp Style Chat Testimonial Bubble */
@@ -203,7 +205,7 @@ a.btn-cta,
 
 /* Print Styles */
 @media print {
-  header, footer, .floating-ig-widget, .whatsapp-floating-btn, .mobile-sticky-bar, #bookingModal, #postReaderModal {
+  header, footer, .floating-ig-widget, .whatsapp-floating-btn, .mobile-bottom-dock, #bookingModal, #postReaderModal {
     display: none !important;
   }
   body {
