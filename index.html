@@ -21,31 +21,40 @@
   <meta property="og:image" content="assets/images/marcos-nutricionista.png">
   <meta property="og:locale" content="es_ES">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Newsreader (Serif Editorial) & Plus Jakarta Sans (Sans Humana) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,500;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS CDN Config con Estética Editorial Humana -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            background: "#FAFAFA",
-            emerald: {
-              50: "#ecfdf5",
-              100: "#d1fae5",
-              200: "#a7f3d0",
-              500: "#10b981",
-              600: "#059669",
-              700: "#047857",
-              900: "#064e3b",
+            background: "#FAF9F6",
+            stone: {
+              50: "#FBFBF9",
+              100: "#F4F3EF",
+              200: "#E7E5E0",
+              300: "#D6D3CB",
+              700: "#44403C",
+              800: "#292524",
+              900: "#1C1917"
+            },
+            forest: {
+              50: "#F2F7F4",
+              100: "#E1EFE8",
+              600: "#0D654C",
+              700: "#065F46",
+              800: "#064E3B",
+              900: "#03382A"
             }
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
           }
         }
       }
@@ -271,18 +280,22 @@
   <!-- MAIN CONTENT -->
   <main id="main-content" role="main">
     
-    <!-- HERO SECTION (Ultra-simplified for Mobile) -->
-    <section id="hero" class="relative pt-24 pb-12 sm:pt-36 sm:pb-24 overflow-hidden emerald-gradient-glow">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- HERO SECTION (Editorial Humana & Atemporal) -->
+    <section id="hero" class="relative pt-24 pb-12 sm:pt-36 sm:pb-24 overflow-hidden bg-[#FAF9F6] border-b border-stone-200">
+      
+      <!-- sutiles líneas de retícula editorial -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#e7e5e0_1px,transparent_1px),linear-gradient(to_bottom,#e7e5e0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
           <!-- Hero Left Column -->
-          <div class="lg:col-span-7 text-center lg:text-left space-y-4 sm:space-y-6">
+          <div class="lg:col-span-7 text-center lg:text-left space-y-5 sm:space-y-6">
             
-            <!-- Mobile-only compact avatar photo (Clean, no 500px scrolling block on phones!) -->
+            <!-- Mobile-only compact avatar photo -->
             <div class="block lg:hidden text-center mb-2">
-              <div class="relative w-28 h-28 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden ring-4 ring-emerald-500/30 shadow-xl">
+              <div class="relative w-28 h-28 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden ring-4 ring-forest-800/20 shadow-md">
                 <img 
                   src="assets/images/marcos-nutricionista.png" 
                   alt="Marcos Demandre Nutricionista" 
@@ -291,89 +304,86 @@
                   class="w-full h-full object-cover object-top"
                 />
               </div>
-              <span class="inline-block mt-2 text-[11px] font-extrabold text-emerald-800 bg-emerald-100 px-3 py-0.5 rounded-full border border-emerald-200">
+              <span class="inline-block mt-2.5 text-[11px] font-semibold text-forest-800 bg-forest-50 px-3 py-0.5 rounded-full border border-forest-100">
                 Marcos Demandre (TSD) · Madrid
               </span>
             </div>
 
-            <!-- Local Badge -->
+            <!-- Local Location Badge -->
             <div class="flex justify-center lg:justify-start">
-              <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 hover:bg-pink-50 border border-emerald-200 text-emerald-800 hover:text-pink-700 text-xs font-semibold transition-colors">
-                <span class="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping" aria-hidden="true"></span>
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-600" aria-hidden="true"></i>
-                <span>100% Online & A Domicilio (Madrid · Barrio de Salamanca)</span>
+              <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-50 border border-forest-100 text-forest-900 text-xs font-medium hover:bg-forest-100 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-forest-700"></span>
+                <span>Nutricionista en Madrid · Consulta 100% Online & A Domicilio</span>
               </a>
             </div>
 
-            <h1 class="text-2xl sm:text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              Transforma tu físico y tu energía <br className="hidden sm:inline">
-              <span class="bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 bg-clip-text text-transparent">
-                sin dietas extremas ni efecto rebote
+            <!-- H1 Headline con Serif Editorial -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.12]">
+              Transforma tu físico y tu salud <br className="hidden sm:inline" />
+              <span class="font-serif italic font-normal text-forest-800">
+                sin dietas extremas ni efecto rebote.
               </span>
             </h1>
 
-            <p class="text-xs sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Programa clínico y deportivo por <strong class="text-slate-900 font-semibold">Marcos Demandre (TSD)</strong>. 
-              Servicio de atención <strong class="text-slate-900 font-semibold">100% Online y A Domicilio</strong> en Madrid para optimizar tu composición corporal y salud digestiva.
+            <p class="text-sm sm:text-lg text-stone-700 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Programa nutricional y deportivo guiado por <strong class="text-stone-900 font-semibold">Marcos Demandre (TSD)</strong>. 
+              Optimiza tu composición corporal y salud digestiva en <strong class="text-stone-900 font-semibold">Madrid</strong> con una pauta flexible adaptada a tu vida real.
             </p>
 
             <!-- Action Buttons -->
-            <div class="pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4">
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
               <button
                 type="button"
-                class="open-booking-modal w-full sm:w-auto btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base px-6 py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 shadow-emerald-glow cursor-pointer min-h-[44px]"
+                class="open-booking-modal w-full sm:w-auto bg-forest-800 hover:bg-forest-900 text-white font-semibold text-sm sm:text-base px-7 py-4 rounded-xl flex items-center justify-center gap-2.5 shadow-sm transition-all hover:shadow-md cursor-pointer min-h-[44px]"
               >
-                <i data-lucide="calendar" class="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true"></i>
+                <i data-lucide="calendar" class="w-4 h-4 sm:w-5 sm:h-5 text-forest-100" aria-hidden="true"></i>
                 <span>Agenda tu Valoración Gratuita</span>
               </button>
 
               <a
                 href="#quiz-diagnostico"
-                class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-base px-5 py-3.5 sm:py-4 rounded-xl border border-slate-300 flex items-center justify-center gap-2 shadow-sm min-h-[44px]"
+                class="w-full sm:w-auto bg-white hover:bg-stone-100 text-stone-800 font-medium text-xs sm:text-base px-6 py-4 rounded-xl border border-stone-300 flex items-center justify-center gap-2 shadow-2xs transition-all min-h-[44px]"
               >
-                <i data-lucide="activity" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" aria-hidden="true"></i>
+                <i data-lucide="activity" class="w-4 h-4 sm:w-5 sm:h-5 text-forest-700" aria-hidden="true"></i>
                 <span>Test Diagnóstico (1 min)</span>
               </a>
             </div>
 
             <!-- Trust Signals -->
-            <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-1.5 text-xs text-slate-500 font-medium">
-              <span class="flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600" aria-hidden="true"></i> Sin permanencia</span>
-              <span class="flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600" aria-hidden="true"></i> Garantía 30 Días Cero Riesgo</span>
-              <span class="flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600" aria-hidden="true"></i> Pack Bonus 150€ Gratis</span>
+            <div class="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-xs text-stone-600 font-medium">
+              <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-forest-700" aria-hidden="true"></i> Sin compromiso de permanencia</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-forest-700" aria-hidden="true"></i> Garantía 30 Días</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-forest-700" aria-hidden="true"></i> Colegiado MAD-0842</span>
             </div>
 
           </div>
 
-          <!-- Hero Right Column (Desktop Only Portrait Card) -->
+          <!-- Hero Right Column (Bespoke Editorial Portrait Card) -->
           <div class="hidden lg:block lg:col-span-5 relative">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group max-w-md mx-auto">
+            <div class="relative rounded-3xl p-3 bg-white border border-stone-200 shadow-xl max-w-md mx-auto">
               
-              <img 
-                src="assets/images/marcos-nutricionista.png" 
-                alt="Retrato profesional de Marcos Demandre Nutricionista Clínico y Deportivo en Madrid holding smoothie" 
-                width="480"
-                height="540"
-                class="w-full h-[480px] sm:h-[540px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
-              />
+              <div class="relative rounded-2xl overflow-hidden border border-stone-100">
+                <img 
+                  src="assets/images/marcos-nutricionista.png" 
+                  alt="Retrato profesional de Marcos Demandre Nutricionista en Madrid" 
+                  width="480"
+                  height="540"
+                  class="w-full h-[460px] object-cover object-top"
+                />
 
-              <div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md text-white p-4 rounded-2xl border border-slate-700/80 flex items-center justify-between shadow-xl">
-                <div>
-                  <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Tu nutrición, tu cambio</span>
-                  <span class="text-sm font-extrabold text-white">Marcos Demandre (TSD)</span>
-                  <span class="text-[11px] text-slate-300 block">Nutricionista Online & A Domicilio Madrid</span>
+                <div class="absolute bottom-3 left-3 right-3 bg-stone-900/90 backdrop-blur-md text-white p-4 rounded-xl border border-stone-700/60 flex items-center justify-between shadow-lg">
+                  <div>
+                    <span class="text-[10px] font-medium text-forest-100 uppercase tracking-widest block">Tu nutrición, tu cambio</span>
+                    <span class="text-sm font-bold text-white">Marcos Demandre (TSD)</span>
+                    <span class="text-[11px] text-stone-300 block">Atención Online & A Domicilio Madrid</span>
+                  </div>
+
+                  <a href="#sobre-marcos" class="w-9 h-9 rounded-lg bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Ver perfil completo">
+                    <i data-lucide="arrow-down" class="w-4 h-4" aria-hidden="true"></i>
+                  </a>
                 </div>
-
-                <a href="#sobre-marcos" class="w-10 h-10 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition-colors shadow-md" aria-label="Ir a sección Sobre Mí">
-                  <i data-lucide="arrow-down" class="w-5 h-5" aria-hidden="true"></i>
-                </a>
               </div>
 
-              <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200 flex items-center gap-1.5 text-xs font-bold text-slate-900">
-                <span class="text-amber-400" aria-hidden="true">★</span> 4.9/5.0 Reseñas Madrid
-              </div>
-
-            </div>
           </div>
 
         </div>
@@ -381,79 +391,127 @@
       </div>
     </section>
 
-    <!-- SECTION: SOBRE MARCOS DEMANDRE -->
-    <section id="sobre-marcos" class="py-12 sm:py-24 bg-white border-y border-slate-200">
+    <!-- SECTION: SOBRE MARCOS DEMANDRE (Editorial Sobrio & Humano) -->
+    <section id="sobre-marcos" class="py-16 sm:py-24 bg-[#FAF9F6] border-y border-stone-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          <div class="lg:col-span-5">
-            <div class="relative max-w-md mx-auto">
-              <div class="absolute -top-3 -left-3 w-full h-full bg-emerald-100 rounded-3xl -z-10" />
-              <img 
-                src="assets/images/marcos-nutricionista.png" 
-                alt="Marcos Demandre Nutricionista atendiendo en Madrid" 
-                width="480"
-                height="480"
-                loading="lazy"
-                decoding="async"
-                class="w-full rounded-3xl shadow-xl object-cover h-[360px] sm:h-[480px] object-top border border-slate-200"
-              />
-              
-              <div class="absolute -bottom-4 -right-4 bg-emerald-600 text-white p-4 rounded-2xl shadow-xl hidden sm:block">
-                <div class="text-xl font-extrabold">100%</div>
-                <div class="text-xs font-medium">Online & A Domicilio</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 space-y-4 sm:space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
-              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600" aria-hidden="true"></i>
+          <!-- Left Column: Text & Editorial Trust Badges -->
+          <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-50 text-forest-900 text-xs font-medium border border-forest-100">
+              <i data-lucide="shield-check" class="w-4 h-4 text-forest-700" aria-hidden="true"></i>
               <span>Garantía de Atención Profesional y Cercana</span>
             </div>
 
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight leading-snug">
               Hola, soy Marcos Demandre. <br />
-              <span class="text-emerald-600">Tu nutricionista clínico y deportivo en Madrid.</span>
+              <span class="font-serif italic font-normal text-forest-800">Tu nutricionista clínico y deportivo en Madrid.</span>
             </h2>
 
-            <p class="text-xs sm:text-base text-slate-600 leading-relaxed">
+            <p class="text-sm sm:text-base text-stone-700 leading-relaxed">
               Como <strong>Técnico Superior en Dietética (TSD)</strong> y especialista en <strong>Recuperación y Potenciación Nutricional</strong>, atiendo de forma <strong>100% Online</strong> y me <strong>desplazo directamente a la ubicación del cliente en Madrid (Barrio de Salamanca, Chamberí, Retiro, etc.)</strong>.
             </p>
 
-            <p class="text-xs sm:text-base text-slate-600 leading-relaxed">
+            <p class="text-sm sm:text-base text-stone-700 leading-relaxed">
               Mi filosofía se resume en 4 palabras: <em>"Tu nutrición, tu cambio"</em>. Trabajo contigo hombro a hombro para que alcances tu mejor versión física sin pasar hambre ni renunciar a tu vida social.
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-              <div class="p-3.5 rounded-2xl bg-[#FAFAFA] border border-slate-200 flex items-start gap-3">
-                <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold flex-shrink-0 text-sm" aria-hidden="true">🎓</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+              <div class="p-4 rounded-xl bg-white border border-stone-200/80 flex items-start gap-3.5 shadow-2xs">
+                <div class="w-8 h-8 rounded-lg bg-forest-50 text-forest-800 flex items-center justify-center font-bold flex-shrink-0" aria-hidden="true">
+                  <i data-lucide="award" class="w-4 h-4 text-forest-700"></i>
+                </div>
                 <div>
-                  <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Formación TSD</h3>
-                  <p class="text-[11px] text-slate-500 mt-0.5">Especialización en fisiopatología digestiva y nutrición de fuerza.</p>
+                  <h3 class="font-bold text-stone-900 text-xs sm:text-sm">Formación TSD Especializada</h3>
+                  <p class="text-xs text-stone-600 mt-0.5">Especialización en fisiopatología digestiva y nutrición de fuerza.</p>
                 </div>
               </div>
 
-              <div class="p-3.5 rounded-2xl bg-[#FAFAFA] border border-slate-200 flex items-start gap-3">
-                <div class="w-8 h-8 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold flex-shrink-0 text-sm" aria-hidden="true">🚗</div>
+              <div class="p-4 rounded-xl bg-white border border-stone-200/80 flex items-start gap-3.5 shadow-2xs">
+                <div class="w-8 h-8 rounded-lg bg-forest-50 text-forest-800 flex items-center justify-center font-bold flex-shrink-0" aria-hidden="true">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-forest-700"></i>
+                </div>
                 <div>
-                  <h3 class="font-bold text-slate-900 text-xs sm:text-sm">A Domicilio & Online</h3>
-                  <p class="text-[11px] text-slate-500 mt-0.5">Se traslada a tu ubicación o consulta 100% digital.</p>
+                  <h3 class="font-bold text-stone-900 text-xs sm:text-sm">A Domicilio & Online</h3>
+                  <p class="text-xs text-stone-600 mt-0.5">Se traslada a tu ubicación o consulta 100% digital en Madrid.</p>
                 </div>
               </div>
             </div>
 
             <div class="pt-2 flex flex-wrap items-center gap-3">
-              <button type="button" class="open-booking-modal btn-cta bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-emerald-glow min-h-[44px]">
+              <button type="button" class="open-booking-modal bg-forest-800 hover:bg-forest-900 text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-2xs transition-all min-h-[44px]">
                 Conocer mi caso con Marcos Demandre
               </button>
 
-              <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-pink-600 hover:text-pink-700 flex items-center gap-1.5 min-h-[44px]">
-                <i data-lucide="instagram" class="w-4 h-4" aria-hidden="true"></i>
+              <a href="https://www.instagram.com/marcostsd.rehab?igsi=ZmZjZXYzdndrbnhl" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-stone-700 hover:text-forest-800 flex items-center gap-1.5 min-h-[44px]">
+                <i data-lucide="instagram" class="w-4 h-4 text-forest-700" aria-hidden="true"></i>
                 <span>@marcostsd.rehab ↗</span>
               </a>
             </div>
+          </div>
 
+          <!-- Right Column: Bespoke Portrait Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative max-w-md mx-auto rounded-2xl bg-white border border-stone-200 shadow-xl p-4 sm:p-5 overflow-hidden">
+              
+              <!-- Badge Superior -->
+              <div class="flex items-center justify-between mb-3">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-50 text-forest-900 text-[11px] font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest-700"></span>
+                  <span>Marcos Demandre (TSD)</span>
+                </div>
+                <span class="text-[10px] font-medium text-stone-500 uppercase tracking-wider">
+                  Madrid · Colegiado MAD-0842
+                </span>
+              </div>
+
+              <!-- Imagen con Marco Editorial -->
+              <div class="relative rounded-xl overflow-hidden border border-stone-200">
+                <img 
+                  src="assets/images/marcos-nutricionista.png" 
+                  alt="Marcos Demandre Nutricionista Clínico y Deportivo atendiendo en Madrid" 
+                  width="480"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-[320px] sm:h-[360px] object-cover object-top"
+                />
+                
+                <div class="absolute bottom-3 left-3 right-3 bg-stone-900/90 backdrop-blur-md text-white p-3 rounded-lg border border-stone-700/60 flex items-center justify-between shadow-md">
+                  <div>
+                    <span class="text-[10px] font-medium text-forest-100 uppercase tracking-widest block">Atención Directa</span>
+                    <span class="text-xs font-bold text-white">Online & A Domicilio Madrid</span>
+                  </div>
+                  <span class="px-2 py-0.5 rounded bg-forest-800 text-white text-[10px] font-semibold">
+                    Salamanca
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bloque de Garantías y Valoración -->
+              <div class="grid grid-cols-2 gap-2.5 pt-3">
+                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200/80 flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded bg-forest-800 text-white flex items-center justify-center font-bold text-xs shrink-0">
+                    ★
+                  </div>
+                  <div>
+                    <div class="text-[9px] font-semibold text-stone-500 uppercase tracking-wider">Google Madrid</div>
+                    <div class="text-xs font-bold text-stone-900">4.9 / 5.0 Reseñas</div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-lg bg-stone-50 border border-stone-200/80 flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded bg-forest-800 text-white flex items-center justify-center font-bold text-xs shrink-0">
+                    ✓
+                  </div>
+                  <div>
+                    <div class="text-[9px] font-semibold text-stone-500 uppercase tracking-wider">Plan Flexible</div>
+                    <div class="text-xs font-bold text-stone-900">Cero Efecto Rebote</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>
