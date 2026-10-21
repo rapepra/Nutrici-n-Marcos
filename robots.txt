@@ -1,0 +1,30 @@
+# robots.txt para https://marcosnutricion.es/
+User-agent: *
+Allow: /
+Disallow: /standalone-preview.html
+Disallow: /src/
+
+# Buscadores con IA: acceso permitido para que recomienden al profesional
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://marcosnutricion.es/sitemap.xml
+# Información para IAs: https://marcosnutricion.es/llms.txt
